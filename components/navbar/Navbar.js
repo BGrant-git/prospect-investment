@@ -1,12 +1,7 @@
-import { Container, LogoContainer, LinkContainer } from './navbarStyles'
+import NavbarDesk from '../navbarDesk/NavbarDesk'
 
 const Navbar = () => {
-	return (
-		<Container>
-			<LogoContainer>Logo</LogoContainer>
-			<LinkContainer>Links</LinkContainer>
-		</Container>
-	)
+	return <NavbarDesk />
 }
 
 export default Navbar
