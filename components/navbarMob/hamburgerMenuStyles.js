@@ -1,21 +1,20 @@
 export const hamburgerMenuStyles = {
 	bmBurgerButton: {
-		position: 'fixed',
+		position: 'absolute',
 		width: '36px',
 		height: '30px',
-		right: '36px',
-		top: '36px',
+		right: '25px',
+		top: '25px',
 	},
 	bmBurgerBars: {
-		background: '#373a47',
+		background: 'black',
 	},
 	bmBurgerBarsHover: {
-		background: '#a90000',
+		background: '#009eef',
 	},
 	bmCrossButton: {
 		height: '24px',
 		width: '24px',
-		marginRight: '20px',
 	},
 	bmCross: {
 		background: '#bdc3c7',
@@ -25,9 +24,10 @@ export const hamburgerMenuStyles = {
 		height: '100%',
 	},
 	bmMenu: {
-		background: '#373a47',
+		background: '#009eef',
 		padding: '2.5em 1.5em 0',
 		fontSize: '1.15em',
+		overflowY: 'hidden',
 	},
 	bmMorphShape: {
 		fill: '#373a47',
