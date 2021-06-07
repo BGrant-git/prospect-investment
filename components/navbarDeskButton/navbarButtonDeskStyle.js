@@ -18,7 +18,7 @@ export const LinkStyle = styled.a`
 	letter-spacing: 0.15em;
 
 	display: inline-block;
-	padding: 10px 10px;
+	padding: 0 10px;
 	position: relative;
 
 	&:after {
