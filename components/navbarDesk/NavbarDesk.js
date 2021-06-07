@@ -1,20 +1,24 @@
-import NavbarButtonDesktop from '../navbarDeskButton/NavbarButtonDesk'
-
-import { Container, LogoContainer, LinkContainer } from './navbarDeskStyles'
+import Link from 'next/link'
 
 import NavbarButtonDesk from '../navbarDeskButton/NavbarButtonDesk'
-import Navbar from '../navbar/Navbar'
+
+import { Container, LogoContainer, LinkContainer } from './navbarDeskStyles'
 
 const NavbarDesk = () => {
 	return (
 		<Container>
 			<LogoContainer>
-				<h1>
-					PROSPECT <span style={{ color: 'white' }}>INVESTMENT</span>
-				</h1>
+				<Link href="/">
+					<h1>
+						PROSPECT <span style={{ color: '#1E90FF' }}>INVESTMENT</span>
+					</h1>
+				</Link>
 			</LogoContainer>
 			<LinkContainer>
-				<NavbarButtonDesk link={'/'} />
+				<NavbarButtonDesk link={'/'} page={'HOME'} />
+				<NavbarButtonDesk link={'/about'} page={'ABOUT'} />
+				<NavbarButtonDesk link={'/projects'} page={'PROJECTS'} />
+				<NavbarButtonDesk link={'/contact'} page={'CONTACT US'} />
 			</LinkContainer>
 		</Container>
 	)
