@@ -20,7 +20,7 @@ export const Title = styled.h1`
 
 export const CopySectionStyles = styled.div`
 	width: 100%;
-	margin: 10px auto;
+	margin: 50px auto 80px;
 	text-align: center;
 	font-size: 25px;
 `

@@ -6,10 +6,10 @@ import {
 	TextContainer,
 } from './bioCardDeskStyles'
 
-const BioCardDesk = ({ name, position, bioText, img, imgOnRight }) => {
+const BioCardDesk = ({ name, position, bioText, img, alignRight }) => {
 	return (
-		<Container align={imgOnRight ? 'right' : 'left'}>
-			{!imgOnRight ? (
+		<Container align={alignRight ? 'right' : 'left'}>
+			{!alignRight ? (
 				<ImageContainer>
 					<ImageStyles src={img} alt="" />
 				</ImageContainer>
@@ -21,7 +21,7 @@ const BioCardDesk = ({ name, position, bioText, img, imgOnRight }) => {
 					<BioTextStyles key={i}>{item}</BioTextStyles>
 				))}
 			</TextContainer>
-			{imgOnRight ? (
+			{alignRight ? (
 				<ImageContainer>
 					<ImageStyles src={img} alt="" />
 				</ImageContainer>

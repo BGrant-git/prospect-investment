@@ -19,7 +19,7 @@ const BioSection = () => {
 					position={item.position}
 					bioText={item.bioText}
 					img={item.img}
-					imgOnRight={item.imgOnRight}
+					alignRight={item.alignRight}
 					key={i}
 				/>
 			))}
