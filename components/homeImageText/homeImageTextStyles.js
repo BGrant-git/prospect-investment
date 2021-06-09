@@ -3,11 +3,9 @@ import styled from 'styled-components'
 export const Container = styled.div`
 	width: 450px;
 	height: 450px;
-	border: 5px solid white;
 	margin-right: 6%;
 	color: white;
 	border-radius: 3px;
-	background: rgba(0, 0, 0, 0.2);
 
 	@media (max-width: 855px) {
 		margin: auto;
@@ -42,10 +40,8 @@ export const Button = styled.button`
 	cursor: pointer;
 	border-radius: 3px;
 	transition: ease-out 0.3s;
-	box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0.3);
 
 	&:hover {
-		box-shadow: inset 250px 0 0 0 rgba(255, 255, 255, 0.5);
-		color: #303030;
+		background-color: rgba(0, 0, 0, 0.2);
 	}
 `

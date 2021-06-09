@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+import { landingText } from '../../public/text-files/homepageText'
+
 import {
 	Container,
 	TextContainer,
@@ -13,11 +15,8 @@ const HomeImageText = () => {
 	return (
 		<Container>
 			<TextContainer>
-				<Header>West London property investment and development</Header>
-				<SubHeader>
-					Potentially a bit more copy here, can say anything Lorem, ipsum dolor
-					sit amet consectetur adipisicing elit.
-				</SubHeader>
+				<Header>{landingText.heading}</Header>
+				<SubHeader>{landingText.subHeading}</SubHeader>
 			</TextContainer>
 			<ButtonContainer>
 				<Link href="/contact">
