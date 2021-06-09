@@ -26,7 +26,6 @@ export const Logo = styled.img`
 `
 
 export const LinkStyles = styled.a`
-	text-decoration: none;
 	display: flex;
 `
 

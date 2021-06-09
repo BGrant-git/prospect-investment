@@ -8,13 +8,11 @@ export const ButtonContainer = styled.div`
 export const ActiveButtonContainer = styled.div``
 
 export const LinkStyle = styled.a`
-	text-decoration: none;
 	cursor: pointer;
 	font-size: 22px;
 
 	color: black;
 	text-transform: uppercase;
-	text-decoration: none;
 	letter-spacing: 0.15em;
 
 	display: inline-block;
