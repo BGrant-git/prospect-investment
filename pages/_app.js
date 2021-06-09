@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
+import StoreContextProvider from '../context/context'
 import Layout from '../components/layout/Layout'
 
 import '@fontsource/sen'
@@ -15,10 +16,12 @@ const GlobalStyle = createGlobalStyle`
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<Layout>
-			<GlobalStyle />
-			<Component {...pageProps} />
-		</Layout>
+		<StoreContextProvider>
+			<Layout>
+				<GlobalStyle />
+				<Component {...pageProps} />
+			</Layout>
+		</StoreContextProvider>
 	)
 }
 
