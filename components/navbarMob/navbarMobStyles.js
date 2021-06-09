@@ -14,6 +14,5 @@ export const Logo = styled.img`
 `
 
 export const MobLink = styled.a`
-	text-decoration: none;
 	color: white;
 `

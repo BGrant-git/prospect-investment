@@ -17,7 +17,7 @@ export const hamburgerMenuStyles = {
 		width: '24px',
 	},
 	bmCross: {
-		background: '#bdc3c7',
+		background: 'white',
 	},
 	bmMenuWrap: {
 		position: 'fixed',

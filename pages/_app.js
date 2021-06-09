@@ -12,6 +12,10 @@ const GlobalStyle = createGlobalStyle`
 		box-sizing: border-box;
 		font-family: "Sen";
 	}
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
 	`
 
 function MyApp({ Component, pageProps }) {
