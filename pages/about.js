@@ -1,5 +1,11 @@
+import BioSection from '../components/bioSection/BioSection'
+
 const About = () => {
-	return <div>about</div>
+	return (
+		<>
+			<BioSection />
+		</>
+	)
 }
 
 export default About

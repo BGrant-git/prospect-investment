@@ -17,8 +17,6 @@ const MainSectionContainer = styled.div`
 	justify-content: flex-end;
 	align-items: center;
 
-	--main-colour: #009eef;
-
 	@media (max-width: 855px) {
 		background-position-x: 15%;
 		height: 600px;

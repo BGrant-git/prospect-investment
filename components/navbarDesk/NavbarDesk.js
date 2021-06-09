@@ -28,8 +28,9 @@ const NavbarDesk = () => {
 			<LinkContainer>
 				<NavbarButtonDesk link={'/'} page={'HOME'} />
 				<NavbarButtonDesk link={'/about'} page={'ABOUT'} />
+				<NavbarButtonDesk link={'/services'} page={'SERVICES'} />
 				<NavbarButtonDesk link={'/projects'} page={'PROJECTS'} />
-				<NavbarButtonDesk link={'/contact'} page={'CONTACT US'} />
+				<NavbarButtonDesk link={'/contact'} page={'CONTACT'} />
 			</LinkContainer>
 		</Container>
 	)

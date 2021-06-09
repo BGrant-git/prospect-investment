@@ -26,7 +26,10 @@ const NavbarMob = () => {
 					<MobLink className="menu-item" href="/about">
 						<h2>ABOUT</h2>
 					</MobLink>
-					<MobLink className="menu-item" href="/about">
+					<MobLink className="menu-item" href="/services">
+						<h2>ABOUT</h2>
+					</MobLink>
+					<MobLink className="menu-item" href="/projects">
 						<h2>PROJECTS</h2>
 					</MobLink>
 					<MobLink className="menu-item" href="/contact">

@@ -9,7 +9,7 @@ export const Container = styled.div`
 `
 
 export const LogoContainer = styled.div`
-	font-size: 20px;
+	font-size: 19px;
 	padding: 0 10px;
 	cursor: pointer;
 	line-height: 30px;

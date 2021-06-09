@@ -6,6 +6,9 @@ import Layout from '../components/layout/Layout'
 import '@fontsource/sen'
 
 const GlobalStyle = createGlobalStyle`
+	html {
+		--main-colour: #009eef;
+	}
   body {
 		margin: 0;
 		padding: 0;
