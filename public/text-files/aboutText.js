@@ -13,16 +13,15 @@ export const bioData = [
 		backgrounds in both finance	and property, Tom seeks to maximise investment returns.`,
 		],
 		img: require('../../public/images/about/man1.jpg'),
-		alignRight: false, // dictates layout of card component when viewed on desktop
 	},
 	{
 		name: `Matthew Rockwell`,
 		position: `Director`,
 		bioText: [
-			`Matthew is a Chartered Civil	Engineer and was Construction Director of	Frendcastle for 30 years. He was successful on numerous developments of 10 to 50 units of mid-market flats, houses and commercial, covering both new build and conversion. He took projects from planning through to sales of the units. Matthew brings his years of experience, industry contacts and project management skills to the team.`,
+			`Matthew is a Chartered Civil	Engineer and was Construction Director of	Frendcastle for 30 years. He was successful on numerous developments of 10 to 50 units of mid-market flats, houses and commercial, covering both new build and conversion. He took projects from planning through to sales of the units. `,
+			`Matthew brings his years of experience, industry contacts and project management skills to the team.`,
 		],
 		img: require('../../public/images/about/man2.jpg'),
-		alignRight: true,
 	},
 	{
 		name: `Anthony Wheaton`,
@@ -33,7 +32,6 @@ export const bioData = [
 			Residential developments in London have been Anthony’s focus for the past 15 years contributing to the growth of expertise in Prospect Investment.`,
 		],
 		img: require('../../public/images/about/man3.jpg'),
-		alignRight: false,
 	},
 	{
 		name: `Carwyn Beswick`,
@@ -43,6 +41,5 @@ export const bioData = [
 			`Most recently Carwyn has been advising and developing	in partnership with a number of UK Local Authorities with a	focus on carbon neutral MMC	residential.`,
 		],
 		img: require('../../public/images/about/man4.jpg'),
-		alignRight: true,
 	},
 ]
