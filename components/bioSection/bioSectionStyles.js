@@ -10,17 +10,18 @@ export const Container = styled.div`
 `
 
 export const TitleContainer = styled.div`
-	position: relative;
 	display: flex;
 	justify-content: center;
 `
 
 export const Title = styled.h1`
-	position: absolute;
 	text-align: center;
 	font-size: 50px;
 	width: 800px;
-	color: white;
+
+	@media (max-width: 855px) {
+		margin-top: 0;
+	}
 `
 
 export const CopySectionStyles = styled.div`
@@ -29,9 +30,17 @@ export const CopySectionStyles = styled.div`
 	text-align: center;
 	font-size: 25px;
 	z-index: 1;
+
+	@media (max-width: 855px) {
+		z-index: -1;
+		margin-top: 13%;
+	}
 `
 export const CopyText = styled.div`
-	background: #f2f2f2;
 	padding: 40px;
 	text-align: justify;
+
+	@media (max-width: 855px) {
+		padding: 50px 40px;
+	}
 `

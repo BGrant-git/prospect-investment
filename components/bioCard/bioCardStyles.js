@@ -1,9 +1,15 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-	margin: 20px 0;
+	margin: 20px 20px;
+	padding: 10px;
 	display: flex;
 	flex-direction: column;
+	height: 400px;
+
+	@media (max-width: 855px) {
+		height: auto;
+	}
 `
 
 export const ImageContainer = styled.div`
@@ -22,7 +28,7 @@ export const ImageStyles = styled.img`
 export const Title = styled.div`
 	margin: 0 10px 0;
 	line-height: 10px;
-	@media (max-width: 855px) {
+	@media (max-width: 1015px) {
 		line-height: 25px;
 	}
 `

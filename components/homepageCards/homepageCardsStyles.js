@@ -41,7 +41,6 @@ export const CardText = styled.div`
 	color: white;
 	border: 3px solid white;
 	background: rgba(0, 0, 0, 0.2);
-	border-radius: 3px;
 	padding: 0 10px;
 
 	@media (max-width: 855px) {
