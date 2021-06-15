@@ -25,7 +25,7 @@ const HomepageCards = () => {
 	return (
 		<Container>
 			<Grid container>
-				{cardData.map((item, i) => (
+				{cardData((item, i) => (
 					<Link href={item.link} key={i}>
 						<Grid item xs={6} md={3}>
 							<Card text={item.text} img={item.img} />
