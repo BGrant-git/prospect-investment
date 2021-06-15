@@ -20,7 +20,8 @@ const NavbarDesk = () => {
 					<LinkStyles style={{ textDecoration: 'none', display: 'flex' }}>
 						<Logo src={logoImg} alt="" />
 						<h1>
-							PROSPECT <span style={{ color: '#009eef' }}>INVESTMENT</span>
+							PROSPECT{' '}
+							<span style={{ color: 'var(--main-colour' }}>INVESTMENT</span>
 						</h1>
 					</LinkStyles>
 				</Link>
