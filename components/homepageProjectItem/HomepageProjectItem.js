@@ -1,8 +1,7 @@
-import { useContext } from 'react'
-import { StoreContext } from '../../context/context'
 import {
 	Container,
 	ImageStyle,
+	ProjectButton,
 	TextContainer,
 } from './homepageProjectItemStyles'
 
@@ -17,7 +16,9 @@ const HomepageProjectItem = ({ date, title, text, img, link }) => {
 				{text.map((item, i) => (
 					<p key={i}>{item}</p>
 				))}
-				<a href={link}>View project</a>
+				<ProjectButton>
+					<a href={link}>View project</a>
+				</ProjectButton>
 			</TextContainer>
 		</Container>
 	)

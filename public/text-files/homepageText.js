@@ -41,8 +41,8 @@ export const projectsData = [
 		link: ``,
 	},
 	{
-		title: `St Mary's Hall`,
-		date: `March 2021`,
+		title: `St Mark's Hall`,
+		date: `04/2021`,
 		text: [
 			`Middle section is empty, provides gardens for the lowest level flats and sufficient to satisfy the requirements for amenity space.
 			`,

@@ -1,5 +1,10 @@
 import HomepageProjectItem from '../homepageProjectItem/HomepageProjectItem'
-import { Container, ProjectsContainer, Title } from './homepageProjectsStyles'
+import {
+	Container,
+	ProjectsContainer,
+	Title,
+	Rule,
+} from './homepageProjectsStyles'
 import { projectsData } from '../../public/text-files/homepageText'
 
 const HomepageProjects = () => {
@@ -8,6 +13,7 @@ const HomepageProjects = () => {
 			<Title>
 				<h1>Featured Projects:</h1>
 			</Title>
+			<Rule />
 			<ProjectsContainer>
 				{projectsData.map((item, i) => (
 					<HomepageProjectItem

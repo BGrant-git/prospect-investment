@@ -20,3 +20,14 @@ export const ProjectsContainer = styled.div`
 		padding: 0;
 	}
 `
+
+export const Rule = styled.div`
+	height: 3px;
+	width: 600px;
+	background-color: var(--main-colour);
+	margin: auto;
+
+	@media (max-width: 855px) {
+		display: none;
+	}
+`
