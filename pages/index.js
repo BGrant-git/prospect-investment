@@ -1,8 +1,5 @@
 import Head from 'next/head'
-import { useEffect } from 'react'
 import styled from 'styled-components'
-import { motion, useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
 
 import HomeImageText from '../components/homeImageText/HomeImageText'
 import HomepageCards from '../components/homepageCards/HomepageCards'
@@ -28,27 +25,6 @@ const MainSectionContainer = styled.div`
 `
 
 const Index = () => {
-	const controls = useAnimation()
-
-	const { ref, inView } = useInView()
-
-	const boxVariants = {
-		hidden: { opacity: 0, translateY: '10%' },
-		visible: {
-			opacity: 1,
-			translateY: '0%',
-			transition: {
-				duration: 0.5,
-			},
-		},
-	}
-
-	useEffect(() => {
-		if (inView) {
-			controls.start('visible')
-		}
-	}, [controls, inView])
-
 	return (
 		<>
 			<Head>
@@ -63,14 +39,7 @@ const Index = () => {
 				<HomeImageText />
 			</MainSectionContainer>
 			<HomepageProjects />
-			<motion.div
-				ref={ref}
-				initial="hidden"
-				animate={controls}
-				variants={boxVariants}
-			>
-				<HomepageCards />
-			</motion.div>
+			<HomepageCards />
 		</>
 	)
 }
