@@ -6,8 +6,8 @@ import NavbarDesk from '../navbarDesk/NavbarDesk'
 import NavbarMob from '../navbarMob/NavbarMob'
 
 const Navbar = () => {
-	const { matches } = useContext(StoreContext)
-	return <>{matches ? <NavbarDesk /> : <NavbarMob />}</>
+	const { matchesMd } = useContext(StoreContext)
+	return <>{matchesMd ? <NavbarDesk /> : <NavbarMob />}</>
 }
 
 export default Navbar

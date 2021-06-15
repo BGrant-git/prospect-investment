@@ -3,7 +3,8 @@ import styled from 'styled-components'
 export const Container = styled.div`
 	display: flex;
 	justify-content: center;
-	margin: 40px;
+	margin: 20px auto;
+	max-width: 1200px;
 `
 
 export const CardContainer = styled.div`
@@ -13,7 +14,7 @@ export const CardContainer = styled.div`
 	transition: 0.2s ease-in-out;
 
 	&:hover {
-		transform: scale(1.1);
+		transform: scale(1.05);
 		z-index: 1;
 	}
 

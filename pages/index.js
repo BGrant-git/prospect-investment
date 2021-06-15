@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import HomeImageText from '../components/homeImageText/HomeImageText'
 import HomepageCards from '../components/homepageCards/HomepageCards'
+import HomepageProjects from '../components/homepageProjects/HomepageProjects'
 
 const homepageBackgroundImage = require('../public/images/homepage/homepageBackground.jpg')
 
@@ -37,6 +38,8 @@ const Index = () => {
 			<MainSectionContainer img={homepageBackgroundImage}>
 				<HomeImageText />
 			</MainSectionContainer>
+
+			<HomepageProjects />
 			<HomepageCards />
 		</>
 	)
