@@ -9,7 +9,7 @@ export const Container = styled.div`
 `
 
 export const LogoContainer = styled.div`
-	font-size: 20px;
+	font-size: 19px;
 	padding: 0 10px;
 	cursor: pointer;
 	line-height: 30px;
@@ -20,7 +20,7 @@ export const Logo = styled.img`
 	height: 70px;
 	margin: 3px 5px 0 0;
 
-	@media (max-width: 1146px) {
+	@media (max-width: 1247px) {
 		margin: 18px 5px 0 0;
 	}
 `

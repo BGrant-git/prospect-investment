@@ -5,7 +5,6 @@ export const Container = styled.div`
 	height: 450px;
 	margin-right: 6%;
 	color: white;
-	border-radius: 3px;
 
 	@media (max-width: 855px) {
 		margin: auto;
@@ -38,7 +37,6 @@ export const Button = styled.button`
 	font-family: inherit;
 	font-size: 22px;
 	cursor: pointer;
-	border-radius: 3px;
 	transition: ease-out 0.3s;
 
 	&:hover {
