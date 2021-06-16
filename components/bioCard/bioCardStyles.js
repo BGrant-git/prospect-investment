@@ -4,11 +4,12 @@ export const Container = styled.div`
 	margin: 20px 20px;
 	padding: 10px;
 	display: flex;
-	flex-direction: column;
-	height: 400px;
+	align-items: center;
+	max-width: 1000px;
 
 	@media (max-width: 855px) {
 		height: auto;
+		flex-direction: column;
 	}
 `
 
@@ -20,16 +21,18 @@ export const ImageContainer = styled.div`
 `
 
 export const ImageStyles = styled.img`
-	width: 100px;
-	height: 100px;
-	border-radius: 100px;
+	width: 200px;
+	height: 200px;
 `
 
-export const Title = styled.div`
+export const TitleContainer = styled.div`
 	margin: 0 10px 0;
-	line-height: 10px;
-	@media (max-width: 1015px) {
-		line-height: 25px;
+	line-height: 40px;
+	font-size: 130%;
+
+	@media (max-width: 855px) {
+		font-size: 100%;
+		line-height: 30px;
 	}
 `
 

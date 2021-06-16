@@ -4,7 +4,7 @@ import {
 	ImageContainer,
 	ImageStyles,
 	TextContainer,
-	Title,
+	TitleContainer,
 } from './bioCardStyles'
 
 const bioCard = ({ name, position, bioText, img }) => {
@@ -12,10 +12,10 @@ const bioCard = ({ name, position, bioText, img }) => {
 		<Container>
 			<ImageContainer>
 				<ImageStyles src={img} alt="" />
-				<Title>
+				<TitleContainer>
 					<h1>{name}</h1>
 					<h2>{position}</h2>
-				</Title>
+				</TitleContainer>
 			</ImageContainer>
 			<TextContainer>
 				{bioText.map((item, i) => (

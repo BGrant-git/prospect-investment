@@ -12,7 +12,7 @@ export const Container = styled.div`
 	@media (max-width: 855px) {
 		flex-direction: column;
 		justify-content: flex-start;
-		align-items: flex-start;
+		text-align: center;
 	}
 `
 

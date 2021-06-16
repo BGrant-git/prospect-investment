@@ -18,14 +18,12 @@ const BioSection = () => {
 			</TitleContainer>
 
 			<CopySectionStyles>
-				<Card square>
-					<CopyText>{aboutPageCopy}</CopyText>
-				</Card>
+				<CopyText>{aboutPageCopy}</CopyText>
 			</CopySectionStyles>
 
 			<Grid container>
 				{bioData.map((item, i) => (
-					<Grid item xs={12} md={6} key={i}>
+					<Grid item xs={12} key={i}>
 						<BioCard
 							name={item.name}
 							position={item.position}

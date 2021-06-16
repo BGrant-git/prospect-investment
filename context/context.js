@@ -8,7 +8,7 @@ const StoreContextProvider = ({ children }) => {
 	const matchesMd = useMediaQuery('(min-width:920px)')
 	const links = ['Home', 'About', 'Projects', 'Contact']
 
-	const boxVariants = {
+	const framerUpVariants = {
 		hidden: { opacity: 0, translateY: '10%' },
 		visible: {
 			opacity: 1,
@@ -19,8 +19,27 @@ const StoreContextProvider = ({ children }) => {
 		},
 	}
 
+	const framerLeftSlideVariants = {
+		hidden: { opacity: 0, translateX: '10%' },
+		visible: {
+			opacity: 1,
+			translateX: '0%',
+			transition: {
+				duration: 1,
+			},
+		},
+	}
+
 	return (
-		<StoreContext.Provider value={{ matchesSm, matchesMd, links, boxVariants }}>
+		<StoreContext.Provider
+			value={{
+				matchesSm,
+				matchesMd,
+				links,
+				framerUpVariants,
+				framerLeftSlideVariants,
+			}}
+		>
 			{children}
 		</StoreContext.Provider>
 	)

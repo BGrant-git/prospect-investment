@@ -26,7 +26,7 @@ const CardComponent = ({ text, img }) => {
 }
 
 const HomepageCards = () => {
-	const { boxVariants } = useContext(StoreContext)
+	const { framerUpVariants } = useContext(StoreContext)
 	const controls = useAnimation()
 
 	const { ref, inView } = useInView()
@@ -42,7 +42,7 @@ const HomepageCards = () => {
 			ref={ref}
 			initial="hidden"
 			animate={controls}
-			variants={boxVariants}
+			variants={framerUpVariants}
 		>
 			<Container>
 				<Grid container>
