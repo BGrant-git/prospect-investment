@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Card } from '@material-ui/core'
 
 export const Container = styled.div`
 	display: flex;
@@ -26,21 +25,18 @@ export const Title = styled.h1`
 
 export const CopySectionStyles = styled.div`
 	max-width: 900px;
-	margin: 150px auto 80px;
+	margin: 0 auto;
 	text-align: center;
-	font-size: 25px;
+	font-size: 20px;
 	z-index: 1;
 
 	@media (max-width: 855px) {
-		z-index: -1;
-		margin-top: 13%;
 	}
 `
 export const CopyText = styled.div`
-	padding: 40px;
+	padding: 10px;
 	text-align: justify;
 
 	@media (max-width: 855px) {
-		padding: 50px 40px;
 	}
 `

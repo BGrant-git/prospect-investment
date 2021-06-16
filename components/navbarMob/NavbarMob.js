@@ -14,7 +14,7 @@ const NavbarMob = () => {
 					<Logo src={logoImg} alt="" />
 					<div>
 						<h1>PROSPECT</h1>
-						<h1 style={{ color: '#009eef' }}>INVESTMENT</h1>
+						<h1 style={{ color: 'var(--main-colour' }}>INVESTMENT</h1>
 					</div>
 				</MobHeader>
 			</Link>
