@@ -13,6 +13,7 @@ const ContactForm = () => {
 	return (
 		<Container>
 			<h1>Contact Us</h1>
+			<h2>Send us a message</h2>
 			<FormStyle>
 				<Grid container>
 					<Grid item xs={12} md={4}>
@@ -51,10 +52,12 @@ const ContactForm = () => {
 								rows={8}
 								style={messageBoxStyle}
 							/>
-							<Button variant="contained" type="submit" style={buttonStyle}>
-								Submit
-							</Button>
 						</FormUnitContainer>
+					</Grid>
+					<Grid item xs={12}>
+						<Button variant="contained" type="submit" style={buttonStyle}>
+							Submit
+						</Button>
 					</Grid>
 				</Grid>
 			</FormStyle>

@@ -2,27 +2,31 @@ import styled from 'styled-components'
 import { TextField } from '@material-ui/core'
 
 export const Container = styled.div`
-	border: 1px solid black;
 	width: 1000px;
-	height: 400px;
+	height: 435px;
 	margin: 20px auto;
+	border: 1px solid black;
 
 	@media (max-width: 855px) {
 		margin: 10px 0;
 		width: 100%;
-		height: auto;
+		height: 670px;
 	}
 `
 
 export const FormStyle = styled.form`
 	display: flex;
+	margin-left: 10px;
+
+	@media (max-width: 855px) {
+		margin: 0;
+	}
 `
 
 export const FormUnitContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	justify-content: flex-end;
 `
 
 export const TextFieldWrapper = styled(TextField)(() => ({
@@ -43,4 +47,6 @@ export const buttonStyle = {
 	width: '300px',
 	height: '50px',
 	borderRadius: '0',
+	backgroundColor: 'var(--main-colour)',
+	color: 'white',
 }
