@@ -5,7 +5,6 @@ export const Container = styled.div`
 	width: 1000px;
 	height: 435px;
 	margin: 20px auto;
-	border: 1px solid black;
 
 	@media (max-width: 855px) {
 		margin: 10px 0;
@@ -32,6 +31,9 @@ export const FormUnitContainer = styled.div`
 export const TextFieldWrapper = styled(TextField)(() => ({
 	'& fieldset': {
 		borderRadius: '0px',
+	},
+	'& .MuiOutlinedInput-notchedOutline': {
+		borderColor: 'black',
 	},
 }))
 
