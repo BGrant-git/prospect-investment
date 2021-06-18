@@ -3,13 +3,14 @@ import { TextField } from '@material-ui/core'
 
 export const Container = styled.div`
 	width: 1000px;
-	height: 435px;
-	margin: 20px auto;
+	height: 380px;
+	margin: 0 auto 50px;
+	background: white;
 
-	@media (max-width: 855px) {
+	@media (max-width: 960px) {
 		margin: 10px 0;
 		width: 100%;
-		height: 670px;
+		height: 605px;
 	}
 `
 
@@ -17,7 +18,7 @@ export const FormStyle = styled.form`
 	display: flex;
 	margin-left: 10px;
 
-	@media (max-width: 855px) {
+	@media (max-width: 960px) {
 		margin: 0;
 	}
 `

@@ -12,7 +12,6 @@ import {
 const ContactForm = () => {
 	return (
 		<Container>
-			<h1>Contact Us</h1>
 			<h2>Send us a message</h2>
 			<FormStyle>
 				<Grid container>
