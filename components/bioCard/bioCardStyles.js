@@ -20,6 +20,7 @@ export const ImageContainer = styled.div`
 	margin: 0 20px 0;
 	background-color: var(--main-colour);
 	padding: 15px;
+	color: white;
 `
 
 export const ImageStyles = styled.img`

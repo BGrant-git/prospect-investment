@@ -25,11 +25,11 @@ export const Logo = styled.img`
 	}
 `
 
-export const LinkStyles = styled.a`
-	display: flex;
-`
-
 export const LinkContainer = styled.div`
 	display: flex;
 	margin-right: 1%;
+`
+
+export const LinkStyles = styled.a`
+	display: flex;
 `
