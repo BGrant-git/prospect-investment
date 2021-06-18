@@ -6,6 +6,7 @@ export const Container = styled.div`
 	height: 380px;
 	margin: 0 auto 50px;
 	background: white;
+	padding: 1px;
 
 	@media (max-width: 960px) {
 		margin: 10px 0;

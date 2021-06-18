@@ -27,8 +27,8 @@ function MyApp({ Component, pageProps }) {
 		<StoreContextProvider>
 			<Layout>
 				<AnimatePresence exitBeforeEnter>
-					<GlobalStyle />
 					<Component {...pageProps} />
+					<GlobalStyle />
 				</AnimatePresence>
 			</Layout>
 		</StoreContextProvider>

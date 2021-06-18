@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import styled from 'styled-components'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 import { StoreContext } from '../context/context'
 import ContactForm from '../components/contactForm/ContactForm'
@@ -22,19 +22,12 @@ const Contact = () => {
 	const { transVariants } = useContext(StoreContext)
 
 	return (
-		<AnimatePresence>
-			<motion.div
-				initial={transVariants.initial}
-				animate={transVariants.animate}
-				exit={transVariants.exit}
-				key="contact"
-			>
-				<Container backgroundImg={backgroundImg}>
-					<LocationComponent />
-					<ContactForm />
-				</Container>
-			</motion.div>
-		</AnimatePresence>
+		<motion.div initial="initial" animate="animate" variants={transVariants}>
+			<Container backgroundImg={backgroundImg}>
+				<LocationComponent />
+				<ContactForm />
+			</Container>
+		</motion.div>
 	)
 }
 

@@ -31,28 +31,23 @@ const Index = () => {
 	const { transVariants } = useContext(StoreContext)
 
 	return (
-		<AnimatePresence>
-			<motion.div
-				initial={transVariants.initial}
-				animate={transVariants.animate}
-			>
-				<div>
-					<Head>
-						<title>Prospect Investment</title>
-						<meta
-							name="Prospect Investment"
-							content="London Property Development."
-						/>
-						<link rel="icon" href="/favicon.ico" />
-					</Head>
-					<MainSectionContainer img={homepageBackgroundImage}>
-						<HomeImageText />
-					</MainSectionContainer>
-					<HomepageProjects />
-					<HomepageCards />
-				</div>
-			</motion.div>
-		</AnimatePresence>
+		<motion.div initial="initial" animate="animate" variants={transVariants}>
+			<div>
+				<Head>
+					<title>Prospect Investment</title>
+					<meta
+						name="Prospect Investment"
+						content="London Property Development."
+					/>
+					<link rel="icon" href="/favicon.ico" />
+				</Head>
+				<MainSectionContainer img={homepageBackgroundImage}>
+					<HomeImageText />
+				</MainSectionContainer>
+				<HomepageProjects />
+				<HomepageCards />
+			</div>
+		</motion.div>
 	)
 }
 
