@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import NavbarButtonDesk from '../navbarDeskButton/NavbarButtonDesk'
+import NavbarButtonDesk from '../navbarButtonDesk/NavbarButtonDesk'
 
 import {
 	Container,

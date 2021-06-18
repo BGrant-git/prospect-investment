@@ -46,7 +46,7 @@ export const messageBoxStyle = {
 
 export const buttonStyle = {
 	margin: '10px auto',
-	fontSize: '18px',
+	fontSize: '19px',
 	width: '300px',
 	height: '50px',
 	borderRadius: '0',

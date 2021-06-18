@@ -1,8 +1,11 @@
+import Link from 'next/link'
+import { Button } from '@material-ui/core'
+
 import {
 	Container,
 	ImageStyle,
-	ProjectButton,
 	TextContainer,
+	buttonStyle,
 } from './homepageProjectItemStyles'
 
 const HomepageProjectItem = ({ date, title, text, img, link }) => {
@@ -16,9 +19,9 @@ const HomepageProjectItem = ({ date, title, text, img, link }) => {
 				{text.map((item, i) => (
 					<p key={i}>{item}</p>
 				))}
-				<ProjectButton>
-					<a href={link}>View project</a>
-				</ProjectButton>
+				<Button variant="contained" type="submit" style={buttonStyle}>
+					<Link href={link}>view project</Link>
+				</Button>
 			</TextContainer>
 		</Container>
 	)

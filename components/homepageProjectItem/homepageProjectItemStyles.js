@@ -27,10 +27,13 @@ export const TextContainer = styled.div`
 	padding: 0 20px 0;
 `
 
-export const ProjectButton = styled.button`
-	background: black;
-	color: white;
-	border: none;
-	padding: 12px;
-	font-size: 17px;
-`
+export const buttonStyle = {
+	margin: '10px auto',
+	fontSize: '15px',
+	fontWeight: 'bold',
+	width: '150px',
+	height: '50px',
+	borderRadius: '0',
+	backgroundColor: 'var(--main-colour)',
+	color: 'white',
+}
