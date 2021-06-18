@@ -1,5 +1,8 @@
+import { useContext } from 'react'
 import styled from 'styled-components'
+import { motion, AnimatePresence } from 'framer-motion'
 
+import { StoreContext } from '../context/context'
 import ContactForm from '../components/contactForm/ContactForm'
 import LocationComponent from '../components/contactDetails/ContactDetails'
 
@@ -16,11 +19,22 @@ const Container = styled.div`
 `
 
 const Contact = () => {
+	const { transVariants } = useContext(StoreContext)
+
 	return (
-		<Container backgroundImg={backgroundImg}>
-			<LocationComponent />
-			<ContactForm />
-		</Container>
+		<AnimatePresence>
+			<motion.div
+				initial={transVariants.initial}
+				animate={transVariants.animate}
+				exit={transVariants.exit}
+				key="contact"
+			>
+				<Container backgroundImg={backgroundImg}>
+					<LocationComponent />
+					<ContactForm />
+				</Container>
+			</motion.div>
+		</AnimatePresence>
 	)
 }
 
