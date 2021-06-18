@@ -18,6 +18,8 @@ export const ImageContainer = styled.div`
 	justify-content: flex-start;
 	align-items: center;
 	margin: 0 20px 0;
+	background-color: var(--main-colour);
+	padding: 15px;
 `
 
 export const ImageStyles = styled.img`
@@ -29,6 +31,7 @@ export const TitleContainer = styled.div`
 	margin: 0 10px 0;
 	line-height: 40px;
 	font-size: 130%;
+	min-width: 250px;
 
 	@media (max-width: 855px) {
 		font-size: 100%;

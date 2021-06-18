@@ -13,7 +13,7 @@ const bioCard = ({ name, position, bioText, img }) => {
 			<ImageContainer>
 				<ImageStyles src={img} alt="" />
 				<TitleContainer>
-					<h1>{name}</h1>
+					<h1>{name.toUpperCase()}</h1>
 					<h2>{position}</h2>
 				</TitleContainer>
 			</ImageContainer>
