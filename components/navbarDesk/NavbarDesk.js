@@ -7,6 +7,7 @@ import {
 	Container,
 	LogoContainer,
 	Logo,
+	Styledh1,
 	LinkContainer,
 	LinkStyles,
 } from './navbarDeskStyles'
@@ -20,10 +21,10 @@ const NavbarDesk = () => {
 				<Link href="/">
 					<LinkStyles style={{ textDecoration: 'none', display: 'flex' }}>
 						<Logo src={logoImg} alt="" />
-						<h1>
+						<Styledh1>
 							PROSPECT{' '}
 							<span style={{ color: 'var(--main-colour' }}>INVESTMENT</span>
-						</h1>
+						</Styledh1>
 					</LinkStyles>
 				</Link>
 			</LogoContainer>
