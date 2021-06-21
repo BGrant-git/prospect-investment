@@ -5,13 +5,13 @@ import { StoreContext } from '../context/context'
 import ServicesComponent from '../components/servicesComponent/ServicesComponent'
 
 const Services = () => {
-	const { transVariants } = useContext(StoreContext)
+	const { transitionVariants } = useContext(StoreContext)
 
 	return (
 		<AnimatePresence exitBeforeEnter>
 			<motion.div
-				initial={transVariants.initial}
-				animate={transVariants.animate}
+				initial={transitionVariants.initial}
+				animate={transitionVariants.animate}
 			>
 				<ServicesComponent />
 			</motion.div>

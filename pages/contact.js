@@ -19,10 +19,14 @@ const Container = styled.div`
 `
 
 const Contact = () => {
-	const { transVariants } = useContext(StoreContext)
+	const { transitionVariants } = useContext(StoreContext)
 
 	return (
-		<motion.div initial="initial" animate="animate" variants={transVariants}>
+		<motion.div
+			initial="initial"
+			animate="animate"
+			variants={transitionVariants}
+		>
 			<Container backgroundImg={backgroundImg}>
 				<LocationComponent />
 				<ContactForm />

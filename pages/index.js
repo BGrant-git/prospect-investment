@@ -28,10 +28,14 @@ const MainSectionContainer = styled.div`
 `
 
 const Index = () => {
-	const { transVariants } = useContext(StoreContext)
+	const { transitionVariants } = useContext(StoreContext)
 
 	return (
-		<motion.div initial="initial" animate="animate" variants={transVariants}>
+		<motion.div
+			initial="initial"
+			animate="animate"
+			variants={transitionVariants}
+		>
 			<div>
 				<Head>
 					<title>Prospect Investment</title>

@@ -5,13 +5,13 @@ import { StoreContext } from '../context/context'
 import ProjectsComponent from '../components/projectsComponent/ProjectsComponent'
 
 const Projects = () => {
-	const { transVariants } = useContext(StoreContext)
+	const { transitionVariants } = useContext(StoreContext)
 
 	return (
 		<AnimatePresence exitBeforeEnter>
 			<motion.div
-				initial={transVariants.initial}
-				animate={transVariants.animate}
+				initial={transitionVariants.initial}
+				animate={transitionVariants.animate}
 			>
 				<ProjectsComponent />
 			</motion.div>
