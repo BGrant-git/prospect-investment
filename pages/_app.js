@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { AnimatePresence } from 'framer-motion'
 
 import StoreContextProvider from '../context/context'
 import Layout from '../components/layout/Layout'
@@ -25,8 +26,10 @@ function MyApp({ Component, pageProps }) {
 	return (
 		<StoreContextProvider>
 			<Layout>
-				<GlobalStyle />
-				<Component {...pageProps} />
+				<AnimatePresence exitBeforeEnter>
+					<Component {...pageProps} />
+					<GlobalStyle />
+				</AnimatePresence>
 			</Layout>
 		</StoreContextProvider>
 	)

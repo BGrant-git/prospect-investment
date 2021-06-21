@@ -8,6 +8,24 @@ const StoreContextProvider = ({ children }) => {
 	const matchesMd = useMediaQuery('(min-width:920px)')
 	const links = ['Home', 'About', 'Projects', 'Contact']
 
+	const transitionVariants = {
+		initial: {
+			opacity: 0,
+		},
+		animate: {
+			opacity: 1,
+			transition: {
+				duration: 0.4,
+			},
+		},
+		exit: {
+			opacity: 0,
+			transition: {
+				duration: 5,
+			},
+		},
+	}
+
 	const framerUpVariants = {
 		hidden: { opacity: 0, translateY: '10%' },
 		visible: {
@@ -36,6 +54,7 @@ const StoreContextProvider = ({ children }) => {
 				matchesSm,
 				matchesMd,
 				links,
+				transitionVariants,
 				framerUpVariants,
 				framerLeftSlideVariants,
 			}}

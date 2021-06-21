@@ -1,6 +1,9 @@
 import Head from 'next/head'
+import { useContext } from 'react'
 import styled from 'styled-components'
+import { motion, AnimatePresence } from 'framer-motion'
 
+import { StoreContext } from '../context/context'
 import HomeImageText from '../components/homeImageText/HomeImageText'
 import HomepageCards from '../components/homepageCards/HomepageCards'
 import HomepageProjects from '../components/homepageProjects/HomepageProjects'
@@ -25,22 +28,30 @@ const MainSectionContainer = styled.div`
 `
 
 const Index = () => {
+	const { transitionVariants } = useContext(StoreContext)
+
 	return (
-		<>
-			<Head>
-				<title>Prospect Investment</title>
-				<meta
-					name="Prospect Investment"
-					content="London Property Development."
-				/>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
-			<MainSectionContainer img={homepageBackgroundImage}>
-				<HomeImageText />
-			</MainSectionContainer>
-			<HomepageProjects />
-			<HomepageCards />
-		</>
+		<motion.div
+			initial="initial"
+			animate="animate"
+			variants={transitionVariants}
+		>
+			<div>
+				<Head>
+					<title>Prospect Investment</title>
+					<meta
+						name="Prospect Investment"
+						content="London Property Development."
+					/>
+					<link rel="icon" href="/favicon.ico" />
+				</Head>
+				<MainSectionContainer img={homepageBackgroundImage}>
+					<HomeImageText />
+				</MainSectionContainer>
+				<HomepageProjects />
+				<HomepageCards />
+			</div>
+		</motion.div>
 	)
 }
 
