@@ -18,9 +18,11 @@ export const Logo = styled.img`
 	min-width: 70px;
 	height: 70px;
 	margin: 3px 5px 0 0;
+`
 
+export const Styledh1 = styled.h1`
 	@media (max-width: 1247px) {
-		margin: 18px 5px 0 0;
+		margin: 14px 5px 0 0;
 	}
 `
 
