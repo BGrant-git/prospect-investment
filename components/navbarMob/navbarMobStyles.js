@@ -13,6 +13,9 @@ export const Logo = styled.img`
 	margin: 5px 5px 0 7px;
 `
 
-export const MobLink = styled.a`
+export const LinkContainer = styled.div`
+	border: 3px white;
+	border-left-style: solid;
+	padding-left: 10px;
 	color: white;
 `

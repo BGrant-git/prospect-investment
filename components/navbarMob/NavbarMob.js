@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { slide as Menu } from 'react-burger-menu'
 
-import { MobLink, MobHeader, Logo } from './navbarMobStyles'
+import { MobHeader, Logo, LinkContainer } from './navbarMobStyles'
 import { hamburgerMenuStyles } from './hamburgerMenuStyles'
 
 const logoImg = require('../../public/images/Logo/logo.png')
@@ -20,21 +20,40 @@ const NavbarMob = () => {
 			</Link>
 			<Menu right styles={hamburgerMenuStyles}>
 				<div>
-					<MobLink className="menu-item" href="/">
-						<h2>HOME</h2>
-					</MobLink>
-					<MobLink className="menu-item" href="/about">
-						<h2>ABOUT</h2>
-					</MobLink>
-					<MobLink className="menu-item" href="/services">
-						<h2>ABOUT</h2>
-					</MobLink>
-					<MobLink className="menu-item" href="/projects">
-						<h2>PROJECTS</h2>
-					</MobLink>
-					<MobLink className="menu-item" href="/contact">
-						<h2>CONTACT US</h2>
-					</MobLink>
+					<LinkContainer>
+						<a className="menu-item" href="/">
+							<h2>HOME</h2>
+						</a>
+					</LinkContainer>
+					<LinkContainer>
+						<a className="menu-item" href="/about">
+							<h2>ABOUT</h2>
+						</a>
+					</LinkContainer>
+
+					<LinkContainer>
+						<a className="menu-item" href="/services">
+							<h2>ABOUT</h2>
+						</a>
+					</LinkContainer>
+
+					<LinkContainer>
+						<a className="menu-item" href="/projects">
+							<h2>PROJECTS</h2>
+						</a>
+						<a className="menu-item" href="/projects">
+							<h3>- COMPLETED</h3>
+						</a>
+						<a className="menu-item" href="/projects">
+							<h3>- IN PROGRESS</h3>
+						</a>
+					</LinkContainer>
+
+					<LinkContainer>
+						<a className="menu-item" href="/contact">
+							<h2>CONTACT US</h2>
+						</a>
+					</LinkContainer>
 				</div>
 			</Menu>
 		</>
