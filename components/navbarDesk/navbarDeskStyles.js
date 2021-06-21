@@ -4,7 +4,6 @@ export const Container = styled.div`
 	width: 100%;
 	height: 80px;
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
 `
 
@@ -28,6 +27,8 @@ export const Logo = styled.img`
 export const LinkContainer = styled.div`
 	display: flex;
 	margin-right: 1%;
+
+	padding-top: 25px;
 `
 
 export const LinkStyles = styled.a`
