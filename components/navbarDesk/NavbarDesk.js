@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import NavbarButtonDesk from '../navbarButtonDesk/NavbarButtonDesk'
+import NavDropdown from '../navDropdown/NavDropdown'
 
 import {
 	Container,
@@ -30,7 +31,7 @@ const NavbarDesk = () => {
 				<NavbarButtonDesk link={'/'} page={'HOME'} />
 				<NavbarButtonDesk link={'/about'} page={'ABOUT'} />
 				<NavbarButtonDesk link={'/services'} page={'SERVICES'} />
-				<NavbarButtonDesk link={'/projects'} page={'PROJECTS'} />
+				<NavDropdown />
 				<NavbarButtonDesk link={'/contact'} page={'CONTACT'} />
 			</LinkContainer>
 		</Container>

@@ -2,10 +2,7 @@ import styled from 'styled-components'
 
 export const ButtonContainer = styled.div`
 	margin: 0 10px;
-	text-align: center;
 `
-
-export const ActiveButtonContainer = styled.div``
 
 export const LinkStyle = styled.a`
 	cursor: pointer;
