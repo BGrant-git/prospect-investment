@@ -20,6 +20,7 @@ const BioSection = () => {
 
 			<CopyComponent />
 
+			<h2>The Team</h2>
 			<Grid container>
 				{bioData.map((item, i) => (
 					<Grid item xs={12} key={i}>
