@@ -22,16 +22,23 @@ const GlobalStyle = createGlobalStyle`
 		text-decoration: none;
 		color: inherit;
 	}
+	div {
+		border-radius: 5px;
+	}
+	img {
+		border-radius: 5px;
+	}
+	button {
+		border-radius: 5px;
+	}
 	`
 
 function MyApp({ Component, pageProps }) {
 	return (
 		<StoreContextProvider>
 			<Layout>
-				<AnimatePresence exitBeforeEnter>
-					<Component {...pageProps} />
-					<GlobalStyle />
-				</AnimatePresence>
+				<Component {...pageProps} />
+				<GlobalStyle />
 			</Layout>
 		</StoreContextProvider>
 	)

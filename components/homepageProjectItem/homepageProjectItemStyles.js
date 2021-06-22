@@ -33,7 +33,6 @@ export const buttonStyle = {
 	fontWeight: 'bold',
 	width: '150px',
 	height: '50px',
-	borderRadius: '0',
 	backgroundColor: 'var(--main-colour)',
 	color: 'white',
 }

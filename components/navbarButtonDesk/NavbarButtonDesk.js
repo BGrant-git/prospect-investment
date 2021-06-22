@@ -6,7 +6,9 @@ const NavbarButtonsDesk = ({ link, isActive, page }) => {
 	return (
 		<ButtonContainer>
 			<Link href={link}>
-				<LinkStyle>{page}</LinkStyle>
+				<LinkStyle style={isActive ? { color: 'var(--main-colour)' } : null}>
+					{page}
+				</LinkStyle>
 			</Link>
 		</ButtonContainer>
 	)

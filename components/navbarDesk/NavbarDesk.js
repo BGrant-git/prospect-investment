@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import NavbarButtonDesk from '../navbarButtonDesk/NavbarButtonDesk'
 import NavDropdown from '../navDropdown/NavDropdown'
@@ -15,6 +16,8 @@ import {
 const logoImg = require('../../public/images/Logo/logo.png')
 
 const NavbarDesk = () => {
+	const router = useRouter()
+
 	return (
 		<Container>
 			<LogoContainer>
@@ -29,11 +32,27 @@ const NavbarDesk = () => {
 				</Link>
 			</LogoContainer>
 			<LinkContainer>
-				<NavbarButtonDesk link={'/'} page={'HOME'} />
-				<NavbarButtonDesk link={'/about'} page={'ABOUT'} />
-				<NavbarButtonDesk link={'/services'} page={'SERVICES'} />
-				<NavDropdown />
-				<NavbarButtonDesk link={'/contact'} page={'CONTACT'} />
+				<NavbarButtonDesk
+					link={'/'}
+					page={'HOME'}
+					isActive={router.pathname == '/' ? true : false}
+				/>
+				<NavbarButtonDesk
+					link={'/about'}
+					page={'ABOUT'}
+					isActive={router.pathname == '/about' ? true : false}
+				/>
+				<NavbarButtonDesk
+					link={'/services'}
+					page={'SERVICES'}
+					isActive={router.pathname == '/services' ? true : false}
+				/>
+				<NavDropdown isActive={router.pathname == '/projects' ? true : false} />
+				<NavbarButtonDesk
+					link={'/contact'}
+					page={'CONTACT'}
+					isActive={router.pathname == '/contact' ? true : false}
+				/>
 			</LinkContainer>
 		</Container>
 	)

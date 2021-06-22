@@ -12,6 +12,7 @@ const Services = () => {
 			<motion.div
 				initial={transitionVariants.initial}
 				animate={transitionVariants.animate}
+				key="services"
 			>
 				<ServicesComponent />
 			</motion.div>

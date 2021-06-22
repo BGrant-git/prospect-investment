@@ -31,9 +31,9 @@ export const FormUnitContainer = styled.div`
 `
 
 export const TextFieldWrapper = styled(TextField)(() => ({
-	'& fieldset': {
-		borderRadius: '0px',
-	},
+	// '& fieldset': {
+	// 	borderRadius: '0px',
+	// },
 	'& .MuiOutlinedInput-notchedOutline': {
 		borderColor: 'black',
 	},
@@ -50,7 +50,6 @@ export const buttonStyle = {
 	fontSize: '19px',
 	width: '300px',
 	height: '50px',
-	borderRadius: '0',
 	backgroundColor: 'var(--main-colour)',
 	color: 'white',
 }
