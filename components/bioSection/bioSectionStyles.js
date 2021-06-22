@@ -19,7 +19,14 @@ export const Title = styled.h1`
 
 	@media (max-width: 855px) {
 		margin-top: 0;
+		width: auto;
+		font-size: 45px;
 	}
+`
+
+export const SubTitle = styled.h1`
+	margin: 40px auto;
+	font-size: 40px;
 `
 
 export const CenterRule = styled.div`

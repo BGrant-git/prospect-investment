@@ -7,8 +7,10 @@ import {
 	Title,
 	TitleContainer,
 	CenterRule,
+	SubTitle,
 } from './bioSectionStyles'
 import { bioData } from '../../public/text-files/aboutText'
+import { aboutPageCopy } from '../../public/text-files/aboutText'
 
 const BioSection = () => {
 	return (
@@ -20,7 +22,8 @@ const BioSection = () => {
 
 			<CopyComponent />
 
-			<h2>The Team</h2>
+			<SubTitle>The Team</SubTitle>
+			<CenterRule />
 			<Grid container>
 				{bioData.map((item, i) => (
 					<Grid item xs={12} key={i}>

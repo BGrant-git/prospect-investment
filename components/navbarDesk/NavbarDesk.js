@@ -19,7 +19,7 @@ const NavbarDesk = () => {
 		<Container>
 			<LogoContainer>
 				<Link href="/">
-					<LinkStyles style={{ textDecoration: 'none', display: 'flex' }}>
+					<LinkStyles>
 						<Logo src={logoImg} alt="" />
 						<Styledh1>
 							PROSPECT{' '}

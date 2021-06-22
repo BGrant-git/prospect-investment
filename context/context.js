@@ -5,7 +5,7 @@ export const StoreContext = createContext()
 
 const StoreContextProvider = ({ children }) => {
 	const matchesSm = useMediaQuery('(min-width: 855px)')
-	const matchesMd = useMediaQuery('(min-width:920px)')
+	const matchesMd = useMediaQuery('(min-width:955px)')
 	const links = ['Home', 'About', 'Projects', 'Contact']
 
 	const transitionVariants = {
