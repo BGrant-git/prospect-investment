@@ -35,6 +35,7 @@ const Index = () => {
 			initial="initial"
 			animate="animate"
 			variants={transitionVariants}
+			key="index"
 		>
 			<div>
 				<Head>

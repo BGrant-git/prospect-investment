@@ -37,10 +37,8 @@ function MyApp({ Component, pageProps }) {
 	return (
 		<StoreContextProvider>
 			<Layout>
-				<AnimatePresence exitBeforeEnter>
-					<Component {...pageProps} />
-					<GlobalStyle />
-				</AnimatePresence>
+				<Component {...pageProps} />
+				<GlobalStyle />
 			</Layout>
 		</StoreContextProvider>
 	)

@@ -12,6 +12,7 @@ const Projects = () => {
 			<motion.div
 				initial={transitionVariants.initial}
 				animate={transitionVariants.animate}
+				key="projects"
 			>
 				<ProjectsComponent />
 			</motion.div>
