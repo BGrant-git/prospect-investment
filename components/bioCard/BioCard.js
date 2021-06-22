@@ -5,11 +5,12 @@ import {
 	ImageStyles,
 	TextContainer,
 	TitleContainer,
+	VerticalRule,
 } from './bioCardStyles'
 
 const bioCard = ({ name, position, bioText, img }) => {
 	return (
-		<Container>
+		<Container square>
 			<ImageContainer>
 				<ImageStyles src={img} alt="" />
 				<TitleContainer>
@@ -17,6 +18,7 @@ const bioCard = ({ name, position, bioText, img }) => {
 					<h2>{position}</h2>
 				</TitleContainer>
 			</ImageContainer>
+
 			<TextContainer>
 				{bioText.map((item, i) => (
 					<BioTextStyles key={i}>{item}</BioTextStyles>

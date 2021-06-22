@@ -1,7 +1,8 @@
-export const aboutPageCopy = [
-	`Over the past 15	years we have built	our business organically,	investing our own money to create
+export const aboutPageCopy = {
+	heading: `Catchy Heading`,
+	text: `Over the past 15	years we have built	our business organically,	investing our own money to create
 	high quality new homes across London. Our specialty is finding innovative planning solutions for challenging sites.`,
-]
+}
 
 export const bioData = [
 	{

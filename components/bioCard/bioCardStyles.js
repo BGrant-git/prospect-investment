@@ -1,11 +1,13 @@
 import styled from 'styled-components'
+import { Card } from '@material-ui/core'
 
-export const Container = styled.div`
-	margin: 20px 20px;
+export const Container = styled(Card)`
+	margin: 20px auto;
 	padding: 10px;
 	display: flex;
 	align-items: center;
 	max-width: 1000px;
+	background-color: white;
 
 	@media (max-width: 855px) {
 		height: auto;
@@ -31,6 +33,8 @@ export const TitleContainer = styled.div`
 	line-height: 40px;
 	font-size: 130%;
 	min-width: 250px;
+	border: 3px black;
+	border-right-style: solid;
 
 	@media (max-width: 855px) {
 		font-size: 100%;
