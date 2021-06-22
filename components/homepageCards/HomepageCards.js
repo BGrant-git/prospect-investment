@@ -28,7 +28,6 @@ const CardComponent = ({ text, img }) => {
 const HomepageCards = () => {
 	const { framerUpVariants } = useContext(StoreContext)
 	const controls = useAnimation()
-
 	const { ref, inView } = useInView()
 
 	useEffect(() => {

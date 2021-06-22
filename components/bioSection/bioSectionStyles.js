@@ -9,8 +9,7 @@ export const Container = styled.div`
 `
 
 export const TitleContainer = styled.div`
-	display: flex;
-	justify-content: center;
+	margin: auto;
 `
 
 export const Title = styled.h1`
@@ -20,23 +19,19 @@ export const Title = styled.h1`
 
 	@media (max-width: 855px) {
 		margin-top: 0;
+		width: auto;
+		font-size: 45px;
 	}
 `
 
-export const CopySectionStyles = styled.div`
-	max-width: 900px;
-	margin: 0 auto;
-	text-align: center;
-	font-size: 20px;
-	z-index: 1;
-
-	@media (max-width: 855px) {
-	}
+export const SubTitle = styled.h1`
+	margin: 40px auto;
+	font-size: 40px;
 `
-export const CopyText = styled.div`
-	padding: 10px;
-	text-align: justify;
 
-	@media (max-width: 855px) {
-	}
+export const CenterRule = styled.div`
+	background-color: black;
+	width: 60px;
+	height: 3px;
+	margin: -30px auto 15px;
 `

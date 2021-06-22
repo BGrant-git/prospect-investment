@@ -5,7 +5,7 @@ export const StoreContext = createContext()
 
 const StoreContextProvider = ({ children }) => {
 	const matchesSm = useMediaQuery('(min-width: 855px)')
-	const matchesMd = useMediaQuery('(min-width:920px)')
+	const matchesMd = useMediaQuery('(min-width:955px)')
 	const links = ['Home', 'About', 'Projects', 'Contact']
 
 	const transitionVariants = {
@@ -48,6 +48,17 @@ const StoreContextProvider = ({ children }) => {
 		},
 	}
 
+	const framerRightSlideVariants = {
+		hidden: { opacity: 0, translateX: '-10%' },
+		visible: {
+			opacity: 1,
+			translateX: '0%',
+			transition: {
+				duration: 1,
+			},
+		},
+	}
+
 	return (
 		<StoreContext.Provider
 			value={{
@@ -57,6 +68,7 @@ const StoreContextProvider = ({ children }) => {
 				transitionVariants,
 				framerUpVariants,
 				framerLeftSlideVariants,
+				framerRightSlideVariants,
 			}}
 		>
 			{children}

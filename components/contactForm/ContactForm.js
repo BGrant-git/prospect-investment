@@ -17,7 +17,6 @@ const ContactForm = () => {
 
 	return (
 		<motion.div initial="hidden" animate="visible" variants={framerUpVariants}>
-			>
 			<Container>
 				<h2>Send us a message</h2>
 				<FormStyle>

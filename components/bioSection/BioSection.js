@@ -1,26 +1,29 @@
 import BioCard from '../bioCard/BioCard'
-import { Grid, Card } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 
+import CopyComponent from '../copyComponent/CopyComponent'
 import {
 	Container,
-	CopySectionStyles,
-	CopyText,
 	Title,
 	TitleContainer,
+	CenterRule,
+	SubTitle,
 } from './bioSectionStyles'
-import { aboutPageCopy, bioData } from '../../public/text-files/aboutText'
+import { bioData } from '../../public/text-files/aboutText'
+import { aboutPageCopy } from '../../public/text-files/aboutText'
 
 const BioSection = () => {
 	return (
 		<Container>
 			<TitleContainer>
 				<Title>WHO WE ARE</Title>
+				<CenterRule />
 			</TitleContainer>
 
-			<CopySectionStyles>
-				<CopyText>{aboutPageCopy}</CopyText>
-			</CopySectionStyles>
+			<CopyComponent />
 
+			<SubTitle>The Team</SubTitle>
+			<CenterRule />
 			<Grid container>
 				{bioData.map((item, i) => (
 					<Grid item xs={12} key={i}>
