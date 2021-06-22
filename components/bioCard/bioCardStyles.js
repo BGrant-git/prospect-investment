@@ -35,6 +35,7 @@ export const TitleContainer = styled.div`
 	min-width: 250px;
 	border: 3px black;
 	border-right-style: ${(props) => props.border};
+	border-radius: 0;
 
 	@media (max-width: 855px) {
 		font-size: 90%;
