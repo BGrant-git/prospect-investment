@@ -1,8 +1,10 @@
 import { useContext } from 'react'
 import { motion } from 'framer-motion'
 
-import { StoreContext } from '../context/context'
+import { StoreContext, CenterRule } from '../context/context'
 import BioSection from '../components/bioSection/BioSection'
+import CopyComponent from '../components/copyComponent/CopyComponent'
+import { Container, TitleContainer, Title } from './pages-styles/aboutStyles'
 
 const About = () => {
 	const { transitionVariants } = useContext(StoreContext)
@@ -13,7 +15,14 @@ const About = () => {
 			animate="animate"
 			variants={transitionVariants}
 		>
-			<BioSection />
+			<Container>
+				<TitleContainer>
+					<Title>WHO WE ARE</Title>
+					<CenterRule />
+				</TitleContainer>
+				<CopyComponent />
+				<BioSection />
+			</Container>
 		</motion.div>
 	)
 }

@@ -2,16 +2,10 @@ import { useContext } from 'react'
 import { motion } from 'framer-motion'
 
 import { StoreContext } from '../../context/context'
-import { aboutPageCopy, bioData } from '../../public/text-files/aboutText'
+import { aboutPageCopy } from '../../public/text-files/aboutText'
 
-import {
-	RowStyle,
-	TextContainer,
-	Text,
-	ImgStyle,
-	LeftRule,
-	RightRule,
-} from './copyComponentStyles'
+import { RowStyle, TextContainer, Text, ImgStyle } from './copyComponentStyles'
+import { LeftRule, RightRule } from '../../context/context'
 
 const CopyComponent = () => {
 	const { framerLeftSlideVariants, framerRightSlideVariants } =

@@ -8,7 +8,18 @@ export const Container = styled.div`
 	margin: auto;
 `
 
+export const TitleContainer = styled.div`
+	margin: auto;
+`
+
 export const Title = styled.h1`
-	margin: 40px auto;
-	font-size: 40px;
+	text-align: center;
+	font-size: 50px;
+	width: 800px;
+
+	@media (max-width: 855px) {
+		margin-top: 0;
+		width: auto;
+		font-size: 45px;
+	}
 `

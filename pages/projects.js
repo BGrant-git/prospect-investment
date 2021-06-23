@@ -1,22 +1,27 @@
 import { useContext } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 
-import { StoreContext } from '../context/context'
-import ProjectsComponent from '../components/projectsComponent/ProjectsComponent'
+import ProjectComponent from '../components/projectComponent/ProjectComponent'
+
+import { StoreContext, CenterRule } from '../context/context'
+import { Container, Title, SubTitle } from './pages-styles/projectsStyles'
 
 const Projects = () => {
 	const { transitionVariants } = useContext(StoreContext)
 
 	return (
-		<AnimatePresence exitBeforeEnter>
-			<motion.div
-				initial={transitionVariants.initial}
-				animate={transitionVariants.animate}
-				key="projects"
-			>
-				<ProjectsComponent />
-			</motion.div>
-		</AnimatePresence>
+		<motion.div
+			initial={transitionVariants.initial}
+			animate={transitionVariants.animate}
+			key="projects"
+		>
+			<Container>
+				<Title>Projects</Title>
+				<CenterRule />
+				<SubTitle>Completed</SubTitle>
+				<ProjectComponent />
+			</Container>
+		</motion.div>
 	)
 }
 
