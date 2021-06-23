@@ -23,7 +23,7 @@ export const MiddleSection = styled.div`
 export const BottomSection = styled.div`
 	width: 100%;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: center;
 `
 

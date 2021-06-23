@@ -4,7 +4,11 @@ import { motion } from 'framer-motion'
 import ProjectComponent from '../components/projectComponent/ProjectComponent'
 
 import { StoreContext, CenterRule } from '../context/context'
-import { Container, Title, SubTitle } from './pages-styles/projectsStyles'
+import {
+	Container,
+	Title,
+	SubTitle,
+} from '../components/pages-styles/projectsStyles'
 
 const Projects = () => {
 	const { transitionVariants } = useContext(StoreContext)

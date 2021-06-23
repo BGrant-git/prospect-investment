@@ -4,7 +4,11 @@ import { motion } from 'framer-motion'
 import { StoreContext, CenterRule } from '../context/context'
 import BioSection from '../components/bioSection/BioSection'
 import CopyComponent from '../components/copyComponent/CopyComponent'
-import { Container, TitleContainer, Title } from './pages-styles/aboutStyles'
+import {
+	Container,
+	TitleContainer,
+	Title,
+} from '../components/pages-styles/aboutStyles'
 
 const About = () => {
 	const { transitionVariants } = useContext(StoreContext)

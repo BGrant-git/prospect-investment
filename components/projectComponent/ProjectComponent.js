@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 
+import TimelineComponent from '../timelineComponent/TimelineComponent'
 import {
 	Container,
 	Title,
@@ -28,14 +29,17 @@ const ProjectComponent = () => {
 				<StyledImg src={testProject.img0} alt="" />
 			</TopSection>
 			<MiddleSection>
-				<StyledImg src={testProject.img1} alt="" />
-
 				<TextContainer>
 					<SubTitle>{testProject.subHeader}</SubTitle>
 					<StyledP>{testProject.text1}</StyledP>
 				</TextContainer>
+				<StyledImg src={testProject.img1} alt="" />
 			</MiddleSection>
-			<BottomSection></BottomSection>
+			<BottomSection>
+				{testProject.timeline.map((item, i) => (
+					<TimelineComponent date={item.date} text={item.text} key={i} />
+				))}
+			</BottomSection>
 		</Container>
 	)
 }
