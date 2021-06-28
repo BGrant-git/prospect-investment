@@ -18,6 +18,7 @@ const About = () => {
 			initial="initial"
 			animate="animate"
 			variants={transitionVariants}
+			key="about"
 		>
 			<Container>
 				<TitleContainer>

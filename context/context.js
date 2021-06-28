@@ -68,6 +68,7 @@ const StoreContextProvider = ({ children }) => {
 			translateX: '0%',
 			transition: {
 				duration: 1,
+				staggerChildren: 1,
 			},
 		},
 	}
@@ -83,6 +84,19 @@ const StoreContextProvider = ({ children }) => {
 		},
 	}
 
+	const framerStaggerVariants = {
+		container: {
+			hidden: { opacity: 0 },
+			show: {
+				opacity: 1,
+				transition: {
+					staggerChildren: 0.5,
+				},
+			},
+		},
+		item: { hidden: { opacity: 0 }, show: { opacity: 1 } },
+	}
+
 	return (
 		<StoreContext.Provider
 			value={{
@@ -93,6 +107,7 @@ const StoreContextProvider = ({ children }) => {
 				framerUpVariants,
 				framerLeftSlideVariants,
 				framerRightSlideVariants,
+				framerStaggerVariants,
 			}}
 		>
 			{children}
