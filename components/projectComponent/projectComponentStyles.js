@@ -12,6 +12,15 @@ export const Container = styled.div`
 	&:hover {
 		transform: scale(1.01);
 	}
+
+	@media (max-width: 855px) {
+		flex-direction: column;
+		max-height: unset;
+
+		&:hover {
+			transform: none;
+		}
+	}
 `
 
 export const Title = styled.h1`
@@ -37,5 +46,9 @@ export const StyledP = styled.p`
 export const StyledImg = styled.img`
 	height: 250px;
 	width: auto;
-	border-radius: 0px 5px 5px 0px;
+	border-radius: 0 5px 5px 0;
+
+	@media (max-width: 855px) {
+		border-radius: 0 0 5px 5px;
+	}
 `
