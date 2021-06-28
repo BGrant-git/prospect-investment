@@ -4,15 +4,20 @@ export const Container = styled.div`
 	display: flex;
 	margin: 20px auto;
 	max-width: 1200px;
+	max-height: 250px;
 	background-color: var(--faded-main-colour);
-	padding: 5px 5px;
+	cursor: pointer;
+	transition: 0.1s ease-in-out;
+
+	&:hover {
+		transform: scale(1.01);
+	}
 `
 
 export const Title = styled.h1`
 	font-size: 35px;
+	margin-top: 10px;
 `
-
-export const SubTitle = styled.h2``
 
 export const TextContainer = styled.div`
 	display: flex;
@@ -20,9 +25,17 @@ export const TextContainer = styled.div`
 	padding: 10px 20px;
 `
 
-export const StyledP = styled.p``
+export const StyledUl = styled.ul`
+	list-style-type: square;
+	margin-left: -15px;
+`
+
+export const StyledP = styled.p`
+	font-size: 20px;
+`
 
 export const StyledImg = styled.img`
-	height: 200px;
+	height: 250px;
 	width: auto;
+	border-radius: 0px 5px 5px 0px;
 `

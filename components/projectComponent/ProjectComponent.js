@@ -1,23 +1,26 @@
-import { motion } from 'framer-motion'
-import { useContext } from 'react'
-
 import {
 	Container,
 	Title,
 	StyledImg,
 	TextContainer,
 	StyledP,
+	StyledUl,
 } from './projectComponentStyles'
-import { LeftRule, StoreContext } from '../../context/context'
+import { LeftRule } from '../../context/context'
 
 const ProjectComponent = ({ title, text, img }) => {
-	const { framerLeftSlideVariants } = useContext(StoreContext)
 	return (
 		<Container>
 			<TextContainer>
 				<Title>{title}</Title>
 				<LeftRule />
-				<StyledP>{text}</StyledP>
+				<StyledUl>
+					{text.map((item, i) => (
+						<li key={i}>
+							<StyledP>{item}</StyledP>
+						</li>
+					))}
+				</StyledUl>
 			</TextContainer>
 			<StyledImg src={img} alt="" />
 		</Container>

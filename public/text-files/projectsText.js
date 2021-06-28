@@ -3,35 +3,53 @@ export const projectsLinks = [
 		// completed
 		{
 			title: `Project One`,
-			text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium magni est laborum, natus quos ex nemo minus voluptatibus pariatur.`,
+			text: [
+				`Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium magni est laborum.`,
+				` natus quos ex nemo minus voluptatibus pariatur.`,
+			],
 			img: require('../images/projects/project1/project1.jpg'),
 		},
 		{
 			title: `Project Two`,
-			text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium magni est laborum, natus quos ex nemo minus voluptatibus pariatur.`,
-			img: require('../images/projects/project1/project1.jpg'),
+			text: [
+				`Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium magni est laborum.`,
+				` natus quos ex nemo minus voluptatibus pariatur.`,
+			],
+			img: require('../images/projects/project1/project3.jpg'),
 		},
 		{
 			title: `Project Three`,
-			text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium magni est laborum, natus quos ex nemo minus voluptatibus pariatur.`,
-			img: require('../images/projects/project1/project1.jpg'),
+			text: [
+				`Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium magni est laborum.`,
+				` natus quos ex nemo minus voluptatibus pariatur.`,
+			],
+			img: require('../images/projects/project1/project4.jpg'),
 		},
 	],
 	[
 		// in progress
 		{
 			title: `Project One`,
-			text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium magni est laborum, natus quos ex nemo minus voluptatibus pariatur.`,
-			img: require('../images/projects/project1/project1.jpg'),
+			text: [
+				`Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium magni est laborum.`,
+				` natus quos ex nemo minus voluptatibus pariatur.`,
+			],
+			img: require('../images/projects/project1/project3.jpg'),
 		},
 		{
 			title: `Project Two`,
-			text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium magni est laborum, natus quos ex nemo minus voluptatibus pariatur.`,
-			img: require('../images/projects/project1/project1.jpg'),
+			text: [
+				`Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium magni est laborum.`,
+				` natus quos ex nemo minus voluptatibus pariatur.`,
+			],
+			img: require('../images/projects/project1/project4.jpg'),
 		},
 		{
 			title: `Project Three`,
-			text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium magni est laborum, natus quos ex nemo minus voluptatibus pariatur.`,
+			text: [
+				`Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium magni est laborum.`,
+				` natus quos ex nemo minus voluptatibus pariatur.`,
+			],
 			img: require('../images/projects/project1/project1.jpg'),
 		},
 	],
