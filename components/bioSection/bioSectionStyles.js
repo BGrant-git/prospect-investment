@@ -12,3 +12,7 @@ export const Title = styled.h1`
 	margin: 40px auto;
 	font-size: 40px;
 `
+
+export const BioCardContainer = styled.div`
+	display: flex;
+`
