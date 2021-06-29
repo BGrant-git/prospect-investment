@@ -14,7 +14,6 @@ export const Container = styled.div`
 
 	@media (max-width: 855px) {
 		height: auto;
-		flex-direction: column;
 	}
 `
 
@@ -35,11 +34,18 @@ export const ImageStyles = styled.img`
 export const TitleContainer = styled.div`
 	margin: 0 10px 0;
 	line-height: 40px;
-	font-size: 130%;
 	min-width: 250px;
 	border: 3px black;
 	border-bottom-style: ${(props) => props.border};
 	border-radius: 0;
+
+	h1 {
+		font-size: 35px;
+	}
+
+	h2 {
+		font-size: 30px;
+	}
 
 	@media (max-width: 855px) {
 		font-size: 90%;

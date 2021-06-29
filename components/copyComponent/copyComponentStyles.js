@@ -27,9 +27,16 @@ export const Text = styled.p`
 	}
 `
 
-export const ImgStyle = styled.img`
+export const StyledImgLeft = styled.img`
 	width: auto;
 	height: 350px;
+	border-radius: 0 5px 0 0;
+`
+
+export const StyledImgRight = styled.img`
+	width: auto;
+	height: 350px;
+	border-radius: 0 0 0 5px;
 `
 
 export const LeftRule = styled.div`
