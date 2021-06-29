@@ -25,9 +25,6 @@ const GlobalStyle = createGlobalStyle`
 	div {
 		border-radius: 5px;
 	}
-	img {
-		border-radius: 5px;
-	}
 	button {
 		border-radius: 5px;
 	}

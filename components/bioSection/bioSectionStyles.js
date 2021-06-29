@@ -8,30 +8,11 @@ export const Container = styled.div`
 	margin: auto;
 `
 
-export const TitleContainer = styled.div`
-	margin: auto;
-`
-
 export const Title = styled.h1`
-	text-align: center;
-	font-size: 50px;
-	width: 800px;
-
-	@media (max-width: 855px) {
-		margin-top: 0;
-		width: auto;
-		font-size: 45px;
-	}
-`
-
-export const SubTitle = styled.h1`
 	margin: 40px auto;
 	font-size: 40px;
 `
 
-export const CenterRule = styled.div`
-	background-color: black;
-	width: 60px;
-	height: 3px;
-	margin: -30px auto 15px;
+export const BioCardContainer = styled.div`
+	display: flex;
 `

@@ -1,5 +1,29 @@
 import { createContext } from 'react'
 import { useMediaQuery } from '@material-ui/core'
+import styled from 'styled-components'
+
+export const CenterRule = styled.div`
+	background-color: black;
+	width: 60px;
+	height: 3px;
+	margin: -30px auto 15px;
+`
+
+export const LeftRule = styled.div`
+	background-color: black;
+	width: 60px;
+	height: 3px;
+	margin: -10px 0 -5px;
+`
+
+export const RightRule = styled.div`
+	background-color: black;
+	width: 60px;
+	height: 3px;
+	margin: -10px 0 -5px;
+	margin-left: auto;
+	margin-right: 0;
+`
 
 export const StoreContext = createContext()
 
@@ -44,6 +68,7 @@ const StoreContextProvider = ({ children }) => {
 			translateX: '0%',
 			transition: {
 				duration: 1,
+				staggerChildren: 1,
 			},
 		},
 	}
@@ -59,6 +84,19 @@ const StoreContextProvider = ({ children }) => {
 		},
 	}
 
+	const framerStaggerVariants = {
+		container: {
+			hidden: { opacity: 0 },
+			show: {
+				opacity: 1,
+				transition: {
+					staggerChildren: 0.5,
+				},
+			},
+		},
+		item: { hidden: { opacity: 0 }, show: { opacity: 1 } },
+	}
+
 	return (
 		<StoreContext.Provider
 			value={{
@@ -69,6 +107,7 @@ const StoreContextProvider = ({ children }) => {
 				framerUpVariants,
 				framerLeftSlideVariants,
 				framerRightSlideVariants,
+				framerStaggerVariants,
 			}}
 		>
 			{children}

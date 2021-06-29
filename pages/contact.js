@@ -26,6 +26,7 @@ const Contact = () => {
 			initial="initial"
 			animate="animate"
 			variants={transitionVariants}
+			key="contact"
 		>
 			<Container backgroundImg={backgroundImg}>
 				<LocationComponent />

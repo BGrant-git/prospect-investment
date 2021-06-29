@@ -5,13 +5,15 @@ export const Container = styled.div`
 	margin: 20px auto;
 	padding: 10px;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	max-width: 1000px;
+	width: 400px;
+	height: 650px;
 	background-color: var(--faded-main-colour);
+	text-align: center;
 
 	@media (max-width: 855px) {
 		height: auto;
-		flex-direction: column;
 	}
 `
 
@@ -19,6 +21,7 @@ export const ImageContainer = styled.div`
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	flex-direction: column;
 	margin: 0 20px 0;
 	padding: 15px;
 `
@@ -31,11 +34,18 @@ export const ImageStyles = styled.img`
 export const TitleContainer = styled.div`
 	margin: 0 10px 0;
 	line-height: 40px;
-	font-size: 130%;
 	min-width: 250px;
 	border: 3px black;
-	border-right-style: ${(props) => props.border};
+	border-bottom-style: ${(props) => props.border};
 	border-radius: 0;
+
+	h1 {
+		font-size: 35px;
+	}
+
+	h2 {
+		font-size: 30px;
+	}
 
 	@media (max-width: 855px) {
 		font-size: 90%;

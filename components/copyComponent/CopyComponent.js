@@ -2,16 +2,16 @@ import { useContext } from 'react'
 import { motion } from 'framer-motion'
 
 import { StoreContext } from '../../context/context'
-import { aboutPageCopy, bioData } from '../../public/text-files/aboutText'
+import { aboutPageCopy } from '../../public/text-files/aboutText'
 
 import {
 	RowStyle,
 	TextContainer,
 	Text,
-	ImgStyle,
-	LeftRule,
-	RightRule,
+	StyledImgLeft,
+	StyledImgRight,
 } from './copyComponentStyles'
+import { LeftRule, RightRule } from '../../context/context'
 
 const CopyComponent = () => {
 	const { framerLeftSlideVariants, framerRightSlideVariants } =
@@ -30,7 +30,7 @@ const CopyComponent = () => {
 						<LeftRule />
 						<Text>{aboutPageCopy[0].text}</Text>
 					</TextContainer>
-					<ImgStyle src={aboutPageCopy[0].img} alt="" />
+					<StyledImgLeft src={aboutPageCopy[0].img} alt="" />
 				</RowStyle>
 			</motion.div>
 			<motion.div
@@ -39,7 +39,7 @@ const CopyComponent = () => {
 				variants={framerRightSlideVariants}
 			>
 				<RowStyle>
-					<ImgStyle src={aboutPageCopy[1].img} alt="" />
+					<StyledImgRight src={aboutPageCopy[1].img} alt="" />
 					<TextContainer style={{ textAlign: 'right' }}>
 						<h2>{aboutPageCopy[1].heading}</h2>
 						<RightRule />

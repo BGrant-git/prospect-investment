@@ -12,7 +12,7 @@ const NavDropdown = ({ link, isActive, page }) => {
 	return (
 		<NavbarDropdown>
 			<ButtonContainer>
-				<Link href="JavaScript:Void(0)">
+				<Link href="/projects">
 					<LinkStyle style={isActive ? { color: 'var(--main-colour)' } : null}>
 						PROJECTS
 					</LinkStyle>
