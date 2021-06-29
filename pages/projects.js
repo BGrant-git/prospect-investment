@@ -16,7 +16,7 @@ const inProgressLinks = projectsLinks[1]
 
 const Projects = () => {
 	const { transitionVariants, framerStaggerVariants } = useContext(StoreContext)
-	const ruleStyle = { marginTop: '-10px' }
+	const ruleStyle = { marginTop: '-10px', width: '20px' }
 
 	return (
 		<motion.div
