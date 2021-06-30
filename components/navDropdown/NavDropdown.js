@@ -5,7 +5,7 @@ import {
 	NavbarDropdown,
 	DropdownLinkWrapper,
 	ButtonWrapper,
-	LinkStyle,
+	StyledA,
 } from './navDropdownStyles'
 
 const NavDropdown = ({ link, isActive, page }) => {
@@ -13,9 +13,9 @@ const NavDropdown = ({ link, isActive, page }) => {
 		<NavbarDropdown>
 			<ButtonWrapper>
 				<Link href="/projects" as={'/projects'}>
-					<LinkStyle style={isActive ? { color: 'var(--main-colour)' } : null}>
-						<a>PROJECTS</a>
-					</LinkStyle>
+					<StyledA style={isActive ? { color: 'var(--main-colour)' } : null}>
+						PROJECTS
+					</StyledA>
 				</Link>
 			</ButtonWrapper>
 			<NavbarDropdownContent>
