@@ -8,7 +8,13 @@ const withImages = require('next-images')
 
 module.exports = withImages({
 	webpack(config) {
-		config.plugins.push(new webpack.EnvironmentPlugin(myEnv))
+		config.plugins.push(
+			new webpack.EnvironmentPlugin({
+				NODE_ENV: 'development',
+				DEBUG: false,
+				myEnv,
+			})
+		)
 		return config
 	},
 })
