@@ -12,18 +12,22 @@ const NavDropdown = ({ link, isActive, page }) => {
 	return (
 		<NavbarDropdown>
 			<ButtonWrapper>
-				<Link href="/projects">
+				<Link href="/projects" as={'/projects'}>
 					<LinkStyle style={isActive ? { color: 'var(--main-colour)' } : null}>
-						PROJECTS
+						<a>PROJECTS</a>
 					</LinkStyle>
 				</Link>
 			</ButtonWrapper>
 			<NavbarDropdownContent>
 				<DropdownLinkWrapper>
-					<Link href="/projects">COMPLETED</Link>
+					<Link href="/projects" as={'/projects'}>
+						<a>COMPLETED</a>
+					</Link>
 				</DropdownLinkWrapper>
 				<DropdownLinkWrapper>
-					<Link href="/projects">IN PROGRESS</Link>
+					<Link href="/projects" as={'/projects'}>
+						<a>IN PROGRESS</a>
+					</Link>
 				</DropdownLinkWrapper>
 			</NavbarDropdownContent>
 		</NavbarDropdown>

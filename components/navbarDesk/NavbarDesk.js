@@ -21,7 +21,7 @@ const NavbarDesk = () => {
 	return (
 		<Container>
 			<LogoWrapper>
-				<Link href="/">
+				<Link href="/" as={'/'}>
 					<StyledA>
 						<StyledImg src={logoImg} alt="" />
 						<StyledH1>
