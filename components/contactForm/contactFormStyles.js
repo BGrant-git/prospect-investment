@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { TextField } from '@material-ui/core'
+import { TextField, Button } from '@material-ui/core'
 
 export const Container = styled.div`
 	width: 1000px;
@@ -15,7 +15,7 @@ export const Container = styled.div`
 	}
 `
 
-export const FormStyle = styled.form`
+export const StyledForm = styled.form`
 	display: flex;
 	margin-left: 10px;
 
@@ -24,7 +24,7 @@ export const FormStyle = styled.form`
 	}
 `
 
-export const FormUnitContainer = styled.div`
+export const FormWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	width: 100%;

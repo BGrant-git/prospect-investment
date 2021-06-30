@@ -11,19 +11,19 @@ export const Container = styled.div`
 	}
 `
 
-export const TextContainer = styled.div`
+export const TextWrapper = styled.div`
 	padding: 10px;
 `
 
-export const Header = styled.h1`
+export const StyledH1 = styled.h1`
 	font-size: 35px;
 `
 
-export const SubHeader = styled.h2`
+export const StyledH2 = styled.h2`
 	font-size: 25px;
 `
 
-export const ButtonContainer = styled.div`
+export const ButtonWrapper = styled.div`
 	display: flex;
 	justify-content: center;
 `

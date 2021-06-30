@@ -1,8 +1,8 @@
 import {
 	Container,
-	Title,
+	StyledH1,
 	StyledImg,
-	TextContainer,
+	TextWrapper,
 	StyledP,
 	StyledUl,
 } from './projectComponentStyles'
@@ -11,8 +11,8 @@ import { LeftRule } from '../../context/context'
 const ProjectComponent = ({ title, text, img }) => {
 	return (
 		<Container>
-			<TextContainer>
-				<Title>{title}</Title>
+			<TextWrapper>
+				<StyledH1>{title}</StyledH1>
 				<LeftRule />
 				<StyledUl>
 					{text.map((item, i) => (
@@ -21,7 +21,7 @@ const ProjectComponent = ({ title, text, img }) => {
 						</li>
 					))}
 				</StyledUl>
-			</TextContainer>
+			</TextWrapper>
 			<StyledImg src={img} alt="" />
 		</Container>
 	)

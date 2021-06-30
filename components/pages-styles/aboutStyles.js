@@ -8,11 +8,11 @@ export const Container = styled.div`
 	margin: auto;
 `
 
-export const TitleContainer = styled.div`
+export const TitleWrapper = styled.div`
 	margin: auto;
 `
 
-export const Title = styled.h1`
+export const StyledH1 = styled.h1`
 	text-align: center;
 	font-size: 50px;
 	width: 800px;

@@ -7,7 +7,7 @@ export const Container = styled.div`
 	align-items: center;
 `
 
-export const DateBox = styled.div`
+export const DateWrapper = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -18,7 +18,7 @@ export const DateBox = styled.div`
 	width: 150px;
 `
 
-export const TextBox = styled.div`
+export const TextWrapper = styled.div`
 	display: flex;
 	align-items: center;
 	background: white;

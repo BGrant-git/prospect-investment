@@ -7,7 +7,7 @@ export const Container = styled.div`
 	max-width: 1200px;
 `
 
-export const CardText = styled.div`
+export const CardTextWrapper = styled.div`
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -23,7 +23,7 @@ export const CardText = styled.div`
 	}
 `
 
-export const CardContainer = styled.div`
+export const CardWrapper = styled.div`
 	position: relative;
 	text-align: center;
 	cursor: pointer;
@@ -34,7 +34,7 @@ export const CardContainer = styled.div`
 		z-index: 1;
 	}
 
-	&:hover ${CardText} {
+	&:hover ${CardTextWrapper} {
 		transform: translate(-50%, -50%) scale(1.2);
 		z-index: 1;
 	}
@@ -46,7 +46,7 @@ export const CardContainer = styled.div`
 	}
 `
 
-export const CardImg = styled.img`
+export const StyledImg = styled.img`
 	width: 100%;
 	height: 100%;
 

@@ -8,11 +8,7 @@ export const Container = styled.div`
 	margin: auto;
 `
 
-export const Title = styled.h1`
+export const StyledH1 = styled.h1`
 	margin: 40px auto;
 	font-size: 40px;
-`
-
-export const BioCardContainer = styled.div`
-	display: flex;
 `

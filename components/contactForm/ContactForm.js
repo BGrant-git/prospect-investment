@@ -1,23 +1,23 @@
 import { Grid, Button } from '@material-ui/core'
 
-import { StoreContext } from '../../context/context'
 import {
 	Container,
-	FormStyle,
+	StyledForm,
 	TextFieldWrapper,
 	messageBoxStyle,
-	FormUnitContainer,
+	FormWrapper,
 	buttonStyle,
+	StyledMuiButton,
 } from './contactFormStyles'
 
 const ContactForm = () => {
 	return (
 		<Container>
 			<h2>Send us a message</h2>
-			<FormStyle>
+			<StyledForm>
 				<Grid container>
 					<Grid item xs={12} md={4}>
-						<FormUnitContainer>
+						<FormWrapper>
 							<TextFieldWrapper
 								label="Name"
 								type="text"
@@ -39,10 +39,10 @@ const ContactForm = () => {
 								variant="outlined"
 								style={messageBoxStyle}
 							/>
-						</FormUnitContainer>
+						</FormWrapper>
 					</Grid>
 					<Grid item xs={12} md={8}>
-						<FormUnitContainer>
+						<FormWrapper>
 							<TextFieldWrapper
 								label="Message"
 								type="text"
@@ -52,7 +52,7 @@ const ContactForm = () => {
 								rows={8}
 								style={messageBoxStyle}
 							/>
-						</FormUnitContainer>
+						</FormWrapper>
 					</Grid>
 					<Grid item xs={12}>
 						<Button variant="contained" type="submit" style={buttonStyle}>
@@ -60,7 +60,7 @@ const ContactForm = () => {
 						</Button>
 					</Grid>
 				</Grid>
-			</FormStyle>
+			</StyledForm>
 		</Container>
 	)
 }

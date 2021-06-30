@@ -6,11 +6,11 @@ import NavDropdown from '../navDropdown/NavDropdown'
 
 import {
 	Container,
-	LogoContainer,
-	Logo,
-	Styledh1,
-	LinkContainer,
-	LinkStyles,
+	LogoWrapper,
+	StyledImg,
+	StyledH1,
+	LinkWrapper,
+	StyledA,
 } from './navbarDeskStyles'
 
 const logoImg = require('../../public/images/Logo/logo.png')
@@ -20,18 +20,18 @@ const NavbarDesk = () => {
 
 	return (
 		<Container>
-			<LogoContainer>
+			<LogoWrapper>
 				<Link href="/">
-					<LinkStyles>
-						<Logo src={logoImg} alt="" />
-						<Styledh1>
+					<StyledA>
+						<StyledImg src={logoImg} alt="" />
+						<StyledH1>
 							PROSPECT{' '}
 							<span style={{ color: 'var(--main-colour' }}>INVESTMENT</span>
-						</Styledh1>
-					</LinkStyles>
+						</StyledH1>
+					</StyledA>
 				</Link>
-			</LogoContainer>
-			<LinkContainer>
+			</LogoWrapper>
+			<LinkWrapper>
 				<NavbarButtonDesk
 					link={'/'}
 					page={'HOME'}
@@ -53,7 +53,7 @@ const NavbarDesk = () => {
 					page={'CONTACT'}
 					isActive={router.pathname == '/contact' ? true : false}
 				/>
-			</LinkContainer>
+			</LinkWrapper>
 		</Container>
 	)
 }

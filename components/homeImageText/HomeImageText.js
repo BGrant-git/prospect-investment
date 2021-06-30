@@ -7,11 +7,11 @@ import { landingText } from '../../public/text-files/homepageText'
 
 import {
 	Container,
-	TextContainer,
+	TextWrapper,
 	Button,
-	ButtonContainer,
-	Header,
-	SubHeader,
+	ButtonWrapper,
+	StyledH1,
+	StyledH2,
 } from './homeImageTextStyles'
 
 const HomeImageText = () => {
@@ -23,16 +23,16 @@ const HomeImageText = () => {
 			variants={framerLeftSlideVariants}
 		>
 			<Container>
-				<TextContainer>
-					<Header>{landingText.heading}</Header>
-					<SubHeader>{landingText.subHeading}</SubHeader>
-				</TextContainer>
+				<TextWrapper>
+					<StyledH1>{landingText.heading}</StyledH1>
+					<StyledH2>{landingText.subHeading}</StyledH2>
+				</TextWrapper>
 
-				<ButtonContainer>
+				<ButtonWrapper>
 					<Link href="/contact">
 						<Button>Book a Consultation</Button>
 					</Link>
-				</ButtonContainer>
+				</ButtonWrapper>
 			</Container>
 		</motion.div>
 	)

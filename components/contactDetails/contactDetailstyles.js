@@ -20,7 +20,7 @@ export const TextWrapper = styled.div`
 	line-height: 15px;
 `
 
-export const LinkWrapper = styled.a`
+export const StyledA = styled.a`
 	font-size: 20px;
 	color: purple;
 	text-decoration: underline;

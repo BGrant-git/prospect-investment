@@ -23,12 +23,12 @@ export const Container = styled.div`
 	}
 `
 
-export const Title = styled.h1`
+export const StyledH1 = styled.h1`
 	font-size: 35px;
 	margin-top: 10px;
 `
 
-export const TextContainer = styled.div`
+export const TextWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	padding: 10px 20px;

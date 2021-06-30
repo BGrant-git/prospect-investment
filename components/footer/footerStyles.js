@@ -16,8 +16,8 @@ export const Container = styled.div`
 	}
 `
 
-export const LogoContainer = styled.div`
+export const LogoWrapper = styled.div`
 	filter: opacity(0.7);
 `
 
-export const LinksContainer = styled.div``
+export const LinksWrapper = styled.div``

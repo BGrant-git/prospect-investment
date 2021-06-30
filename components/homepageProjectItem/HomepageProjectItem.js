@@ -3,16 +3,16 @@ import { Button } from '@material-ui/core'
 
 import {
 	Container,
-	ImageStyle,
-	TextContainer,
+	StyledImg,
+	TextWrapper,
 	buttonStyle,
 } from './homepageProjectItemStyles'
 
 const HomepageProjectItem = ({ date, title, text, img, link }) => {
 	return (
 		<Container>
-			<ImageStyle src={img} alt="" />
-			<TextContainer>
+			<StyledImg src={img} alt="" />
+			<TextWrapper>
 				<p>{date}</p>
 				<h1>{title.toUpperCase()}</h1>
 
@@ -22,7 +22,7 @@ const HomepageProjectItem = ({ date, title, text, img, link }) => {
 				<Button variant="contained" type="submit" style={buttonStyle}>
 					<Link href={link}>view project</Link>
 				</Button>
-			</TextContainer>
+			</TextWrapper>
 		</Container>
 	)
 }

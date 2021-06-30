@@ -12,7 +12,7 @@ export const Container = styled.div`
 	}
 `
 
-export const ImageStyle = styled.img`
+export const StyledImg = styled.img`
 	width: 450px;
 	height: 300px;
 
@@ -23,7 +23,7 @@ export const ImageStyle = styled.img`
 	}
 `
 
-export const TextContainer = styled.div`
+export const TextWrapper = styled.div`
 	padding: 0 20px 0;
 `
 

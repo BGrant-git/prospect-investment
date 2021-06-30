@@ -1,27 +1,27 @@
 import BioCard from '../bioCard/BioCard'
 import { Grid } from '@material-ui/core'
 
-import { Container, Title, BioCardContainer } from './bioSectionStyles'
+import { Container, StyledH1 } from './bioSectionStyles'
 import { bioData } from '../../public/text-files/aboutText'
 import { CenterRule } from '../../context/context'
 
 const BioSection = () => {
 	return (
 		<Container>
-			<Title>The Team</Title>
+			<StyledH1>The Team</StyledH1>
 			<CenterRule />
 			<Grid container>
-					{bioData.map((item, i) => (
-						<Grid item xs={12} md={6} key={i}>
-							<BioCard
-								name={item.name}
-								position={item.position}
-								bioText={item.bioText}
-								img={item.img}
-								alignRight={item.alignRight}
-							/>
-						</Grid>
-					))}
+				{bioData.map((item, i) => (
+					<Grid item xs={12} md={6} key={i}>
+						<BioCard
+							name={item.name}
+							position={item.position}
+							bioText={item.bioText}
+							img={item.img}
+							alignRight={item.alignRight}
+						/>
+					</Grid>
+				))}
 			</Grid>
 		</Container>
 	)

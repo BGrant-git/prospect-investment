@@ -9,19 +9,19 @@ import { StoreContext } from '../../context/context'
 import { cardData } from '../../public/text-files/homepageText'
 import {
 	Container,
-	CardContainer,
-	CardImg,
-	CardText,
+	CardWrapper,
+	StyledImg,
+	CardTextWrapper,
 } from './HomepageCardsStyles'
 
 const CardComponent = ({ text, img }) => {
 	return (
-		<CardContainer>
-			<CardImg src={img} alt="" />
-			<CardText>
+		<CardWrapper>
+			<StyledImg src={img} alt="" />
+			<CardTextWrapper>
 				<h2>{text}</h2>
-			</CardText>
-		</CardContainer>
+			</CardTextWrapper>
+		</CardWrapper>
 	)
 }
 

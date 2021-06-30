@@ -6,8 +6,8 @@ import ProjectComponent from '../components/projectComponent/ProjectComponent'
 import { StoreContext, CenterRule } from '../context/context'
 import {
 	Container,
-	Title,
-	SubTitle,
+	StyledH1,
+	StyledH2,
 } from '../components/pages-styles/projectsStyles'
 import { projectsLinks } from '../public/text-files/projectsText'
 
@@ -26,9 +26,9 @@ const Projects = () => {
 			key="projects"
 		>
 			<Container>
-				<Title>Projectsssss</Title>
+				<StyledH1>Projectsssss</StyledH1>
 				<CenterRule />
-				<SubTitle>Completed</SubTitle>
+				<StyledH2>Completed</StyledH2>
 				<CenterRule style={ruleStyle} />
 				<motion.div
 					initial="hidden"
@@ -48,7 +48,7 @@ const Projects = () => {
 					</>
 				</motion.div>
 
-				<SubTitle>In Progress</SubTitle>
+				<StyledH2>In Progress</StyledH2>
 				<CenterRule style={ruleStyle} />
 				<>
 					{inProgressLinks.map((item, i) => (

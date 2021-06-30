@@ -1,16 +1,16 @@
 import Link from 'next/link'
 
-import { ButtonContainer, LinkStyle } from './navbarButtonDeskStyle'
+import { ButtonWrapper, StyledA } from './navbarButtonDeskStyle'
 
 const NavbarButtonsDesk = ({ link, isActive, page }) => {
 	return (
-		<ButtonContainer>
+		<ButtonWrapper>
 			<Link href={link}>
-				<LinkStyle style={isActive ? { color: 'var(--main-colour)' } : null}>
+				<StyledA style={isActive ? { color: 'var(--main-colour)' } : null}>
 					{page}
-				</LinkStyle>
+				</StyledA>
 			</Link>
-		</ButtonContainer>
+		</ButtonWrapper>
 	)
 }
 
