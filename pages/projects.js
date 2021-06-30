@@ -26,7 +26,7 @@ const Projects = () => {
 			key="projects"
 		>
 			<Container>
-				<Title>Projects</Title>
+				<Title>Projectsssss</Title>
 				<CenterRule />
 				<SubTitle>Completed</SubTitle>
 				<CenterRule style={ruleStyle} />
