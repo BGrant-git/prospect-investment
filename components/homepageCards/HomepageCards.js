@@ -46,10 +46,12 @@ const HomepageCards = () => {
 			<Container>
 				<Grid container>
 					{cardData.map((item, i) => (
-						<Link href={item.link} key={i}>
-							<Grid item xs={6} md={3}>
-								<CardComponent text={item.text} img={item.img} />
-							</Grid>
+						<Link href={item.link} as={`/${item.link}`} key={i}>
+							<a>
+								<Grid item xs={6} md={3}>
+									<CardComponent text={item.text} img={item.img} />
+								</Grid>
+							</a>
 						</Link>
 					))}
 				</Grid>

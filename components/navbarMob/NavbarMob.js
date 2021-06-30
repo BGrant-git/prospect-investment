@@ -9,7 +9,7 @@ const logoImg = require('../../public/images/Logo/logo.png')
 const NavbarMob = () => {
 	return (
 		<>
-			<Link href="/">
+			<Link href="/" as={`/`}>
 				<StyledA>
 					<StyledImg src={logoImg} alt="" />
 					<div>
@@ -21,38 +21,50 @@ const NavbarMob = () => {
 			<Menu right styles={hamburgerMenuStyles}>
 				<div>
 					<LinkWrapper>
-						<a className="menu-item" href="/">
-							<h2>HOME</h2>
-						</a>
+						<Link href="/" as="/">
+							<a className="menu-item">
+								<h2>HOME</h2>
+							</a>
+						</Link>
 					</LinkWrapper>
 					<LinkWrapper>
-						<a className="menu-item" href="/about">
-							<h2>ABOUT</h2>
-						</a>
+						<Link href="/" as="/about">
+							<a className="menu-item">
+								<h2>ABOUT</h2>
+							</a>
+						</Link>
+					</LinkWrapper>
+					<LinkWrapper>
+						<Link href="/" as="/services">
+							<a className="menu-item">
+								<h2>ABOUT</h2>
+							</a>
+						</Link>
+					</LinkWrapper>
+					<LinkWrapper>
+						<Link href="/" as="/projects">
+							<a className="menu-item" href="/projects">
+								<h2>PROJECTS</h2>
+							</a>
+						</Link>
+						<Link href="/" as="/projects">
+							<a className="menu-item" href="/projects">
+								<h3>- COMPLETED</h3>
+							</a>
+						</Link>
+						<Link href="/" as="/projects">
+							<a className="menu-item" href="/projects">
+								<h3>- IN PROGRESS</h3>
+							</a>
+						</Link>
 					</LinkWrapper>
 
 					<LinkWrapper>
-						<a className="menu-item" href="/services">
-							<h2>ABOUT</h2>
-						</a>
-					</LinkWrapper>
-
-					<LinkWrapper>
-						<a className="menu-item" href="/projects">
-							<h2>PROJECTS</h2>
-						</a>
-						<a className="menu-item" href="/projects">
-							<h3>- COMPLETED</h3>
-						</a>
-						<a className="menu-item" href="/projects">
-							<h3>- IN PROGRESS</h3>
-						</a>
-					</LinkWrapper>
-
-					<LinkWrapper>
-						<a className="menu-item" href="/contact">
-							<h2>CONTACT US</h2>
-						</a>
+						<Link href="/" as="/contact">
+							<a className="menu-item">
+								<h2>CONTACT US</h2>
+							</a>
+						</Link>
 					</LinkWrapper>
 				</div>
 			</Menu>
