@@ -1,6 +1,6 @@
 import { Grid, Link } from '@material-ui/core'
 
-import { Container, LinkWrapper, TextWrapper } from './contactDetailstyles'
+import { Container, StyledA, TextWrapper } from './contactDetailstyles'
 import { contactDetails } from '../../public/text-files/contactDetails'
 
 const phoneNumber = contactDetails.phoneNumber
@@ -22,11 +22,11 @@ const LocationComponent = () => {
 				<Grid item xs={12} md={6}>
 					<TextWrapper>
 						<h3>Phone</h3>
-						<LinkWrapper href={`tel:${phoneNumber}`}>{phoneNumber}</LinkWrapper>
+						<StyledA href={`tel:${phoneNumber}`}>{phoneNumber}</StyledA>
 					</TextWrapper>
 					<h3>Email</h3>
 					<TextWrapper>
-						<LinkWrapper href={`mailto:${email}`}>{email}</LinkWrapper>
+						<StyledA href={`mailto:${email}`}>{email}</StyledA>
 					</TextWrapper>
 				</Grid>
 				<Grid item xs={12} md={3}>

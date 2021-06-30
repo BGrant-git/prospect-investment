@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
-export const ButtonContainer = styled.div`
+export const ButtonWrapper = styled.div`
 	margin: 0 10px;
 `
 
-export const LinkStyle = styled.a`
+export const StyledA = styled.a`
 	cursor: pointer;
 	font-size: 22px;
 

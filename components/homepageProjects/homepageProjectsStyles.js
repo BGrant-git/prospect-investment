@@ -7,12 +7,12 @@ export const Container = styled.div`
 	max-width: 1200px;
 `
 
-export const Title = styled.div`
+export const TitleWrapper = styled.div`
 	margin: 0 auto -30px;
 	font-size: 22px;
 `
 
-export const ProjectsContainer = styled.div`
+export const ProjectsWrapper = styled.div`
 	margin: auto;
 	padding: 30px;
 

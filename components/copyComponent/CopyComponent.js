@@ -5,9 +5,9 @@ import { StoreContext } from '../../context/context'
 import { aboutPageCopy } from '../../public/text-files/aboutText'
 
 import {
-	RowStyle,
-	TextContainer,
-	Text,
+	RowWrapper,
+	TextWrapper,
+	StyledP,
 	StyledImgLeft,
 	StyledImgRight,
 } from './copyComponentStyles'
@@ -24,28 +24,28 @@ const CopyComponent = () => {
 				animate="visible"
 				variants={framerLeftSlideVariants}
 			>
-				<RowStyle>
-					<TextContainer>
+				<RowWrapper>
+					<TextWrapper>
 						<h2>{aboutPageCopy[0].heading}</h2>
 						<LeftRule />
-						<Text>{aboutPageCopy[0].text}</Text>
-					</TextContainer>
+						<StyledP>{aboutPageCopy[0].text}</StyledP>
+					</TextWrapper>
 					<StyledImgLeft src={aboutPageCopy[0].img} alt="" />
-				</RowStyle>
+				</RowWrapper>
 			</motion.div>
 			<motion.div
 				initial="hidden"
 				animate="visible"
 				variants={framerRightSlideVariants}
 			>
-				<RowStyle>
+				<RowWrapper>
 					<StyledImgRight src={aboutPageCopy[1].img} alt="" />
-					<TextContainer style={{ textAlign: 'right' }}>
+					<TextWrapper style={{ textAlign: 'right' }}>
 						<h2>{aboutPageCopy[1].heading}</h2>
 						<RightRule />
-						<Text>{aboutPageCopy[1].text}</Text>
-					</TextContainer>
-				</RowStyle>
+						<StyledP>{aboutPageCopy[1].text}</StyledP>
+					</TextWrapper>
+				</RowWrapper>
 			</motion.div>
 		</>
 	)

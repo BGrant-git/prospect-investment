@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const ButtonContainer = styled.div`
+export const ButtonWrapper = styled.div`
 	margin: 0 10px;
 `
 
@@ -52,7 +52,7 @@ export const NavbarDropdown = styled.div`
 	}
 `
 
-export const DropdownLink = styled.div`
+export const DropdownLinkWrapper = styled.div`
 	background-color: white;
 	width: 100%;
 	height: 100%;

@@ -6,8 +6,8 @@ import BioSection from '../components/bioSection/BioSection'
 import CopyComponent from '../components/copyComponent/CopyComponent'
 import {
 	Container,
-	TitleContainer,
-	Title,
+	TitleWrapper,
+	StyledH1,
 } from '../components/pages-styles/aboutStyles'
 
 const About = () => {
@@ -21,10 +21,10 @@ const About = () => {
 			key="about"
 		>
 			<Container>
-				<TitleContainer>
-					<Title>WHO WE ARE</Title>
+				<TitleWrapper>
+					<StyledH1>WHO WE ARE</StyledH1>
 					<CenterRule />
-				</TitleContainer>
+				</TitleWrapper>
 				<CopyComponent />
 				<BioSection />
 			</Container>

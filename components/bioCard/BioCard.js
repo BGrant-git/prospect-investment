@@ -4,12 +4,12 @@ import { useInView } from 'react-intersection-observer'
 
 import { StoreContext } from '../../context/context'
 import {
-	BioTextStyles,
+	StyledP,
 	Container,
-	ImageContainer,
-	ImageStyles,
-	TextContainer,
-	TitleContainer,
+	ImageWrapper,
+	StyledImg,
+	TextWrapper,
+	TitleWrapper,
 } from './bioCardStyles'
 
 const bioCard = ({ name, position, bioText, img }) => {
@@ -32,19 +32,19 @@ const bioCard = ({ name, position, bioText, img }) => {
 			variants={framerUpVariants}
 		>
 			<Container>
-				<ImageContainer>
-					<ImageStyles src={img} alt="" />
-					<TitleContainer border={matchesMd ? 'solid' : 'none'}>
+				<ImageWrapper>
+					<StyledImg src={img} alt="" />
+					<TitleWrapper border={matchesMd ? 'solid' : 'none'}>
 						<h1>{name.toUpperCase()}</h1>
 						<h2>{position}</h2>
-					</TitleContainer>
-				</ImageContainer>
+					</TitleWrapper>
+				</ImageWrapper>
 
-				<TextContainer>
+				<TextWrapper>
 					{bioText.map((item, i) => (
-						<BioTextStyles key={i}>{item}</BioTextStyles>
+						<StyledP key={i}>{item}</StyledP>
 					))}
-				</TextContainer>
+				</TextWrapper>
 			</Container>
 		</motion.div>
 	)

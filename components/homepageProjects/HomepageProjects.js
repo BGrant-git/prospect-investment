@@ -6,8 +6,8 @@ import { StoreContext } from '../../context/context'
 
 import {
 	Container,
-	ProjectsContainer,
-	Title,
+	ProjectsWrapper,
+	TitleWrapper,
 	Rule,
 } from './homepageProjectsStyles'
 import { projectsData } from '../../public/text-files/homepageText'
@@ -32,11 +32,11 @@ const HomepageProjects = () => {
 			variants={framerUpVariants}
 		>
 			<Container>
-				<Title>
+				<TitleWrapper>
 					<h1>Featured Projects:</h1>
-				</Title>
+				</TitleWrapper>
 				<Rule />
-				<ProjectsContainer>
+				<ProjectsWrapper>
 					{projectsData.map((item, i) => (
 						<HomepageProjectItem
 							date={item.date}
@@ -47,7 +47,7 @@ const HomepageProjects = () => {
 							key={i}
 						/>
 					))}
-				</ProjectsContainer>
+				</ProjectsWrapper>
 			</Container>
 		</motion.div>
 	)

@@ -1,18 +1,14 @@
-import {
-	Container,
-	EventContainer,
-	DateBox,
-	TextBox,
-} from './timelineComponentStyles'
+import { Container, DateWrapper, TextWrapper } from './timelineComponentStyles'
+
 const TimelineComponent = ({ date, text }) => {
 	return (
 		<Container>
-			<DateBox>
+			<DateWrapper>
 				<h2>{date}</h2>
-			</DateBox>
-			<TextBox>
+			</DateWrapper>
+			<TextWrapper>
 				<p>{text}</p>
-			</TextBox>
+			</TextWrapper>
 		</Container>
 	)
 }

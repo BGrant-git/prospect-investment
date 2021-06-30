@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 
 import { StoreContext } from '../../context/context'
-import { Container, LogoContainer } from './footerStyles'
+import { Container, LogoWrapper } from './footerStyles'
 
 const year = new Date().getFullYear()
 
@@ -10,12 +10,12 @@ const Footer = () => {
 	return (
 		<Container>
 			<div>
-				<LogoContainer>
+				<LogoWrapper>
 					<h1>
 						PROSPECT{' '}
 						<span style={{ color: 'var(--main-colour' }}>INVESTMENT</span>
 					</h1>
-				</LogoContainer>
+				</LogoWrapper>
 			</div>
 			<div>
 				<p>

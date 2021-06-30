@@ -3,28 +3,28 @@ import Link from 'next/link'
 import {
 	NavbarDropdownContent,
 	NavbarDropdown,
-	DropdownLink,
-	ButtonContainer,
+	DropdownLinkWrapper,
+	ButtonWrapper,
 	LinkStyle,
 } from './navDropdownStyles'
 
 const NavDropdown = ({ link, isActive, page }) => {
 	return (
 		<NavbarDropdown>
-			<ButtonContainer>
+			<ButtonWrapper>
 				<Link href="/projects">
 					<LinkStyle style={isActive ? { color: 'var(--main-colour)' } : null}>
 						PROJECTS
 					</LinkStyle>
 				</Link>
-			</ButtonContainer>
+			</ButtonWrapper>
 			<NavbarDropdownContent>
-				<DropdownLink>
+				<DropdownLinkWrapper>
 					<Link href="/projects">COMPLETED</Link>
-				</DropdownLink>
-				<DropdownLink>
+				</DropdownLinkWrapper>
+				<DropdownLinkWrapper>
 					<Link href="/projects">IN PROGRESS</Link>
-				</DropdownLink>
+				</DropdownLinkWrapper>
 			</NavbarDropdownContent>
 		</NavbarDropdown>
 	)

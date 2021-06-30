@@ -17,7 +17,7 @@ export const Container = styled.div`
 	}
 `
 
-export const ImageContainer = styled.div`
+export const ImageWrapper = styled.div`
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
@@ -26,12 +26,12 @@ export const ImageContainer = styled.div`
 	padding: 15px;
 `
 
-export const ImageStyles = styled.img`
+export const StyledImg = styled.img`
 	width: 200px;
 	height: 200px;
 `
 
-export const TitleContainer = styled.div`
+export const TitleWrapper = styled.div`
 	margin: 0 10px 0;
 	line-height: 40px;
 	min-width: 250px;
@@ -53,7 +53,7 @@ export const TitleContainer = styled.div`
 	}
 `
 
-export const TextContainer = styled.div`
+export const TextWrapper = styled.div`
 	margin: 0 20px;
 
 	@media (max-width: 855px) {
@@ -61,7 +61,7 @@ export const TextContainer = styled.div`
 	}
 `
 
-export const BioTextStyles = styled.p`
+export const StyledP = styled.p`
 	text-align: justify;
 	font-size: 18px;
 `
