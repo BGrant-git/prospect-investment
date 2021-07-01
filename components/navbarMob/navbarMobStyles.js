@@ -16,6 +16,7 @@ export const StyledImg = styled.img`
 export const LinkWrapper = styled.div`
 	border: 3px white;
 	border-left-style: solid;
+	border-radius: 0;
 	padding-left: 10px;
 	color: white;
 `

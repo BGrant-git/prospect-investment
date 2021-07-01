@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-	display: flex;
 	justify-content: center;
 	margin: 20px auto 60px;
 	max-width: 1200px;
@@ -24,18 +23,14 @@ export const CardTextWrapper = styled.div`
 `
 
 export const CardWrapper = styled.div`
+	display: flex;
 	position: relative;
 	text-align: center;
 	cursor: pointer;
-	transition: 0.2s ease-in-out;
+	transition: 0.1s ease-in-out;
 
 	&:hover {
-		transform: scale(1.05);
-		z-index: 1;
-	}
-
-	&:hover ${CardTextWrapper} {
-		transform: translate(-50%, -50%) scale(1.2);
+		transform: scale(1.02);
 		z-index: 1;
 	}
 
