@@ -21,7 +21,7 @@ const HomepageProjectItem = ({ date, title, text, img, link }) => {
 				))}
 				<Button variant="contained" type="submit" style={buttonStyle}>
 					<Link href={link} as={link}>
-						<a>project</a>
+						<a>see project</a>
 					</Link>
 				</Button>
 			</TextWrapper>
