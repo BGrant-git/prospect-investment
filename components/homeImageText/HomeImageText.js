@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useContext } from 'react'
 import { motion } from 'framer-motion'
+import { Button } from '@material-ui/core'
 
 import { StoreContext } from '../../context/context'
 import { landingText } from '../../public/text-files/homepageText'
@@ -8,10 +9,9 @@ import { landingText } from '../../public/text-files/homepageText'
 import {
 	Container,
 	TextWrapper,
-	Button,
-	ButtonWrapper,
 	StyledH1,
 	StyledH2,
+	muiButtonStyle,
 } from './homeImageTextStyles'
 
 const HomeImageText = () => {
@@ -28,11 +28,13 @@ const HomeImageText = () => {
 					<StyledH2>{landingText.subHeading}</StyledH2>
 				</TextWrapper>
 
-				<ButtonWrapper>
+				<div>
 					<Link href="/contact">
-						<Button>Book a Consultation</Button>
+						<Button variant="contained" style={muiButtonStyle}>
+							book a consultation
+						</Button>
 					</Link>
-				</ButtonWrapper>
+				</div>
 			</Container>
 		</motion.div>
 	)

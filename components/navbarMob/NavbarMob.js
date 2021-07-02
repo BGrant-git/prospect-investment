@@ -21,50 +21,35 @@ const NavbarMob = () => {
 			<Menu right styles={hamburgerMenuStyles}>
 				<div>
 					<LinkWrapper>
-						<Link href="/" as="/">
-							<a className="menu-item">
-								<h2>HOME</h2>
-							</a>
-						</Link>
+						<a href="/" className="menu-item">
+							<h2>HOME</h2>
+						</a>
 					</LinkWrapper>
 					<LinkWrapper>
-						<Link href="/" as="/about">
-							<a className="menu-item">
-								<h2>ABOUT</h2>
-							</a>
-						</Link>
+						<a href="/about" className="menu-item">
+							<h2>ABOUT</h2>
+						</a>
 					</LinkWrapper>
 					<LinkWrapper>
-						<Link href="/" as="/services">
-							<a className="menu-item">
-								<h2>ABOUT</h2>
-							</a>
-						</Link>
+						<a href="/services" className="menu-item">
+							<h2>SERVICES</h2>
+						</a>
 					</LinkWrapper>
 					<LinkWrapper>
-						<Link href="/" as="/projects">
-							<a className="menu-item" href="/projects">
-								<h2>PROJECTS</h2>
-							</a>
-						</Link>
-						<Link href="/" as="/projects">
-							<a className="menu-item" href="/projects">
-								<h3>- COMPLETED</h3>
-							</a>
-						</Link>
-						<Link href="/" as="/projects">
-							<a className="menu-item" href="/projects">
-								<h3>- IN PROGRESS</h3>
-							</a>
-						</Link>
+						<a className="menu-item" href="/projects">
+							<h2>PROJECTS</h2>
+						</a>
+						<a className="menu-item" href="/projects">
+							<h3>- COMPLETED</h3>
+						</a>
+						<a className="menu-item" href="/projects">
+							<h3>- IN PROGRESS</h3>
+						</a>
 					</LinkWrapper>
-
 					<LinkWrapper>
-						<Link href="/" as="/contact">
-							<a className="menu-item">
-								<h2>CONTACT US</h2>
-							</a>
-						</Link>
+						<a className="menu-item">
+							<h2>CONTACT US</h2>
+						</a>
 					</LinkWrapper>
 				</div>
 			</Menu>
