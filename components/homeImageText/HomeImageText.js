@@ -31,7 +31,7 @@ const HomeImageText = () => {
 				<div>
 					<Link href="/contact">
 						<Button variant="contained" style={muiButtonStyle}>
-							book a consultation
+							contact us
 						</Button>
 					</Link>
 				</div>

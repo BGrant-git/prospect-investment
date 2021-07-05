@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-	width: 450px;
-	height: 450px;
-	margin-right: 6%;
 	color: white;
+	text-align: center;
+	max-width: 1000px;
 
 	@media (max-width: 855px) {
 		margin: auto;
@@ -25,7 +24,8 @@ export const StyledH2 = styled.h2`
 
 export const muiButtonStyle = {
 	background: 'white',
-	fontSize: '18px',
-	width: '270px',
-	height: '50px',
+	fontSize: '19px',
+	padding: '10px 40px',
+	// width: '250px',
+	// height: '50px',
 }
