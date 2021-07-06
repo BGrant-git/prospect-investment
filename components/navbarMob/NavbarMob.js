@@ -9,7 +9,7 @@ const logoImg = require('../../public/images/Logo/logo.png')
 const NavbarMob = () => {
 	return (
 		<>
-			<Link href="/" as={`/`}>
+			<Link href="/">
 				<StyledA>
 					<StyledImg src={logoImg} alt="" />
 					<div>

@@ -6,7 +6,7 @@ import HomepageProjects from '../components/homepageProjects/HomepageProjects'
 
 const homepageBackgroundImage = require('../public/images/homepage/landing/shutterstock_1212713398.jpg')
 
-const HeroSectionContainer = styled.div`
+const HeroSectionWrapper = styled.div`
 	background: linear-gradient(rgba(25, 25, 112, 0.3), rgba(25, 25, 112, 0.5)),
 		url(${(props) => props.img});
 	background-position: bottom;
@@ -16,9 +16,10 @@ const HeroSectionContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	margin-top: -80px;
+	position: static;
 	border-radius: 0;
 	transition: 0.5s ease-in-out;
+	margin-top: -80px;
 
 	@media (max-width: 855px) {
 		background-position-x: 15%;
@@ -37,9 +38,9 @@ const Index = () => {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<HeroSectionContainer img={homepageBackgroundImage}>
+			<HeroSectionWrapper img={homepageBackgroundImage}>
 				<HomeImageText />
-			</HeroSectionContainer>
+			</HeroSectionWrapper>
 			<HomepageProjects />
 			{/* <HomepageCards /> */}
 		</div>

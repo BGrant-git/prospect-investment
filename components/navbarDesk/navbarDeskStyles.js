@@ -6,6 +6,13 @@ export const Container = styled.div`
 	display: flex;
 	justify-content: space-between;
 	background-color: transparent;
+	transition: 0.2s ease-in-out;
+	z-index: 99;
+	position: sticky;
+	top: 0;
+	left: 0;
+	background-color: ${(props) => props.bg};
+	border-radius: 0px;
 `
 
 export const LogoWrapper = styled.div`

@@ -29,7 +29,7 @@ const HomeImageText = () => {
 				</TextWrapper>
 
 				<div>
-					<Link href="/contact">
+					<Link href="/contact" as="/contact">
 						<Button variant="contained" style={muiButtonStyle}>
 							contact us
 						</Button>

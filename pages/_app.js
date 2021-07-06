@@ -22,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
 		box-sizing: border-box;
 		font-family: "Sen";
 		background-color: #ffffff;
+		color: var(--main-dark);
 	}
 	a {
 		text-decoration: none;
