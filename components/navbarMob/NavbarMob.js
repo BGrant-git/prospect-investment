@@ -1,14 +1,35 @@
+import { useContext } from 'react'
 import Link from 'next/link'
 import { slide as Menu } from 'react-burger-menu'
+import { motion } from 'framer-motion'
 
-import { StyledA, StyledImg, LinkWrapper, StyledH1 } from './navbarMobStyles'
+import { StoreContext } from '../../context/context'
+import {
+	StyledA,
+	StyledImg,
+	LinkWrapper,
+	StyledH1,
+	ArrowWrapper,
+	StyledIcon,
+} from './navbarMobStyles'
 import { hamburgerMenuStyles } from './hamburgerMenuStyles'
 
 const logoImg = require('../../public/images/Logo/logo.png')
+const navArrow = require('../../public/images/arrow-up.png')
+
+const scrollToTop = () => {
+	window.scrollTo({
+		top: 0,
+		behavior: 'smooth',
+	})
+}
 
 const NavbarMob = () => {
+	const { scrolled, framerUpVariants } = useContext(StoreContext)
+	const [scrolledVal] = scrolled
+
 	return (
-		<>
+		<div style={{ transition: '1s ease-in' }}>
 			<Link href="/">
 				<StyledA>
 					<StyledImg src={logoImg} alt="" />
@@ -53,7 +74,15 @@ const NavbarMob = () => {
 					</LinkWrapper>
 				</div>
 			</Menu>
-		</>
+			<div style={{ transition: '1s ease-in-out' }}>
+				<ArrowWrapper
+					display={scrolledVal ? 'initial' : 'none'}
+					onClick={() => scrollToTop()}
+				>
+					<StyledIcon src={navArrow} alt="" />
+				</ArrowWrapper>
+			</div>
+		</div>
 	)
 }
 

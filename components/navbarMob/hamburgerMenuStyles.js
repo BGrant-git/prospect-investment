@@ -24,7 +24,7 @@ export const hamburgerMenuStyles = {
 		height: '100%',
 	},
 	bmMenu: {
-		background: 'var(--main-colour)',
+		background: 'var(--main-dark)',
 		padding: '2.5em 1.5em 0',
 		fontSize: '1.15em',
 		overflowY: 'hidden',

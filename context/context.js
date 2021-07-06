@@ -1,4 +1,4 @@
-import { createContext } from 'react'
+import { createContext, useState, useEffect } from 'react'
 import { useMediaQuery } from '@material-ui/core'
 import styled from 'styled-components'
 
@@ -31,6 +31,20 @@ const StoreContextProvider = ({ children }) => {
 	const matchesSm = useMediaQuery('(min-width: 855px)')
 	const matchesMd = useMediaQuery('(min-width:955px)')
 	const links = ['Home', 'About', 'Projects', 'Contact']
+	const [scrolled, setScrolled] = useState(false)
+
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll)
+	}, [])
+
+	const handleScroll = () => {
+		const offset = window.scrollY
+		if (offset > 80) {
+			setScrolled(true)
+		} else {
+			setScrolled(false)
+		}
+	}
 
 	const transitionVariants = {
 		initial: {
@@ -108,6 +122,7 @@ const StoreContextProvider = ({ children }) => {
 				framerLeftSlideVariants,
 				framerRightSlideVariants,
 				framerStaggerVariants,
+				scrolled: [scrolled, setScrolled],
 			}}
 		>
 			{children}
@@ -116,12 +131,3 @@ const StoreContextProvider = ({ children }) => {
 }
 
 export default StoreContextProvider
-
-{
-	{
-		{
-			{
-			}
-		}
-	}
-}

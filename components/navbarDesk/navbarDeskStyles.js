@@ -44,3 +44,8 @@ export const LinkWrapper = styled.div`
 export const StyledA = styled.a`
 	display: flex;
 `
+
+export const Test = styled.div`
+	width: 100px;
+	height: 100px;
+`

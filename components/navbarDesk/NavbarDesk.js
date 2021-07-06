@@ -1,10 +1,11 @@
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useContext } from 'react'
 import { useRouter } from 'next/router'
 
 import NavbarButtonDesk from '../navbarButtonDesk/NavbarButtonDesk'
 import NavDropdown from '../navDropdown/NavDropdown'
 
+import { StoreContext } from '../../context/context'
 import {
 	Container,
 	LogoWrapper,
@@ -17,24 +18,12 @@ import {
 const logoImg = require('../../public/images/Logo/logo.png')
 
 const NavbarDesk = () => {
-	const [scrolled, setScrolled] = useState(false)
+	const { scrolled } = useContext(StoreContext)
+	const [scrolledVal] = scrolled
 	const router = useRouter()
 
-	useEffect(() => {
-		window.addEventListener('scroll', handleScroll)
-	}, [])
-
-	const handleScroll = () => {
-		const offset = window.scrollY
-		if (offset > 80) {
-			setScrolled(true)
-		} else {
-			setScrolled(false)
-		}
-	}
-
 	return (
-		<Container bg={scrolled ? 'var(--main-dark)' : 'transparent'}>
+		<Container bg={scrolledVal ? 'var(--main-dark)' : 'transparent'}>
 			<LogoWrapper>
 				<Link href="/" as="">
 					<StyledA>
