@@ -8,8 +8,13 @@ import '@fontsource/sen'
 
 const GlobalStyle = createGlobalStyle`
 	html {
-		--main-colour: #009eef;
-		--faded-main-colour: #e0f3fc;
+		--main-colour: #0076D6;		
+		--main-colour-light: #6FCCF4;
+		--main-colour-dark: #004E86;
+		--main-colour-faded: #C9E8FB;
+		--main-grey: #E3E3E3;
+		--main-dark: #333333;
+
 	}
   body {
 		margin: 0;

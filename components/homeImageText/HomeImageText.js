@@ -15,7 +15,7 @@ import {
 } from './homeImageTextStyles'
 
 const HomeImageText = () => {
-	const { framerLeftSlideVariants } = useContext(StoreContext)
+	const { framerLeftSlideVariants, matchesSm } = useContext(StoreContext)
 	return (
 		<motion.div
 			initial="hidden"

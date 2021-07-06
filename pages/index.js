@@ -18,6 +18,7 @@ const HeroSectionContainer = styled.div`
 	height: 100vh;
 	margin-top: -80px;
 	border-radius: 0;
+	transition: 0.5s ease-in-out;
 
 	@media (max-width: 855px) {
 		background-position-x: 15%;

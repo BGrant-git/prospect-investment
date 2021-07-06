@@ -26,6 +26,5 @@ export const muiButtonStyle = {
 	background: 'white',
 	fontSize: '19px',
 	padding: '10px 40px',
-	// width: '250px',
-	// height: '50px',
+	fontWeight: 'bold',
 }
