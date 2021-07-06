@@ -20,3 +20,7 @@ export const LinkWrapper = styled.div`
 	padding-left: 10px;
 	color: white;
 `
+
+export const StyledH1 = styled.h1`
+	color: white;
+`

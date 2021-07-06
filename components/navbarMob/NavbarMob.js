@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { slide as Menu } from 'react-burger-menu'
 
-import { StyledA, StyledImg, LinkWrapper } from './navbarMobStyles'
+import { StyledA, StyledImg, LinkWrapper, StyledH1 } from './navbarMobStyles'
 import { hamburgerMenuStyles } from './hamburgerMenuStyles'
 
 const logoImg = require('../../public/images/Logo/logo.png')
@@ -13,7 +13,7 @@ const NavbarMob = () => {
 				<StyledA>
 					<StyledImg src={logoImg} alt="" />
 					<div>
-						<h1>PROSPECT</h1>
+						<StyledH1>PROSPECT</StyledH1>
 						<h1 style={{ color: 'var(--main-colour' }}>INVESTMENT</h1>
 					</div>
 				</StyledA>

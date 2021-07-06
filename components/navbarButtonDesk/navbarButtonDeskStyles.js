@@ -7,8 +7,7 @@ export const ButtonWrapper = styled.div`
 export const StyledA = styled.a`
 	cursor: pointer;
 	font-size: 22px;
-
-	color: black;
+	color: white;
 	text-transform: uppercase;
 	letter-spacing: 0.15em;
 
@@ -23,7 +22,7 @@ export const StyledA = styled.a`
 		height: 2px;
 		left: 50%;
 		position: absolute;
-		background: black;
+		background: var(--main-colour);
 		transition: width 0.3s ease 0s, left 0.3s ease 0s;
 		width: 0;
 	}
