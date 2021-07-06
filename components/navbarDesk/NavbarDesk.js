@@ -17,7 +17,7 @@ import {
 const logoImg = require('../../public/images/Logo/logo.png')
 
 const NavbarDesk = () => {
-	const [scrolled, setScrolled] = useState(true)
+	const [scrolled, setScrolled] = useState(false)
 	const router = useRouter()
 
 	useEffect(() => {
