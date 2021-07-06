@@ -7,7 +7,7 @@ export const RowWrapper = styled.div`
 	margin: 0 auto;
 	font-size: 20px;
 	z-index: 1;
-	background-color: var(--faded-main-colour);
+	background-color: var(--main-colour-faded);
 
 	@media (max-width: 855px) {
 		flex-direction: column;

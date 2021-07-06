@@ -1,27 +1,24 @@
 import Head from 'next/head'
-import { useContext } from 'react'
 import styled from 'styled-components'
-import { motion, AnimatePresence } from 'framer-motion'
 
-import { StoreContext } from '../context/context'
 import HomeImageText from '../components/homeImageText/HomeImageText'
-import HomepageCards from '../components/homepageCards/HomepageCards'
 import HomepageProjects from '../components/homepageProjects/HomepageProjects'
 
-const homepageBackgroundImage = require('../public/images/homepage/homepageBackground.jpg')
+const homepageBackgroundImage = require('../public/images/homepage/landing/shutterstock_1212713398.jpg')
 
-const MainSectionContainer = styled.div`
-	background: linear-gradient(rgba(25, 25, 112, 0.05), rgba(25, 25, 112, 0.3)),
+const HeroSectionContainer = styled.div`
+	background: linear-gradient(rgba(25, 25, 112, 0.3), rgba(25, 25, 112, 0.5)),
 		url(${(props) => props.img});
-	height: 800px;
-	background-position: center;
+	background-position: bottom;
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 	align-items: center;
-
+	height: 100vh;
+	margin-top: -80px;
 	border-radius: 0;
+	transition: 0.5s ease-in-out;
 
 	@media (max-width: 855px) {
 		background-position-x: 15%;
@@ -30,31 +27,22 @@ const MainSectionContainer = styled.div`
 `
 
 const Index = () => {
-	const { transitionVariants } = useContext(StoreContext)
-
 	return (
-		<motion.div
-			initial="initial"
-			animate="animate"
-			variants={transitionVariants}
-			key="index"
-		>
-			<div>
-				<Head>
-					<title>Prospect Investment</title>
-					<meta
-						name="Prospect Investment"
-						content="London Property Development."
-					/>
-					<link rel="icon" href="/favicon.ico" />
-				</Head>
-				<MainSectionContainer img={homepageBackgroundImage}>
-					<HomeImageText />
-				</MainSectionContainer>
-				<HomepageProjects />
-				{/* <HomepageCards /> */}
-			</div>
-		</motion.div>
+		<div>
+			<Head>
+				<title>Prospect Investment</title>
+				<meta
+					name="Prospect Investment"
+					content="London Property Development."
+				/>
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
+			<HeroSectionContainer img={homepageBackgroundImage}>
+				<HomeImageText />
+			</HeroSectionContainer>
+			<HomepageProjects />
+			{/* <HomepageCards /> */}
+		</div>
 	)
 }
 

@@ -5,7 +5,7 @@ export const Container = styled.div`
 	margin: 20px auto;
 	max-width: 1200px;
 	max-height: 250px;
-	background-color: var(--faded-main-colour);
+	background-color: var(--main-colour-faded);
 	cursor: pointer;
 	transition: 0.1s ease-in-out;
 

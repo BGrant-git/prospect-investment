@@ -5,6 +5,7 @@ export const Container = styled.div`
 	height: 80px;
 	display: flex;
 	justify-content: space-between;
+	background-color: transparent;
 `
 
 export const LogoWrapper = styled.div`
@@ -29,7 +30,6 @@ export const StyledH1 = styled.h1`
 export const LinkWrapper = styled.div`
 	display: flex;
 	margin-right: 1%;
-
 	padding-top: 25px;
 `
 

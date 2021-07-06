@@ -15,7 +15,7 @@ import {
 } from './homeImageTextStyles'
 
 const HomeImageText = () => {
-	const { framerLeftSlideVariants } = useContext(StoreContext)
+	const { framerLeftSlideVariants, matchesSm } = useContext(StoreContext)
 	return (
 		<motion.div
 			initial="hidden"
@@ -31,7 +31,7 @@ const HomeImageText = () => {
 				<div>
 					<Link href="/contact">
 						<Button variant="contained" style={muiButtonStyle}>
-							book a consultation
+							contact us
 						</Button>
 					</Link>
 				</div>
