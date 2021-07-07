@@ -7,7 +7,7 @@ export const ButtonWrapper = styled.div`
 export const StyledA = styled.a`
 	cursor: pointer;
 	font-size: 22px;
-	color: black;
+	color: white;
 	text-transform: uppercase;
 	letter-spacing: 0.15em;
 	display: inline-block;
@@ -21,7 +21,7 @@ export const StyledA = styled.a`
 		height: 2px;
 		left: 50%;
 		position: absolute;
-		background: black;
+		background: var(--main-colour);
 		transition: width 0.3s ease 0s, left 0.3s ease 0s;
 		width: 0;
 	}
@@ -60,6 +60,7 @@ export const DropdownLinkWrapper = styled.div`
 	font-size: 20px;
 	padding: 10px 5px;
 	transition: 0.1s ease-in-out;
+	border-radius: 0;
 
 	&:hover {
 		background-color: #f0f0f0;

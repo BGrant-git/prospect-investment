@@ -6,6 +6,13 @@ export const Container = styled.div`
 	display: flex;
 	justify-content: space-between;
 	background-color: transparent;
+	transition: 0.2s ease-in-out;
+	z-index: 99;
+	position: sticky;
+	top: 0;
+	left: 0;
+	background-color: ${(props) => props.bg};
+	border-radius: 0px;
 `
 
 export const LogoWrapper = styled.div`
@@ -22,6 +29,7 @@ export const StyledImg = styled.img`
 `
 
 export const StyledH1 = styled.h1`
+	color: white;
 	@media (max-width: 1247px) {
 		margin: 14px 5px 0 0;
 	}
@@ -35,4 +43,9 @@ export const LinkWrapper = styled.div`
 
 export const StyledA = styled.a`
 	display: flex;
+`
+
+export const Test = styled.div`
+	width: 100px;
+	height: 100px;
 `

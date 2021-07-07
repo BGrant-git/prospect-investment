@@ -7,10 +7,10 @@ export const hamburgerMenuStyles = {
 		top: '25px',
 	},
 	bmBurgerBars: {
-		background: 'black',
+		background: 'white',
 	},
 	bmBurgerBarsHover: {
-		background: '#009eef',
+		background: 'var(--main-colour)',
 	},
 	bmCrossButton: {
 		height: '24px',
@@ -24,7 +24,7 @@ export const hamburgerMenuStyles = {
 		height: '100%',
 	},
 	bmMenu: {
-		background: '#009eef',
+		background: 'var(--main-dark)',
 		padding: '2.5em 1.5em 0',
 		fontSize: '1.15em',
 		overflowY: 'hidden',

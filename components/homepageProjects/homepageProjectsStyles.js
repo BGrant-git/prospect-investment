@@ -28,6 +28,7 @@ export const Rule = styled.div`
 	margin: auto;
 
 	@media (max-width: 855px) {
-		display: none;
+		width: 200px;
+		margin-bottom: 10px;
 	}
 `
