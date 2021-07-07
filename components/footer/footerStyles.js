@@ -8,6 +8,7 @@ export const Container = styled.div`
 	text-align: center;
 	border: 2px black;
 	border-top-style: solid;
+	border-radius: 0;
 
 	@media (max-width: 855px) {
 		flex-direction: column;
