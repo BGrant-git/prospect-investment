@@ -22,12 +22,6 @@ export const LogoWrapper = styled.div`
 	line-height: 30px;
 `
 
-export const StyledImg = styled.img`
-	min-width: 70px;
-	height: 70px;
-	margin: 3px 5px 0 0;
-`
-
 export const StyledH1 = styled.h1`
 	color: white;
 	@media (max-width: 1247px) {
@@ -43,9 +37,4 @@ export const LinkWrapper = styled.div`
 
 export const StyledA = styled.a`
 	display: flex;
-`
-
-export const Test = styled.div`
-	width: 100px;
-	height: 100px;
 `

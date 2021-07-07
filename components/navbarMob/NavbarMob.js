@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { slide as Menu } from 'react-burger-menu'
-import { motion } from 'framer-motion'
 
 import { StoreContext } from '../../context/context'
 import {
@@ -29,10 +29,9 @@ const NavbarMob = () => {
 	const [scrolledVal] = scrolled
 
 	return (
-		<div style={{ transition: '1s ease-in' }}>
+		<div>
 			<Link href="/">
 				<StyledA>
-					<StyledImg src={logoImg} alt="" />
 					<div>
 						<StyledH1>PROSPECT</StyledH1>
 						<h1 style={{ color: 'var(--main-colour' }}>INVESTMENT</h1>
@@ -79,7 +78,7 @@ const NavbarMob = () => {
 					display={scrolledVal ? 'initial' : 'none'}
 					onClick={() => scrollToTop()}
 				>
-					<StyledIcon src={navArrow} alt="" />
+					<Image src={navArrow} alt="" width={50} height={50} />
 				</ArrowWrapper>
 			</div>
 		</div>

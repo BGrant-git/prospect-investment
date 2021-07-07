@@ -5,12 +5,7 @@ export const StyledA = styled.a`
 	display: flex;
 	cursor: pointer;
 	width: 66%;
-`
-
-export const StyledImg = styled.img`
-	width: 55px;
-	height: 56px;
-	margin: 5px 5px 0 7px;
+	margin-left: 10px;
 `
 
 export const LinkWrapper = styled.div`
@@ -33,9 +28,4 @@ export const ArrowWrapper = styled.div`
 	bottom: 20px;
 	right: 10px;
 	z-index: 98;
-`
-
-export const StyledIcon = styled.img`
-	width: 100%;
-	height: 100%;
 `

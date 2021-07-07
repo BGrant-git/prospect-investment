@@ -9,13 +9,10 @@ import { StoreContext } from '../../context/context'
 import {
 	Container,
 	LogoWrapper,
-	StyledImg,
 	StyledH1,
 	LinkWrapper,
 	StyledA,
 } from './navbarDeskStyles'
-
-const logoImg = require('../../public/images/Logo/logo.png')
 
 const NavbarDesk = () => {
 	const { scrolled } = useContext(StoreContext)
@@ -27,7 +24,6 @@ const NavbarDesk = () => {
 			<LogoWrapper>
 				<Link href="/" as="">
 					<StyledA>
-						<StyledImg src={logoImg} alt="" />
 						<StyledH1>
 							PROSPECT{' '}
 							<span style={{ color: 'var(--main-colour' }}>INVESTMENT</span>
