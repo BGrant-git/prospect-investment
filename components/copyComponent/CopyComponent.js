@@ -1,6 +1,8 @@
 import { useContext } from 'react'
 import { motion } from 'framer-motion'
 
+import LeftAnimateWrapper from '../framerWrappers/LeftAnimateWrapper'
+import RightAnimateWrapper from '../framerWrappers/RightAnimateWrapper'
 import { StoreContext } from '../../context/context'
 import { aboutPageCopy } from '../../public/text-files/aboutText'
 
@@ -19,11 +21,7 @@ const CopyComponent = () => {
 
 	return (
 		<>
-			<motion.div
-				initial="hidden"
-				animate="visible"
-				variants={framerLeftSlideVariants}
-			>
+			<LeftAnimateWrapper>
 				<RowWrapper>
 					<TextWrapper>
 						<h2>{aboutPageCopy[0].heading}</h2>
@@ -32,8 +30,8 @@ const CopyComponent = () => {
 					</TextWrapper>
 					<StyledImgLeft src={aboutPageCopy[0].img} alt="" />
 				</RowWrapper>
-			</motion.div>
-			<motion.div
+			</LeftAnimateWrapper>
+			<RightAnimateWrapper
 				initial="hidden"
 				animate="visible"
 				variants={framerRightSlideVariants}
@@ -46,7 +44,7 @@ const CopyComponent = () => {
 						<StyledP>{aboutPageCopy[1].text}</StyledP>
 					</TextWrapper>
 				</RowWrapper>
-			</motion.div>
+			</RightAnimateWrapper>
 		</>
 	)
 }

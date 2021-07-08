@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { motion } from 'framer-motion'
 
 import ProjectComponent from '../components/projectComponent/ProjectComponent'
-
+import UpAnimateWrapper from '../components/framerWrappers/UpAnimateWrapper'
 import { StoreContext, CenterRule } from '../context/context'
 import {
 	Container,
