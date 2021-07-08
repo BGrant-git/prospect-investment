@@ -2,7 +2,8 @@ import { useContext } from 'react'
 import { motion } from 'framer-motion'
 
 import ProjectComponent from '../components/projectComponent/ProjectComponent'
-import UpAnimateWrapper from '../components/framerWrappers/UpAnimateWrapper'
+import StaggerAnimateWrapper from '../components/framerWrappers/StaggerAnimateWrapper'
+
 import { StoreContext, CenterRule } from '../context/context'
 import {
 	Container,
@@ -20,15 +21,11 @@ const Projects = () => {
 
 	return (
 		<Container>
-			<StyledH1>Projectsssss</StyledH1>
+			<StyledH1>Projects</StyledH1>
 			<CenterRule />
 			<StyledH2>Completed</StyledH2>
 			<CenterRule style={ruleStyle} />
-			<motion.div
-				initial="hidden"
-				animate="show"
-				variants={framerStaggerVariants.container}
-			>
+			<StaggerAnimateWrapper variant={framerStaggerVariants.container}>
 				<>
 					{completedLinks.map((item, i) => (
 						<motion.div variants={framerStaggerVariants.item} key={i}>
@@ -40,7 +37,7 @@ const Projects = () => {
 						</motion.div>
 					))}
 				</>
-			</motion.div>
+			</StaggerAnimateWrapper>
 
 			<StyledH2>In Progress</StyledH2>
 			<CenterRule style={ruleStyle} />
