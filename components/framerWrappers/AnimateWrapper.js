@@ -3,17 +3,13 @@ import { motion } from 'framer-motion'
 
 import { StoreContext } from '../../context/context'
 
-const UpAnimateWrapper = ({ children }) => {
-	const { framerUpVariants, matchesSm } = useContext(StoreContext)
+const AnimateWrapper = ({ children, variants }) => {
+	const { matchesSm } = useContext(StoreContext)
 
 	return (
 		<>
 			{matchesSm ? (
-				<motion.div
-					initial="hidden"
-					animate="visible"
-					variants={framerUpVariants}
-				>
+				<motion.div initial="hidden" animate="visible" variants={variants}>
 					{children}
 				</motion.div>
 			) : (
@@ -23,4 +19,4 @@ const UpAnimateWrapper = ({ children }) => {
 	)
 }
 
-export default UpAnimateWrapper
+export default AnimateWrapper
