@@ -3,15 +3,21 @@ import styled from 'styled-components'
 export const Container = styled.div`
 	display: flex;
 	justify-content: center;
-	margin-top: -80px;
-	padding-top: 80px;
 	background: linear-gradient(0deg, white, 85%, rgba(25, 25, 112, 0.35)),
 		url(${(props) => props.bg});
-	background-position: top;
+	background-position: bottom;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-attachment: fixed;
 	border-radius: 0;
+	margin-top: -80px;
+	padding-top: 80px;
+
+	&:before {
+		width: 100%;
+		height: 80px;
+		background-color: rgba(25, 25, 112, 0.375);
+	}
 `
 
 export const ContentWrapper = styled.div`
@@ -22,6 +28,13 @@ export const ContentWrapper = styled.div`
 
 export const TitleWrapper = styled.div`
 	margin: auto;
+`
+
+export const HeaderBackground = styled.div`
+	background-color: 'rgba(25, 25, 112, 0.375)';
+	width: 100%;
+	height: 80px;
+	margin: -80px 0 80px;
 `
 
 export const StyledH1 = styled.h1`

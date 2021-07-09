@@ -12,16 +12,18 @@ const copyBackground = require('../public/images/about/shutterstock_179448743.jp
 
 const About = () => {
 	return (
-		<Container bg={copyBackground}>
-			<ContentWrapper>
-				<TitleWrapper>
-					<StyledH1>WHO WE ARE</StyledH1>
-					<CenterRule style={{ backgroundColor: 'white' }} />
-				</TitleWrapper>
-				<CopyComponent />
-				<BioSection />
-			</ContentWrapper>
-		</Container>
+		<>
+			<Container bg={copyBackground}>
+				<ContentWrapper>
+					<TitleWrapper>
+						<StyledH1>WHO WE ARE</StyledH1>
+						<CenterRule style={{ backgroundColor: 'white' }} />
+					</TitleWrapper>
+					<CopyComponent />
+					<BioSection />
+				</ContentWrapper>
+			</Container>
+		</>
 	)
 }
 
