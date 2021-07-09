@@ -10,6 +10,8 @@ export const Container = styled.div`
 	background-position: top;
 	background-repeat: no-repeat;
 	background-size: contain;
+	background-attachment: fixed;
+	border-radius: 0;
 `
 
 export const ContentWrapper = styled.div`
