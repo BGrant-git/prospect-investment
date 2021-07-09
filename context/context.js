@@ -3,21 +3,21 @@ import { useMediaQuery } from '@material-ui/core'
 import styled from 'styled-components'
 
 export const CenterRule = styled.div`
-	background-color: black;
+	background-color: white;
 	width: 60px;
 	height: 3px;
 	margin: -30px auto 15px;
 `
 
 export const LeftRule = styled.div`
-	background-color: black;
+	background-color: white;
 	width: 60px;
 	height: 3px;
 	margin: -10px 0 -5px;
 `
 
 export const RightRule = styled.div`
-	background-color: black;
+	background-color: white;
 	width: 60px;
 	height: 3px;
 	margin: -10px 0 -5px;

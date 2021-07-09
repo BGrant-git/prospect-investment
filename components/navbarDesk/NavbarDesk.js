@@ -24,7 +24,7 @@ const NavbarDesk = () => {
 			<LogoWrapper>
 				<Link href="/" as="">
 					<StyledA>
-						<StyledH1>
+						<StyledH1 fontSize={scrolledVal ? '38px' : '45px'}>
 							PROSPECT{' '}
 							<span style={{ color: 'var(--main-colour' }}>INVESTMENT</span>
 						</StyledH1>
