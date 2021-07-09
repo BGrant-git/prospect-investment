@@ -101,14 +101,14 @@ const StoreContextProvider = ({ children }) => {
 	const framerStaggerVariants = {
 		container: {
 			hidden: { opacity: 0 },
-			show: {
+			visible: {
 				opacity: 1,
 				transition: {
 					staggerChildren: 0.5,
 				},
 			},
 		},
-		item: { hidden: { opacity: 0 }, show: { opacity: 1 } },
+		item: { hidden: { opacity: 0 }, visible: { opacity: 1 } },
 	}
 
 	return (

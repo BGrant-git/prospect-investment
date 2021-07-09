@@ -1,6 +1,8 @@
 import { useContext, useEffect } from 'react'
-import { motion, useAnimation } from 'framer-motion'
+import { useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+
+import ScrollAnimateWrapper from '../framerWrappers/ScrollAnimateWrapper'
 
 import { StoreContext } from '../../context/context'
 import {
@@ -15,22 +17,9 @@ import {
 const bioCard = ({ name, position, bioText, img }) => {
 	const { matchesMd } = useContext(StoreContext)
 	const { framerUpVariants } = useContext(StoreContext)
-	const controls = useAnimation()
-	const { ref, inView } = useInView()
-
-	useEffect(() => {
-		if (inView) {
-			controls.start('visible')
-		}
-	}, [controls, inView])
 
 	return (
-		<motion.div
-			ref={ref}
-			initial="hidden"
-			animate={controls}
-			variants={framerUpVariants}
-		>
+		<ScrollAnimateWrapper variants={framerUpVariants}>
 			<Container>
 				<ImageWrapper>
 					<StyledImg src={img} alt="" />
@@ -46,7 +35,7 @@ const bioCard = ({ name, position, bioText, img }) => {
 					))}
 				</TextWrapper>
 			</Container>
-		</motion.div>
+		</ScrollAnimateWrapper>
 	)
 }
 

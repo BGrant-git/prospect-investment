@@ -1,9 +1,9 @@
-import { useContext, useEffect } from 'react'
-import HomepageProjectItem from '../homepageProjectItem/HomepageProjectItem'
-import { motion, useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
-import { StoreContext } from '../../context/context'
+import { useContext } from 'react'
 
+import HomepageProjectItem from '../homepageProjectItem/HomepageProjectItem'
+import ScrollAnimateWrapper from '../framerWrappers/ScrollAnimateWrapper'
+
+import { StoreContext } from '../../context/context'
 import {
 	Container,
 	ProjectsWrapper,
@@ -14,23 +14,9 @@ import { projectsData } from '../../public/text-files/homepageText'
 
 const HomepageProjects = () => {
 	const { framerUpVariants } = useContext(StoreContext)
-	const controls = useAnimation()
-
-	const { ref, inView } = useInView({ threshold: 0.1 })
-
-	useEffect(() => {
-		if (inView) {
-			controls.start('visible')
-		}
-	}, [controls, inView])
 
 	return (
-		<motion.div
-			ref={ref}
-			initial="hidden"
-			animate={controls}
-			variants={framerUpVariants}
-		>
+		<ScrollAnimateWrapper variants={framerUpVariants}>
 			<Container>
 				<TitleWrapper>
 					<h1>Featured Projects:</h1>
@@ -49,7 +35,7 @@ const HomepageProjects = () => {
 					))}
 				</ProjectsWrapper>
 			</Container>
-		</motion.div>
+		</ScrollAnimateWrapper>
 	)
 }
 
