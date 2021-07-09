@@ -8,9 +8,11 @@ export const RowWrapper = styled.div`
 	font-size: 20px;
 	z-index: 1;
 	background-color: white;
+	border-radius: 5px;
 
 	@media (max-width: 855px) {
 		flex-direction: column;
+		border-radius: 0px;
 	}
 `
 

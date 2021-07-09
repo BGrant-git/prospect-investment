@@ -11,9 +11,13 @@ export const Container = styled.div`
 	height: 650px;
 	background-color: white;
 	text-align: center;
+	border-radius: 5px;
 
 	@media (max-width: 855px) {
+		width: 100%;
+		max-width: 500px;
 		height: auto;
+		border-radius: 0px;
 	}
 `
 

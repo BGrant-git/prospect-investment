@@ -7,11 +7,13 @@ export const Container = styled.div`
 	margin: 0 auto 50px;
 	background: white;
 	padding: 1px;
+	border-radius: 5px;
 
 	@media (max-width: 960px) {
 		margin: 10px 0;
 		width: 100%;
 		height: 605px;
+		border-radius: 0px;
 	}
 `
 
