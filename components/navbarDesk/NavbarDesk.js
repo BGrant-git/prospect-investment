@@ -20,7 +20,7 @@ const NavbarDesk = () => {
 	const router = useRouter()
 
 	return (
-		<Container bg={scrolledVal ? 'var(--main-dark)' : 'transparent'}>
+		<Container bg={scrolledVal ? 'var(--main-colour-dark)' : 'transparent'}>
 			<LogoWrapper>
 				<Link href="/" as="">
 					<StyledA>

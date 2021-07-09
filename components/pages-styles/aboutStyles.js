@@ -2,10 +2,20 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
+	margin-top: -80px;
+	padding-top: 80px;
+	background: linear-gradient(0deg, white, 85%, rgba(25, 25, 112, 0.35)),
+		url(${(props) => props.bg});
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: contain;
+`
+
+export const ContentWrapper = styled.div`
 	max-width: 1200px;
-	margin: auto;
+	display: flex;
+	flex-direction: column;
 `
 
 export const TitleWrapper = styled.div`
@@ -15,7 +25,8 @@ export const TitleWrapper = styled.div`
 export const StyledH1 = styled.h1`
 	text-align: center;
 	font-size: 50px;
-	width: 800px;
+	max-width: 800px;
+	color: white;
 
 	@media (max-width: 855px) {
 		margin-top: 0;
