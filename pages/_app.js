@@ -28,12 +28,6 @@ const GlobalStyle = createGlobalStyle`
 		text-decoration: none;
 		color: inherit;
 	}
-	div {
-		border-radius: 5px;
-	}
-	button {
-		border-radius: 5px;
-	}
 	`
 
 function MyApp({ Component, pageProps }) {

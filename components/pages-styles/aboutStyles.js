@@ -13,10 +13,9 @@ export const Container = styled.div`
 	margin-top: -80px;
 	padding-top: 160px;
 
-	&:before {
-		width: 100%;
-		height: 80px;
-		background-color: rgba(25, 25, 112, 0.375);
+	@media (max-width: 855px) {
+		background-position: 0% 15%;
+		overflow-y: hidden;
 	}
 `
 
