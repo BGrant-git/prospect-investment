@@ -20,11 +20,11 @@ const NavbarDesk = () => {
 	const router = useRouter()
 
 	return (
-		<Container bg={scrolledVal ? 'var(--main-dark)' : 'transparent'}>
+		<Container bg={scrolledVal ? 'var(--main-colour-dark)' : 'transparent'}>
 			<LogoWrapper>
 				<Link href="/" as="">
 					<StyledA>
-						<StyledH1>
+						<StyledH1 fontSize={scrolledVal ? '38px' : '45px'}>
 							PROSPECT{' '}
 							<span style={{ color: 'var(--main-colour' }}>INVESTMENT</span>
 						</StyledH1>

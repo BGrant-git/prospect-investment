@@ -9,10 +9,13 @@ const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	background: url(${(props) => props.backgroundImg});
+	background: linear-gradient(rgba(25, 25, 112, 0.1), rgba(25, 25, 112, 0.2)),
+		url(${(props) => props.backgroundImg});
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	margin-top: -80px;
+	padding-top: 80px;
 `
 
 const Contact = () => {

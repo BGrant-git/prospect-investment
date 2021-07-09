@@ -2,20 +2,46 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
+	background: linear-gradient(0deg, white, 75%, rgba(25, 25, 112, 0.35)),
+		url(${(props) => props.bg});
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-attachment: fixed;
+	border-radius: 0;
+	margin-top: -80px;
+	padding-top: 160px;
+
+	&:before {
+		width: 100%;
+		height: 80px;
+		background-color: rgba(25, 25, 112, 0.375);
+	}
+`
+
+export const ContentWrapper = styled.div`
 	max-width: 1200px;
-	margin: auto;
+	display: flex;
+	flex-direction: column;
 `
 
 export const TitleWrapper = styled.div`
-	margin: auto;
+	margin: 0 auto 20px;
+`
+
+export const HeaderBackground = styled.div`
+	background-color: 'rgba(25, 25, 112, 0.375)';
+	width: 100%;
+	height: 80px;
+	margin: -80px 0 80px;
 `
 
 export const StyledH1 = styled.h1`
 	text-align: center;
 	font-size: 50px;
-	width: 800px;
+	max-width: 800px;
+	color: white;
 
 	@media (max-width: 855px) {
 		margin-top: 0;

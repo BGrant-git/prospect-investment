@@ -1,5 +1,5 @@
 const ServicesComponent = () => {
-	return <div>Services</div>
+	return <div></div>
 }
 
 export default ServicesComponent

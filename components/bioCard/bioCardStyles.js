@@ -9,7 +9,7 @@ export const Container = styled.div`
 	align-items: center;
 	width: 400px;
 	height: 650px;
-	background-color: var(--main-colour-faded);
+	background-color: white;
 	text-align: center;
 
 	@media (max-width: 855px) {

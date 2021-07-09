@@ -67,20 +67,18 @@ const NavbarMob = () => {
 						</a>
 					</LinkWrapper>
 					<LinkWrapper>
-						<a className="menu-item">
+						<a className="menu-item" href="/contact">
 							<h2>CONTACT US</h2>
 						</a>
 					</LinkWrapper>
 				</div>
 			</Menu>
-			<div style={{ transition: '1s ease-in-out' }}>
-				<ArrowWrapper
-					display={scrolledVal ? 'initial' : 'none'}
-					onClick={() => scrollToTop()}
-				>
-					<Image src={navArrow} alt="" width={50} height={50} />
-				</ArrowWrapper>
-			</div>
+			<ArrowWrapper
+				display={scrolledVal ? 'initial' : 'none'}
+				onClick={() => scrollToTop()}
+			>
+				<Image src={navArrow} alt="" width={50} height={50} />
+			</ArrowWrapper>
 		</div>
 	)
 }

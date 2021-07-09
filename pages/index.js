@@ -24,6 +24,7 @@ const HeroSectionWrapper = styled.div`
 	@media (max-width: 855px) {
 		background-position-x: 15%;
 		height: 600px;
+		transition: none;
 	}
 `
 

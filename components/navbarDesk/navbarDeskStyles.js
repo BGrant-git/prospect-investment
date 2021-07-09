@@ -7,7 +7,7 @@ export const Container = styled.div`
 	justify-content: space-between;
 	background-color: transparent;
 	transition: 0.2s ease-in-out;
-	z-index: 99;
+	z-index: 999;
 	position: sticky;
 	top: 0;
 	left: 0;
@@ -23,7 +23,10 @@ export const LogoWrapper = styled.div`
 `
 
 export const StyledH1 = styled.h1`
+	transition: 0.2s ease-in-out;
 	color: white;
+	font-size: ${(props) => props.fontSize};
+
 	@media (max-width: 1247px) {
 		margin: 14px 5px 0 0;
 	}
