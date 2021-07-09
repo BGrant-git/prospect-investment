@@ -24,6 +24,7 @@ export const LogoWrapper = styled.div`
 
 export const StyledH1 = styled.h1`
 	color: white;
+
 	@media (max-width: 1247px) {
 		margin: 14px 5px 0 0;
 	}
