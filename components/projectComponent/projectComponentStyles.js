@@ -3,7 +3,7 @@ import { LeftRule } from '../../store/context'
 
 export const Container = styled.div`
 	display: flex;
-	margin: 20px auto;
+	margin: 20px auto 0;
 	max-width: 1200px;
 	max-height: 250px;
 	cursor: pointer;
