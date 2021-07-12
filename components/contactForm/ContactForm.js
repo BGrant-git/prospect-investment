@@ -53,7 +53,7 @@ const ContactForm = () => {
 						</FormWrapper>
 					</Grid>
 					<Grid item xs={12}>
-						<Button variant="filled" type="submit" style={buttonStyle}>
+						<Button variant="contained" type="submit" style={buttonStyle}>
 							Submit
 						</Button>
 					</Grid>
