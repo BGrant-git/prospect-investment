@@ -2,7 +2,7 @@ import { useContext, useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
-import { StoreContext } from '../../context/context'
+import { StoreContext } from '../../store/context'
 
 const ScrollAnimateWrapper = ({ variants, children }) => {
 	const { matchesSm } = useContext(StoreContext)

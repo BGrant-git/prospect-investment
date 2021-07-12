@@ -1,6 +1,6 @@
 import ServicesComponent from '../components/servicesComponent/ServicesComponent'
 
-import { Container } from '../components/pages-styles/servicesStyles'
+import { Container } from '../store/pages-styles/servicesStyles'
 
 const Services = () => {
 	return (

@@ -1,16 +1,20 @@
 import styled from 'styled-components'
-import { TextField } from '@material-ui/core'
 
 export const Container = styled.div`
 	max-width: 1000px;
 	margin: auto;
+	border: 2px solid var(--main-colour-faded);
+	border-radius: 5px;
+
+	@media (max-width: 855px) {
+		border-radius: 0;
+	}
 `
 
 export const StyledForm = styled.form`
 	display: flex;
-	margin-left: 10px;
 	margin-bottom: 40px;
-	padding-top: 20px;
+	padding-top: 10px;
 
 	@media (max-width: 960px) {
 		margin: 0;
@@ -30,7 +34,7 @@ export const messageBoxStyle = {
 }
 
 export const buttonStyle = {
-	margin: '10px auto',
+	margin: '25px auto 0',
 	fontSize: '19px',
 	width: '300px',
 	height: '50px',

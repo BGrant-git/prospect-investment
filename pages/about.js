@@ -1,4 +1,4 @@
-import { CenterRule } from '../context/context'
+import { CenterRule } from '../store/context'
 import BioSection from '../components/bioSection/BioSection'
 import CopyComponent from '../components/copyComponent/CopyComponent'
 import {
@@ -6,7 +6,7 @@ import {
 	ContentWrapper,
 	TitleWrapper,
 	StyledH1,
-} from '../components/pages-styles/aboutStyles'
+} from '../store/pages-styles/aboutStyles'
 
 const copyBackground = require('../public/images/about/shutterstock_179448743.jpg')
 
