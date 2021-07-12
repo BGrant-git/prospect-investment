@@ -17,7 +17,7 @@ const About = () => {
 				<ContentWrapper>
 					<TitleWrapper>
 						<StyledH1>WHO WE ARE</StyledH1>
-						<CenterRule />
+						<CenterRule background="white" />
 					</TitleWrapper>
 					<CopyComponent />
 					<BioSection />

@@ -9,7 +9,7 @@ const BioSection = () => {
 	return (
 		<Container>
 			<StyledH1>The Team</StyledH1>
-			<CenterRule />
+			<CenterRule background="white" />
 			<Grid container>
 				{bioData.map((item, i) => (
 					<Grid item xs={12} md={6} key={i}>

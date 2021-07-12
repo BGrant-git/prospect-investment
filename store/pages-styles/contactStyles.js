@@ -14,10 +14,9 @@ export const Container = styled.div`
 `
 
 export const ContentWrapper = styled.div`
-	width: 100%;
 	margin: 20px auto 100px;
 	background: white;
-	padding: 40px 0 50px;
+	padding: 40px 0 30px;
 
 	@media (max-width: 960px) {
 		margin: 10px 0;
@@ -29,7 +28,7 @@ export const ContentWrapper = styled.div`
 export const StyledH1 = styled.h1`
 	font-size: 42px;
 	color: white;
-	margin: 80px 0 40px;
+	margin: 140px 0 20px;
 
 	@media (max-width: 855px) {
 		margin-top: 40px;
