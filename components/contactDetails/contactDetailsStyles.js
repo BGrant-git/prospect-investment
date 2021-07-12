@@ -25,6 +25,7 @@ export const ContentWrapper = styled.div`
 	display: flex;
 	justify-content: center;
 	background: #e0e0e0;
+	margin-top: 15px;
 `
 
 export const ContactMethodWrapper = styled.div`

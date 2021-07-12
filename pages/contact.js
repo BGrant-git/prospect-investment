@@ -15,7 +15,7 @@ const Contact = () => {
 	return (
 		<Container backgroundImg={backgroundImg}>
 			<StyledH1>Contact Us</StyledH1>
-			<CenterRule />
+			<CenterRule background="white" />
 			<ContentWrapper>
 				<ContactForm />
 				<ContactDetails />
