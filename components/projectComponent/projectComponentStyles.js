@@ -5,12 +5,14 @@ export const Container = styled.div`
 	margin: 20px auto;
 	max-width: 1200px;
 	max-height: 250px;
-	background-color: var(--main-colour-faded);
 	cursor: pointer;
 	transition: 0.1s ease-in-out;
+	background-color: white;
+	border-radius: 5px;
 
 	&:hover {
 		transform: scale(1.01);
+		border-radius: 0px;
 	}
 
 	@media (max-width: 855px) {

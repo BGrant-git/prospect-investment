@@ -1,28 +1,36 @@
-import styled from 'styled-components'
-
 import ContactForm from '../components/contactForm/ContactForm'
-import LocationComponent from '../components/contactDetails/ContactDetails'
+
+import {
+	Container,
+	ContentWrapper,
+	DetailsWrapper,
+	StyledH1,
+	InfoWrapper,
+} from '../components/pages-styles/contactStyles'
 
 const backgroundImg = require('../public/images/homepage/naomi-hebert-MP0bgaS_d1c-unsplash.jpg')
-
-const Container = styled.div`
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	background: linear-gradient(rgba(25, 25, 112, 0.1), rgba(25, 25, 112, 0.2)),
-		url(${(props) => props.backgroundImg});
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	margin-top: -80px;
-	padding-top: 80px;
-`
 
 const Contact = () => {
 	return (
 		<Container backgroundImg={backgroundImg}>
-			<LocationComponent />
-			<ContactForm />
+			<ContentWrapper>
+				<StyledH1>Contact Us</StyledH1>
+				<ContactForm />
+				<DetailsWrapper>
+					<InfoWrapper>
+						<h2>Telephone:</h2>
+						<h2>Email:</h2>
+					</InfoWrapper>
+					<div>
+						<a href="tel:0798765432">
+							<h2>+44 (0) 798765432</h2>
+						</a>
+						<a href="">
+							<h2>john.invalid@smith.invalid.com</h2>
+						</a>
+					</div>
+				</DetailsWrapper>
+			</ContentWrapper>
 		</Container>
 	)
 }

@@ -1,21 +1,7 @@
 import styled from 'styled-components'
-import { TextField, Button } from '@material-ui/core'
+import { TextField } from '@material-ui/core'
 
-export const Container = styled.div`
-	width: 1000px;
-	height: 380px;
-	margin: 0 auto 50px;
-	background: white;
-	padding: 1px;
-	border-radius: 5px;
-
-	@media (max-width: 960px) {
-		margin: 10px 0;
-		width: 100%;
-		height: 605px;
-		border-radius: 0px;
-	}
-`
+export const Container = styled.div``
 
 export const StyledForm = styled.form`
 	display: flex;
@@ -32,17 +18,8 @@ export const FormWrapper = styled.div`
 	width: 100%;
 `
 
-export const TextFieldWrapper = styled(TextField)(() => ({
-	// '& fieldset': {
-	// 	borderRadius: '0px',
-	// },
-	'& .MuiOutlinedInput-notchedOutline': {
-		borderColor: 'black',
-	},
-}))
-
 export const messageBoxStyle = {
-	margin: '10px auto',
+	margin: '9px auto',
 	fontSize: '18px',
 	width: '90%',
 }
