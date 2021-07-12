@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 import NavbarButtonDesk from '../navbarButtonDesk/NavbarButtonDesk'
 import NavDropdown from '../navDropdown/NavDropdown'
 
-import { StoreContext } from '../../store/context'
+import { StoreContext } from '../../context/context'
 import {
 	Container,
 	LogoWrapper,

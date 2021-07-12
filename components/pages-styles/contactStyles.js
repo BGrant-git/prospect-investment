@@ -17,7 +17,7 @@ export const ContentWrapper = styled.div`
 	width: 100%;
 	margin: 20px auto 100px;
 	background: white;
-	padding: 40px 0 50px;
+	padding: 40px 0;
 
 	@media (max-width: 960px) {
 		margin: 10px 0;
@@ -34,4 +34,25 @@ export const StyledH1 = styled.h1`
 	@media (max-width: 855px) {
 		margin-top: 40px;
 	}
+`
+
+export const DetailsWrapper = styled.div`
+	display: flex;
+	justify-content: center;
+	text-align: left;
+
+	a {
+		color: var(--main-colour-dark);
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+	@media (max-width: 855px) {
+		font-size: 80%;
+	}
+`
+
+export const InfoWrapper = styled.div`
+	text-align: right;
+	margin: 0 10px 0 0;
 `

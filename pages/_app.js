@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 import { AnimatePresence } from 'framer-motion'
 
-import StoreContextProvider from '../store/context'
+import StoreContextProvider from '../context/context'
 import Layout from '../components/layout/Layout'
 
 import '@fontsource/sen'

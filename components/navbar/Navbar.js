@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 
-import { StoreContext } from '../../store/context'
+import { StoreContext } from '../../context/context'
 import NavbarDesk from '../navbarDesk/NavbarDesk'
 import NavbarMob from '../navbarMob/NavbarMob'
 

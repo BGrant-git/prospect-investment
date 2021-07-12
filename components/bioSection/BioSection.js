@@ -3,7 +3,7 @@ import { Grid } from '@material-ui/core'
 
 import { Container, StyledH1 } from './bioSectionStyles'
 import { bioData } from '../../public/text-files/aboutText'
-import { CenterRule } from '../../store/context'
+import { CenterRule } from '../../context/context'
 
 const BioSection = () => {
 	return (

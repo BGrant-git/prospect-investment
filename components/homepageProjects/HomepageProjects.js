@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import HomepageProjectItem from '../homepageProjectItem/HomepageProjectItem'
 import ScrollAnimateWrapper from '../framerWrappers/ScrollAnimateWrapper'
 
-import { StoreContext } from '../../store/context'
+import { StoreContext } from '../../context/context'
 import {
 	Container,
 	ProjectsWrapper,

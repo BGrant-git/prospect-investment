@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 
-import { StoreContext } from '../../store/context'
+import { StoreContext } from '../../context/context'
 import { Container, LogoWrapper } from './footerStyles'
 
 const year = new Date().getFullYear()

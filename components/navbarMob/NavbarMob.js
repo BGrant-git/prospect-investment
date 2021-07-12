@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { slide as Menu } from 'react-burger-menu'
 
-import { StoreContext } from '../../store/context'
+import { StoreContext } from '../../context/context'
 import {
 	StyledA,
 	StyledImg,

@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { Button } from '@material-ui/core'
 import { motion } from 'framer-motion'
 
-import { StoreContext } from '../../store/context'
+import { StoreContext } from '../../context/context'
 import { landingText } from '../../public/text-files/homepageText'
 
 import {

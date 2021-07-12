@@ -6,7 +6,7 @@ import {
 	StyledP,
 	StyledUl,
 } from './projectComponentStyles'
-import { LeftRule } from '../../store/context'
+import { LeftRule } from '../../context/context'
 
 const ProjectComponent = ({ title, text, img }) => {
 	return (
