@@ -14,22 +14,26 @@ export const Container = styled.div`
 `
 
 export const ContentWrapper = styled.div`
-	width: 1000px;
-	margin: 50px auto 100px;
+	width: 100%;
+	margin: 20px auto 100px;
 	background: white;
-	padding: 0 0 20px;
-	border-radius: 5px;
+	padding: 40px 0;
 
 	@media (max-width: 960px) {
 		margin: 10px 0;
 		width: 100%;
-		height: 605px;
 		border-radius: 0px;
 	}
 `
 
 export const StyledH1 = styled.h1`
 	font-size: 42px;
+	color: white;
+	margin: 80px 0 40px;
+
+	@media (max-width: 855px) {
+		margin-top: 40px;
+	}
 `
 
 export const DetailsWrapper = styled.div`
@@ -41,6 +45,10 @@ export const DetailsWrapper = styled.div`
 		color: var(--main-colour-dark);
 		text-decoration: underline;
 		cursor: pointer;
+	}
+
+	@media (max-width: 855px) {
+		font-size: 80%;
 	}
 `
 

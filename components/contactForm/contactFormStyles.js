@@ -1,11 +1,16 @@
 import styled from 'styled-components'
 import { TextField } from '@material-ui/core'
 
-export const Container = styled.div``
+export const Container = styled.div`
+	max-width: 1000px;
+	margin: auto;
+`
 
 export const StyledForm = styled.form`
 	display: flex;
 	margin-left: 10px;
+	margin-bottom: 40px;
+	padding-top: 20px;
 
 	@media (max-width: 960px) {
 		margin: 0;

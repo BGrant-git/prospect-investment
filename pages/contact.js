@@ -1,5 +1,6 @@
 import ContactForm from '../components/contactForm/ContactForm'
 
+import { CenterRule } from '../context/context'
 import {
 	Container,
 	ContentWrapper,
@@ -7,14 +8,16 @@ import {
 	StyledH1,
 	InfoWrapper,
 } from '../components/pages-styles/contactStyles'
+import { contactDetails } from '../public/text-files/contactDetails'
 
 const backgroundImg = require('../public/images/homepage/naomi-hebert-MP0bgaS_d1c-unsplash.jpg')
 
 const Contact = () => {
 	return (
 		<Container backgroundImg={backgroundImg}>
+			<StyledH1>Contact Us</StyledH1>
+			<CenterRule />
 			<ContentWrapper>
-				<StyledH1>Contact Us</StyledH1>
 				<ContactForm />
 				<DetailsWrapper>
 					<InfoWrapper>
@@ -23,10 +26,10 @@ const Contact = () => {
 					</InfoWrapper>
 					<div>
 						<a href="tel:0798765432">
-							<h2>+44 (0) 798765432</h2>
+							<h2>{contactDetails.phoneNumber}</h2>
 						</a>
 						<a href="">
-							<h2>john.invalid@smith.invalid.com</h2>
+							<h2>{contactDetails.email}</h2>
 						</a>
 					</div>
 				</DetailsWrapper>
