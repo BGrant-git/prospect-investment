@@ -5,15 +5,15 @@ import {
 	TextWrapper,
 	StyledP,
 	StyledUl,
+	LeftRuleStyled,
 } from './projectComponentStyles'
-import { LeftRule } from '../../store/context'
 
 const ProjectComponent = ({ title, text, img }) => {
 	return (
 		<Container>
 			<TextWrapper>
 				<StyledH1>{title}</StyledH1>
-				<LeftRule style={{ backgroundColor: 'black' }} />
+				<LeftRuleStyled background="black" />
 				<StyledUl>
 					{text.map((item, i) => (
 						<li key={i}>

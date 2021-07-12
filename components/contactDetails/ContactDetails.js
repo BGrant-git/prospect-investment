@@ -12,7 +12,7 @@ const ContactDetails = () => {
 	return (
 		<Container>
 			<h1>Or get in touch with Tom</h1>
-			<CenterRule style={{ background: 'black', width: '20px' }} />
+			<CenterRule background="black" />
 			<ContentWrapper>
 				<ContactMethodWrapper>
 					<h2>Telephone:</h2>

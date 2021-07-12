@@ -28,7 +28,7 @@ export const ContentWrapper = styled.div`
 export const StyledH1 = styled.h1`
 	font-size: 42px;
 	color: white;
-	margin: 140px 0 40px;
+	margin: 140px 0 20px;
 
 	@media (max-width: 855px) {
 		margin-top: 40px;

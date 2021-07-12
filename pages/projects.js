@@ -22,9 +22,9 @@ const Projects = () => {
 	return (
 		<Container>
 			<StyledH1>Projects</StyledH1>
-			<CenterRule />
+			<CenterRule background="white" />
 			<StyledH2>Completed</StyledH2>
-			<CenterRule style={ruleStyle} />
+			<CenterRule background="white" style={ruleStyle} />
 			<StaggerAnimateWrapper variant={framerStaggerVariants.container}>
 				<>
 					{completedLinks.map((item, i) => (
@@ -40,7 +40,7 @@ const Projects = () => {
 			</StaggerAnimateWrapper>
 
 			<StyledH2>In Progress</StyledH2>
-			<CenterRule style={ruleStyle} />
+			<CenterRule background="white" style={ruleStyle} />
 			<>
 				{inProgressLinks.map((item, i) => (
 					<ProjectComponent
