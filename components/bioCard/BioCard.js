@@ -15,8 +15,7 @@ import {
 } from './bioCardStyles'
 
 const bioCard = ({ name, position, bioText, img }) => {
-	const { matchesMd } = useContext(StoreContext)
-	const { framerUpVariants } = useContext(StoreContext)
+	const { matchesMd, framerUpVariants } = useContext(StoreContext)
 
 	return (
 		<ScrollAnimateWrapper variants={framerUpVariants}>

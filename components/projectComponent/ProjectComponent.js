@@ -13,7 +13,7 @@ const ProjectComponent = ({ title, text, img }) => {
 		<Container>
 			<TextWrapper>
 				<StyledH1>{title}</StyledH1>
-				<LeftRuleStyled background="black" />
+				<LeftRuleStyled background="var(--main-dark)" />
 				<StyledUl>
 					{text.map((item, i) => (
 						<li key={i}>
