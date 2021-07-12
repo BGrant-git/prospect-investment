@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 
 import AnimateWrapper from '../framerWrappers/AnimateWrapper'
-import { StoreContext } from '../../context/context'
+import { StoreContext } from '../../store/context'
 import { aboutPageCopy } from '../../public/text-files/aboutText'
 
 import {
@@ -11,7 +11,7 @@ import {
 	StyledImgLeft,
 	StyledImgRight,
 } from './copyComponentStyles'
-import { LeftRule, RightRule } from '../../context/context'
+import { LeftRule, RightRule } from '../../store/context'
 
 const CopyComponent = () => {
 	const { framerLeftSlideVariants, framerRightSlideVariants } =

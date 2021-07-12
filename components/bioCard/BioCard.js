@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer'
 
 import ScrollAnimateWrapper from '../framerWrappers/ScrollAnimateWrapper'
 
-import { StoreContext } from '../../context/context'
+import { StoreContext } from '../../store/context'
 import {
 	StyledP,
 	Container,

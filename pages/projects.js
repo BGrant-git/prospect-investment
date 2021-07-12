@@ -4,12 +4,12 @@ import { motion } from 'framer-motion'
 import ProjectComponent from '../components/projectComponent/ProjectComponent'
 import StaggerAnimateWrapper from '../components/framerWrappers/StaggerAnimateWrapper'
 
-import { StoreContext, CenterRule } from '../context/context'
+import { StoreContext, CenterRule } from '../store/context'
 import {
 	Container,
 	StyledH1,
 	StyledH2,
-} from '../components/pages-styles/projectsStyles'
+} from '../store/pages-styles/projectsStyles'
 import { projectsLinks } from '../public/text-files/projectsText'
 
 const completedLinks = projectsLinks[0]

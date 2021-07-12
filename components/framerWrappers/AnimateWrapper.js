@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { motion } from 'framer-motion'
 
-import { StoreContext } from '../../context/context'
+import { StoreContext } from '../../store/context'
 
 const AnimateWrapper = ({ children, variants }) => {
 	const { matchesSm } = useContext(StoreContext)
