@@ -34,7 +34,7 @@ const CopyComponent = () => {
 					<StyledImgRight src={aboutPageCopy[1].img} alt="" />
 					<TextWrapper style={{ textAlign: 'right' }}>
 						<h2>{aboutPageCopy[1].heading}</h2>
-						<RightRule background="var(--main-dark)" />
+						<RightRule background="var(--main-dark)" /
 						<StyledP>{aboutPageCopy[1].text}</StyledP>
 					</TextWrapper>
 				</RowWrapper>
