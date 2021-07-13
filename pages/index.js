@@ -43,7 +43,6 @@ const Index = () => {
 				<HomeImageText />
 			</HeroSectionWrapper>
 			<HomepageProjects />
-			{/* <HomepageCards /> */}
 		</div>
 	)
 }
