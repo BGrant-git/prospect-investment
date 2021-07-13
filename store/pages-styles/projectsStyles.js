@@ -13,9 +13,9 @@ export const StyledH1 = styled.h1`
 	color: white;
 `
 
-export const StyledH2 = styled.h2`
-	text-align: center;
-	font-size: 40px;
-	margin: 20px 0;
-	color: white;
+export const ProjectsWrapper = styled.div`
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
 `

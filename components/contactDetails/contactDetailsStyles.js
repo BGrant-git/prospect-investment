@@ -7,12 +7,13 @@ export const Container = styled.div`
 	max-width: 1000px;
 	margin: 0 auto 20px;
 	padding: 0 11%;
+
 	border-radius: 5px;
 
 	a {
 		text-decoration: underline;
 		cursor: pointer;
-		background: lightgray;
+		background: var(--main-grey);
 	}
 
 	@media (max-width: 855px) {
