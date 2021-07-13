@@ -46,6 +46,16 @@ export const TextWrapper = styled.div`
 	}
 `
 
+export const ButtonWrapper = styled.div`
+	display: flex;
+	justify-content: space-between;
+
+	a {
+		text-decoration: underline;
+		color: var(--main-colour-dark);
+	}
+`
+
 export const StyledImg = styled.img`
 	height: 250px;
 	width: auto;
