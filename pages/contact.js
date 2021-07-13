@@ -1,5 +1,4 @@
 import ContactForm from '../components/contactForm/ContactForm'
-
 import ContactDetails from '../components/contactDetails/ContactDetails'
 
 import { CenterRule } from '../store/context'
