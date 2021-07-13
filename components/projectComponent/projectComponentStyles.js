@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { LeftRule } from '../../store/context'
 
 export const Container = styled.div`
 	display: flex;
@@ -64,4 +65,8 @@ export const StyledImg = styled.img`
 	@media (max-width: 855px) {
 		border-radius: 0;
 	}
+`
+
+export const LeftRuleStyled = styled(LeftRule)`
+	margin-top: -12px;
 `
