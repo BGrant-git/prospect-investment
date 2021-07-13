@@ -4,7 +4,6 @@ import {
 	ContentWrapper,
 	DetailsWrapper,
 	ContactMethodWrapper,
-	LinkWrapper,
 } from './contactDetailsStyles'
 import { contactDetails } from '../../public/text-files/contactDetails'
 
@@ -12,7 +11,7 @@ const ContactDetails = () => {
 	return (
 		<Container>
 			<h1>Or get in touch with Tom</h1>
-			<CenterRule background="black" />
+			<CenterRule background="var(--main-dark)" />
 			<ContentWrapper>
 				<ContactMethodWrapper>
 					<h2>Telephone:</h2>

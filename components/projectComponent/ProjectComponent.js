@@ -1,26 +1,27 @@
+import { LeftRule } from '../../store/context'
 import {
+	ButtonWrapper,
 	Container,
-	StyledH1,
 	StyledImg,
 	TextWrapper,
-	StyledP,
-	StyledUl,
-	LeftRuleStyled,
 } from './projectComponentStyles'
 
-const ProjectComponent = ({ title, text, img }) => {
+const ProjectComponent = ({ title, area, status, description, gdv, img }) => {
 	return (
 		<Container>
 			<TextWrapper>
-				<StyledH1>{title}</StyledH1>
-				<LeftRuleStyled background="black" />
-				<StyledUl>
-					{text.map((item, i) => (
-						<li key={i}>
-							<StyledP>{item}</StyledP>
-						</li>
-					))}
-				</StyledUl>
+				<h1>{title}</h1>
+
+				<h3>{area}</h3>
+				<LeftRule background="var(--main-dark)" />
+				<h3>{status}</h3>
+				<p>{description}</p>
+				<ButtonWrapper>
+					<p>GDV: {gdv}</p>
+					<p>
+						<a>More info ➤ </a>
+					</p>
+				</ButtonWrapper>
 			</TextWrapper>
 			<StyledImg src={img} alt="" />
 		</Container>

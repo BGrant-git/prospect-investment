@@ -3,9 +3,11 @@ import { LeftRule } from '../../store/context'
 
 export const Container = styled.div`
 	display: flex;
-	margin: 20px auto;
-	max-width: 1200px;
-	max-height: 250px;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 20px 10px 30px;
+	width: 420px;
+	min-height: 570px;
 	cursor: pointer;
 	transition: 0.1s ease-in-out;
 	background-color: white;
@@ -17,8 +19,8 @@ export const Container = styled.div`
 	}
 
 	@media (max-width: 855px) {
-		flex-direction: column;
 		max-height: unset;
+		border-radius: 0;
 
 		&:hover {
 			transform: none;
@@ -26,33 +28,42 @@ export const Container = styled.div`
 	}
 `
 
-export const StyledH1 = styled.h1`
-	font-size: 35px;
-	margin-top: 10px;
-`
-
 export const TextWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	padding: 10px 20px;
+
+	h1 {
+		font-size: 35px;
+		margin: 10px 0 0 0;
+	}
+
+	h3 {
+		margin: 0;
+	}
+
+	p {
+		font-size: 20px;
+	}
 `
 
-export const StyledUl = styled.ul`
-	list-style-type: square;
-	margin-left: -15px;
-`
+export const ButtonWrapper = styled.div`
+	display: flex;
+	justify-content: space-between;
 
-export const StyledP = styled.p`
-	font-size: 20px;
+	a {
+		text-decoration: underline;
+		color: var(--main-colour-dark);
+	}
 `
 
 export const StyledImg = styled.img`
 	height: 250px;
 	width: auto;
-	border-radius: 0 5px 5px 0;
+	border-radius: 0 0 5px 5px;
 
 	@media (max-width: 855px) {
-		border-radius: 0 0 5px 5px;
+		border-radius: 0;
 	}
 `
 
