@@ -6,7 +6,7 @@ export const Container = styled.div`
 	justify-content: space-between;
 	margin: 20px 10px 30px;
 	width: 420px;
-	min-height: 570px;
+	height: 600px;
 	cursor: pointer;
 	transition: 0.1s ease-in-out;
 	background-color: white;

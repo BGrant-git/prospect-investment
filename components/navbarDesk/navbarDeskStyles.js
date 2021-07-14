@@ -26,6 +26,7 @@ export const StyledH1 = styled.h1`
 	transition: 0.2s ease-in-out;
 	color: white;
 	font-size: ${(props) => props.fontSize};
+	margin-top: ${(props) => props.marginTop};
 
 	@media (max-width: 1247px) {
 		margin: 14px 5px 0 0;
@@ -36,8 +37,4 @@ export const LinkWrapper = styled.div`
 	display: flex;
 	margin-right: 1%;
 	padding-top: 25px;
-`
-
-export const StyledA = styled.a`
-	display: flex;
 `

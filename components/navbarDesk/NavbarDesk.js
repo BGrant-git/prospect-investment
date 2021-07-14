@@ -11,7 +11,6 @@ import {
 	LogoWrapper,
 	StyledH1,
 	LinkWrapper,
-	StyledA,
 } from './navbarDeskStyles'
 
 const NavbarDesk = () => {
@@ -23,12 +22,15 @@ const NavbarDesk = () => {
 		<Container bg={scrolledVal ? 'var(--main-colour-dark)' : 'transparent'}>
 			<LogoWrapper>
 				<Link href="/" as="">
-					<StyledA>
-						<StyledH1 fontSize={scrolledVal ? '38px' : '45px'}>
+					<a>
+						<StyledH1
+							fontSize={scrolledVal ? '38px' : '45px'}
+							marginTop={scrolledVal ? '23px' : '20px'}
+						>
 							PROSPECT{' '}
 							<span style={{ color: 'var(--main-colour' }}>INVESTMENT</span>
 						</StyledH1>
-					</StyledA>
+					</a>
 				</Link>
 			</LogoWrapper>
 			<LinkWrapper>
