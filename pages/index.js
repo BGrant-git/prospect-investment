@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 import styled from 'styled-components'
 
 import HomeImageText from '../components/homeImageText/HomeImageText'
@@ -8,7 +9,7 @@ import homepageBackgroundImage from '../public/images/homepage/landing/shutterst
 
 const HeroSectionWrapper = styled.div`
 	background: linear-gradient(rgba(25, 25, 112, 0.3), rgba(25, 25, 112, 0.5)),
-		url(${(props) => props.img});
+		url('images/homepage/landing/shutterstock_1212713398.jpg');
 	background-position: bottom;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -28,6 +29,11 @@ const HeroSectionWrapper = styled.div`
 	}
 `
 
+const DynamicHeroComponent = dynamic(
+	() => import('../components/homeImageText/HomeImageText'),
+	{ loading: () => <p>Loading...</p> }
+)
+
 const Index = () => {
 	return (
 		<div>
@@ -40,7 +46,7 @@ const Index = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<HeroSectionWrapper img={homepageBackgroundImage}>
-				<HomeImageText />
+				<DynamicHeroComponent />
 			</HeroSectionWrapper>
 			<HomepageProjects />
 		</div>
