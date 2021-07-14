@@ -1,14 +1,14 @@
 import { CenterRule } from '../store/context'
 import BioSection from '../components/bioSection/BioSection'
 import CopyComponent from '../components/copyComponent/CopyComponent'
+
 import {
 	Container,
 	ContentWrapper,
 	TitleWrapper,
 	StyledH1,
 } from '../store/pages-styles/aboutStyles'
-
-const copyBackground = require('../public/images/about/shutterstock_179448743.jpg')
+import copyBackground from '../public/images/about/shutterstock_179448743.jpg'
 
 const About = () => {
 	return (

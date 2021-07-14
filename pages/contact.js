@@ -7,8 +7,7 @@ import {
 	ContentWrapper,
 	StyledH1,
 } from '../store/pages-styles/contactStyles'
-
-const backgroundImg = require('../public/images/homepage/naomi-hebert-MP0bgaS_d1c-unsplash.jpg')
+import backgroundImg from '../public/images/homepage/naomi-hebert-MP0bgaS_d1c-unsplash.jpg'
 
 const Contact = () => {
 	return (
