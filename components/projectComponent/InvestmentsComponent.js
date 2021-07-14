@@ -4,7 +4,7 @@ import {
 	Container,
 	StyledImg,
 	TextWrapper,
-} from './projectComponentStyles'
+} from './investmentsComponentStyles'
 
 const ProjectComponent = ({ title, area, status, description, gdv, img }) => {
 	return (
