@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import HomeImageText from '../components/homeImageText/HomeImageText'
 import HomepageProjects from '../components/homepageProjects/HomepageProjects'
 
-const homepageBackgroundImage = require('../public/images/homepage/landing/shutterstock_1212713398.jpg')
+import homepageBackgroundImage from '../public/images/homepage/landing/shutterstock_1212713398.jpg'
 
 const HeroSectionWrapper = styled.div`
 	background: linear-gradient(rgba(25, 25, 112, 0.3), rgba(25, 25, 112, 0.5)),
