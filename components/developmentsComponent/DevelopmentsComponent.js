@@ -4,9 +4,16 @@ import {
 	Container,
 	StyledImg,
 	TextWrapper,
-} from './investmentsComponentStyles'
+} from './developmentsComponentStyles'
 
-const ProjectComponent = ({ title, area, status, description, gdv, img }) => {
+const DevelopmentsComponent = ({
+	title,
+	area,
+	status,
+	description,
+	gdv,
+	img,
+}) => {
 	return (
 		<Container>
 			<TextWrapper>
@@ -28,4 +35,4 @@ const ProjectComponent = ({ title, area, status, description, gdv, img }) => {
 	)
 }
 
-export default ProjectComponent
+export default DevelopmentsComponent

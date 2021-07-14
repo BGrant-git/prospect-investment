@@ -42,13 +42,8 @@ const NavbarDesk = () => {
 					page={'ABOUT'}
 					isActive={router.pathname == '/about' ? true : false}
 				/>
-				<NavbarButtonDesk
-					link={'/services'}
-					page={'SERVICES'}
-					isActive={router.pathname == '/services' ? true : false}
-				/>
 				<NavDropdown
-					isActive={router.pathname == '/investments' ? true : false}
+					isActive={router.pathname == '/developments' ? true : false}
 				/>
 				<NavbarButtonDesk
 					link={'/contact'}
