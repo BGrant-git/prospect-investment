@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { motion } from 'framer-motion'
 
-import ProjectComponent from '../components/projectComponent/ProjectComponent'
+import ProjectComponent from '../components/developmentsComponent/DevelopmentsComponent'
 import StaggerAnimateWrapper from '../components/framerWrappers/StaggerAnimateWrapper'
 
 import { StoreContext, CenterRule } from '../store/context'
@@ -12,12 +12,12 @@ import {
 } from '../store/pages-styles/projectsStyles'
 import { projectsShortData } from '../public/text-files/projectsText'
 
-const Projects = () => {
+const Developments = () => {
 	const { framerStaggerVariants } = useContext(StoreContext)
 
 	return (
 		<Container>
-			<StyledH1>Projects</StyledH1>
+			<StyledH1>Developments</StyledH1>
 			<CenterRule background="white" />
 			<StaggerAnimateWrapper variant={framerStaggerVariants.container}>
 				<ProjectsWrapper>
@@ -39,4 +39,4 @@ const Projects = () => {
 	)
 }
 
-export default Projects
+export default Developments

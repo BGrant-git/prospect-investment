@@ -51,18 +51,13 @@ const NavbarMob = () => {
 						</a>
 					</LinkWrapper>
 					<LinkWrapper>
-						<a href="/services" className="menu-item">
-							<h2>SERVICES</h2>
+						<a className="menu-item" href="/investments">
+							<h2>DEVELOPMENTS</h2>
 						</a>
-					</LinkWrapper>
-					<LinkWrapper>
-						<a className="menu-item" href="/projects">
-							<h2>PROJECTS</h2>
-						</a>
-						<a className="menu-item" href="/projects">
+						<a className="menu-item" href="/investments">
 							<h3>- COMPLETED</h3>
 						</a>
-						<a className="menu-item" href="/projects">
+						<a className="menu-item" href="/investments">
 							<h3>- IN PROGRESS</h3>
 						</a>
 					</LinkWrapper>

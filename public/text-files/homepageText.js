@@ -4,29 +4,6 @@ export const landingText = {
 sit amet consectetur adipisicing elit.`,
 }
 
-export const cardData = [
-	{
-		link: '/about',
-		text: 'Who We Are',
-		img: require('../../public/images/homepage/cards/people.jpg'),
-	},
-	{
-		link: '/about',
-		text: 'What We Do',
-		img: require('../../public/images/homepage/cards/kitchen.jpg'),
-	},
-	{
-		link: '/projects',
-		text: 'Our Projects',
-		img: require('../../public/images/homepage/cards/house.jpg'),
-	},
-	{
-		link: '/contact',
-		text: 'Get In Touch',
-		img: require('../../public/images/homepage/cards/emptysquare.jpg'),
-	},
-]
-
 export const projectsData = [
 	{
 		title: `St Mary's Hall`,

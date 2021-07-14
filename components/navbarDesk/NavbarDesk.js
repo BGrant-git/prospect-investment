@@ -11,7 +11,6 @@ import {
 	LogoWrapper,
 	StyledH1,
 	LinkWrapper,
-	StyledA,
 } from './navbarDeskStyles'
 
 const NavbarDesk = () => {
@@ -23,12 +22,15 @@ const NavbarDesk = () => {
 		<Container bg={scrolledVal ? 'var(--main-colour-dark)' : 'transparent'}>
 			<LogoWrapper>
 				<Link href="/" as="">
-					<StyledA>
-						<StyledH1 fontSize={scrolledVal ? '38px' : '45px'}>
+					<a>
+						<StyledH1
+							fontSize={scrolledVal ? '38px' : '45px'}
+							marginTop={scrolledVal ? '23px' : '20px'}
+						>
 							PROSPECT{' '}
 							<span style={{ color: 'var(--main-colour' }}>INVESTMENT</span>
 						</StyledH1>
-					</StyledA>
+					</a>
 				</Link>
 			</LogoWrapper>
 			<LinkWrapper>
@@ -42,12 +44,9 @@ const NavbarDesk = () => {
 					page={'ABOUT'}
 					isActive={router.pathname == '/about' ? true : false}
 				/>
-				<NavbarButtonDesk
-					link={'/services'}
-					page={'SERVICES'}
-					isActive={router.pathname == '/services' ? true : false}
+				<NavDropdown
+					isActive={router.pathname == '/developments' ? true : false}
 				/>
-				<NavDropdown isActive={router.pathname == '/projects' ? true : false} />
 				<NavbarButtonDesk
 					link={'/contact'}
 					page={'CONTACT'}
