@@ -98,6 +98,7 @@ const StoreContextProvider = ({ children }) => {
 			visible: {
 				opacity: 1,
 				transition: {
+					delay: 0.1,
 					staggerChildren: 0.5,
 				},
 			},
