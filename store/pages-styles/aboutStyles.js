@@ -3,8 +3,8 @@ import styled from 'styled-components'
 export const Container = styled.div`
 	display: flex;
 	justify-content: center;
-	/* background: linear-gradient(0deg, white, 75%, rgba(25, 25, 112, 0.35)),
-		url(${(props) => props.bg}); */
+	background: linear-gradient(0deg, white, 75%, rgba(25, 25, 112, 0.35)),
+		url(${(props) => props.bg});
 	background-position: bottom;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -46,22 +46,5 @@ export const StyledH1 = styled.h1`
 		margin-top: 0;
 		width: auto;
 		font-size: 45px;
-	}
-`
-
-export const ImageWrapper = styled.div`
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	margin-top: -80px;
-
-	z-index: -1;
-
-	&:after {
-		position: absolute;
-		background: linear-gradient(0deg, white, 75%, rgba(25, 25, 112, 0.35));
-		height: 100%;
-		width: 100%;
-		content: '';
 	}
 `

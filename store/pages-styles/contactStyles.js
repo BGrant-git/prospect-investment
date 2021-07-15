@@ -4,8 +4,8 @@ export const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	/* background: linear-gradient(rgba(25, 25, 112, 0.2), rgba(25, 25, 112, 0.4)),
-		url(${(props) => props.backgroundImg}); */
+	background: linear-gradient(0deg, white, 75%, rgba(25, 25, 112, 0.35)),
+		url(${(props) => props.backgroundImg});
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -32,21 +32,5 @@ export const StyledH1 = styled.h1`
 
 	@media (max-width: 855px) {
 		margin-top: 40px;
-	}
-`
-
-export const ImageWrapper = styled.div`
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	margin-top: -80px;
-	z-index: -1;
-
-	&:after {
-		position: absolute;
-		background: linear-gradient(0deg, white, 65%, rgba(25, 25, 112, 0.35));
-		height: 100%;
-		width: 100%;
-		content: '';
 	}
 `
