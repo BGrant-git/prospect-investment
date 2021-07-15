@@ -54,12 +54,6 @@ const StoreContextProvider = ({ children }) => {
 				duration: 0.3,
 			},
 		},
-		exit: {
-			opacity: 0,
-			transition: {
-				duration: 5,
-			},
-		},
 	}
 
 	const framerUpVariants = {
@@ -69,6 +63,7 @@ const StoreContextProvider = ({ children }) => {
 			translateY: '0%',
 			transition: {
 				duration: 0.5,
+				delay: 0.2,
 			},
 		},
 	}
@@ -80,7 +75,7 @@ const StoreContextProvider = ({ children }) => {
 			translateX: '0%',
 			transition: {
 				duration: 1,
-				staggerChildren: 1,
+				delay: 0.2,
 			},
 		},
 	}
@@ -92,6 +87,7 @@ const StoreContextProvider = ({ children }) => {
 			translateX: '0%',
 			transition: {
 				duration: 1,
+				delay: 0.2,
 			},
 		},
 	}
