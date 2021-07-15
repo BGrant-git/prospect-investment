@@ -1,17 +1,18 @@
 import Head from 'next/head'
 import styled from 'styled-components'
+import Image from 'next/image'
 
 import HomeImageText from '../components/homeImageText/HomeImageText'
 import HomepageProjects from '../components/homepageProjects/HomepageProjects'
 
-import homepageBackgroundImage from '../public/images/homepage/landing/shutterstock_1212713398.jpg'
+const homepageBackgroundImage =
+	'/images/homepage/landing/shutterstock_1212713398.jpg'
 
 const HeroSectionWrapper = styled.div`
-	background: linear-gradient(rgba(25, 25, 112, 0.3), rgba(25, 25, 112, 0.5)),
-		url(${homepageBackgroundImage});
+	/* background: linear-gradient(rgba(25, 25, 112, 0.3), rgba(25, 25, 112, 0.5));
 	background-position: bottom;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: cover; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -23,8 +24,21 @@ const HeroSectionWrapper = styled.div`
 	margin-top: -80px;
 
 	@media (max-width: 855px) {
-		background-position-x: 15%;
 		transition: none;
+	}
+`
+
+const ImageWrapper = styled.div`
+	width: 100%;
+	height: 100%;
+	position: absolute;
+
+	&:after {
+		position: absolute;
+		background: linear-gradient(rgba(25, 25, 112, 0.3), rgba(25, 25, 112, 0.5));
+		height: 100%;
+		width: 100%;
+		content: '';
 	}
 `
 
@@ -39,7 +53,10 @@ const Index = () => {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<HeroSectionWrapper img={homepageBackgroundImage}>
+			<HeroSectionWrapper>
+				<ImageWrapper>
+					<Image src={homepageBackgroundImage} layout="fill" priority="true" />
+				</ImageWrapper>
 				<HomeImageText />
 			</HeroSectionWrapper>
 			<HomepageProjects />

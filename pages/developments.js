@@ -17,7 +17,7 @@ const Developments = () => {
 
 	return (
 		<Container>
-			<StyledH1>Developments</StyledH1>
+			<StyledH1>DEVELOPMENTS</StyledH1>
 			<CenterRule background="white" />
 			<StaggerAnimateWrapper variant={framerStaggerVariants.container}>
 				<ProjectsWrapper>
