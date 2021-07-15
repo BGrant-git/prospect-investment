@@ -8,7 +8,7 @@ import homepageBackgroundImage from '../public/images/homepage/landing/shutterst
 
 const HeroSectionWrapper = styled.div`
 	background: linear-gradient(rgba(25, 25, 112, 0.3), rgba(25, 25, 112, 0.5)),
-		url(${(props) => props.img});
+		url(${homepageBackgroundImage});
 	background-position: bottom;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -18,12 +18,10 @@ const HeroSectionWrapper = styled.div`
 	height: 100vh;
 	position: static;
 	border-radius: 0;
-	transition: 0.5s ease-in-out;
 	margin-top: -80px;
 
 	@media (max-width: 855px) {
 		background-position-x: 15%;
-		height: 600px;
 		transition: none;
 	}
 `
