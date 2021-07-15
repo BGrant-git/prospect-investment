@@ -15,7 +15,9 @@ const HeroSectionWrapper = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
 	height: 100vh;
+	transition: 0.2 ease-in-out;
 	position: static;
 	border-radius: 0;
 	margin-top: -80px;
