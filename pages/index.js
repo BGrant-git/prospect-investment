@@ -1,6 +1,9 @@
 import Head from 'next/head'
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
+import { useContext } from 'react'
 
+import { StoreContext } from '../store/context'
 import HomeImageText from '../components/homeImageText/HomeImageText'
 import HomepageProjects from '../components/homepageProjects/HomepageProjects'
 
@@ -29,8 +32,14 @@ const HeroSectionWrapper = styled.div`
 `
 
 const Index = () => {
+	const { transitionVariants } = useContext(StoreContext)
+
 	return (
-		<div>
+		<motion.div
+			variants={transitionVariants}
+			initial="initial"
+			animate="animate"
+		>
 			<Head>
 				<title>Prospect Investment</title>
 				<meta
@@ -43,7 +52,7 @@ const Index = () => {
 				<HomeImageText />
 			</HeroSectionWrapper>
 			<HomepageProjects />
-		</div>
+		</motion.div>
 	)
 }
 

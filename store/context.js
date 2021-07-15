@@ -63,7 +63,7 @@ const StoreContextProvider = ({ children }) => {
 			translateY: '0%',
 			transition: {
 				duration: 0.5,
-				delay: 0.2,
+				delay: 0.3,
 			},
 		},
 	}
@@ -75,7 +75,7 @@ const StoreContextProvider = ({ children }) => {
 			translateX: '0%',
 			transition: {
 				duration: 1,
-				delay: 0.2,
+				delay: 0.3,
 			},
 		},
 	}
@@ -87,7 +87,7 @@ const StoreContextProvider = ({ children }) => {
 			translateX: '0%',
 			transition: {
 				duration: 1,
-				delay: 0.2,
+				delay: 0.3,
 			},
 		},
 	}
@@ -98,7 +98,7 @@ const StoreContextProvider = ({ children }) => {
 			visible: {
 				opacity: 1,
 				transition: {
-					delay: 0.2,
+					delay: 0.3,
 					staggerChildren: 0.5,
 				},
 			},
