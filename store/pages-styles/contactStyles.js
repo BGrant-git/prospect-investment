@@ -4,7 +4,7 @@ export const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	background: linear-gradient(rgba(25, 25, 112, 0.2), rgba(25, 25, 112, 0.4)),
+	background: linear-gradient(0deg, white, 75%, rgba(25, 25, 112, 0.35)),
 		url(${(props) => props.backgroundImg});
 	background-position: center;
 	background-repeat: no-repeat;
@@ -26,9 +26,9 @@ export const ContentWrapper = styled.div`
 `
 
 export const StyledH1 = styled.h1`
-	font-size: 42px;
+	font-size: 50px;
 	color: white;
-	margin: 140px 0 20px;
+	margin: 115px 0 32px;
 
 	@media (max-width: 855px) {
 		margin-top: 40px;

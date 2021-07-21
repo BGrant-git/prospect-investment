@@ -13,29 +13,35 @@ import {
 import { projectsShortData } from '../public/text-files/projectsText'
 
 const Developments = () => {
-	const { framerStaggerVariants } = useContext(StoreContext)
+	const { transitionVariants, framerStaggerVariants } = useContext(StoreContext)
 
 	return (
-		<Container>
-			<StyledH1>Developments</StyledH1>
-			<CenterRule background="white" />
-			<StaggerAnimateWrapper variant={framerStaggerVariants.container}>
-				<ProjectsWrapper>
-					{projectsShortData.map((item, i) => (
-						<motion.div variants={framerStaggerVariants.item} key={i}>
-							<ProjectComponent
-								title={item.title}
-								area={item.area}
-								status={item.status}
-								description={item.description}
-								gdv={item.gdv}
-								img={item.img}
-							/>
-						</motion.div>
-					))}
-				</ProjectsWrapper>
-			</StaggerAnimateWrapper>
-		</Container>
+		<motion.div
+			variants={transitionVariants}
+			initial="initial"
+			animate="animate"
+		>
+			<Container>
+				<StyledH1>DEVELOPMENTS</StyledH1>
+				<CenterRule background="white" />
+				<StaggerAnimateWrapper variant={framerStaggerVariants.container}>
+					<ProjectsWrapper>
+						{projectsShortData.map((item, i) => (
+							<motion.div variants={framerStaggerVariants.item} key={i}>
+								<ProjectComponent
+									title={item.title}
+									area={item.area}
+									status={item.status}
+									description={item.description}
+									gdv={item.gdv}
+									img={item.img}
+								/>
+							</motion.div>
+						))}
+					</ProjectsWrapper>
+				</StaggerAnimateWrapper>
+			</Container>
+		</motion.div>
 	)
 }
 
