@@ -21,16 +21,12 @@ const HeroSectionWrapper = styled.div`
 	align-items: center;
 	width: 100%;
 	height: 100vh;
-	/* transition: 0.2 ease-in-out; */
 	position: static;
 	border-radius: 0;
 	margin-top: -80px;
 
 	@media (max-width: 855px) {
 		transition: none;
-		width: 100vw;
-		background-position: 100% 100%;
-		background-size: 100% 100%;
 	}
 `
 
