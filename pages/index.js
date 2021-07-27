@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { useContext } from 'react'
+import dynamic from 'next/dynamic'
 
 import { StoreContext } from '../store/context'
 import HomeImageText from '../components/homeImageText/HomeImageText'
@@ -28,8 +29,13 @@ const HeroSectionWrapper = styled.div`
 	@media (max-width: 855px) {
 		background-position-x: 15%;
 		transition: none;
+		width: 100%;
 	}
 `
+
+const DyncamicComponent = dynamic(() =>
+	import('../components/homeImageText/HomeImageText')
+)
 
 const Index = () => {
 	const { transitionVariants } = useContext(StoreContext)
@@ -49,7 +55,7 @@ const Index = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<HeroSectionWrapper img={homepageBackgroundImage}>
-				<HomeImageText />
+				<DyncamicComponent />
 			</HeroSectionWrapper>
 			<HomepageProjects />
 		</motion.div>
