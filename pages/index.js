@@ -19,15 +19,12 @@ const HeroSectionWrapper = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
+	transition: 0.2 ease-in-out;
 	position: static;
 	border-radius: 0;
 	margin-top: -80px;
-
-	@media (max-width: 855px) {
-		transition: none;
-	}
 `
 
 const DyncamicComponent = dynamic(() =>
