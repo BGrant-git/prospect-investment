@@ -17,26 +17,26 @@ import {
 const HomeImageText = () => {
 	const { framerLeftSlideVariants } = useContext(StoreContext)
 	return (
-		<motion.div
-			initial="hidden"
-			animate="visible"
-			variants={framerLeftSlideVariants}
-		>
-			<Container>
-				<TextWrapper>
-					<StyledH1>{landingText.heading}</StyledH1>
-					<StyledH2>{landingText.subHeading}</StyledH2>
-				</TextWrapper>
+		// <motion.div
+		// 	initial="hidden"
+		// 	animate="visible"
+		// 	variants={framerLeftSlideVariants}
+		// >
+		<Container>
+			<TextWrapper>
+				<StyledH1>{landingText.heading}</StyledH1>
+				<StyledH2>{landingText.subHeading}</StyledH2>
+			</TextWrapper>
 
-				<div>
-					<Link href="/contact" as="/contact">
-						<Button variant="contained" style={muiButtonStyle}>
-							contact us
-						</Button>
-					</Link>
-				</div>
-			</Container>
-		</motion.div>
+			<div>
+				<Link href="/contact" as="/contact">
+					<Button variant="contained" style={muiButtonStyle}>
+						contact us
+					</Button>
+				</Link>
+			</div>
+		</Container>
+		// </motion.div>
 	)
 }
 
