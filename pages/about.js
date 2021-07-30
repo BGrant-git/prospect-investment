@@ -1,9 +1,9 @@
 import { useContext } from 'react'
 import { motion } from 'framer-motion'
+import dynamic from 'next/dynamic'
 
 import { CenterRule } from '../store/context'
 import BioSection from '../components/bioSection/BioSection'
-import CopyComponent from '../components/copyComponent/CopyComponent'
 
 import { StoreContext } from '../store/context'
 
@@ -13,10 +13,16 @@ import {
 	TitleWrapper,
 	StyledH1,
 } from '../store/pages-styles/aboutStyles'
-import copyBackground from '../public/images/about/shutterstock_179448743.jpg'
+
+import copyBackgroundMob from '../public/images/about/mob-bg.jpg'
+import copyBackgroundDesk from '../public/images/about/shutterstock_179448743.jpg'
+
+const DyncamicCopyComponent = dynamic(() =>
+	import('../components/copyComponent/CopyComponent')
+)
 
 const About = () => {
-	const { transitionVariants } = useContext(StoreContext)
+	const { transitionVariants, matchesSm } = useContext(StoreContext)
 
 	return (
 		<motion.div
@@ -24,13 +30,13 @@ const About = () => {
 			initial="initial"
 			animate="animate"
 		>
-			<Container bg={copyBackground}>
+			<Container bg={matchesSm ? copyBackgroundDesk : copyBackgroundMob}>
 				<ContentWrapper>
 					<TitleWrapper>
 						<StyledH1>WHO WE ARE</StyledH1>
 						<CenterRule background="white" />
 					</TitleWrapper>
-					<CopyComponent />
+					<DyncamicCopyComponent />
 					<BioSection />
 				</ContentWrapper>
 			</Container>

@@ -7,7 +7,6 @@ export const Container = styled.div`
 	max-width: 1000px;
 	margin: 0 auto 20px;
 	padding: 0 11%;
-
 	border-radius: 5px;
 
 	a {
@@ -19,6 +18,8 @@ export const Container = styled.div`
 	@media (max-width: 855px) {
 		font-size: 80%;
 		border-radius: 0;
+		padding: 0;
+		margin: 0;
 	}
 `
 
@@ -37,4 +38,8 @@ export const ContactMethodWrapper = styled.div`
 
 export const DetailsWrapper = styled.div`
 	text-align: left;
+
+	@media (max-width: 855px) {
+		width: 100%;
+	}
 `

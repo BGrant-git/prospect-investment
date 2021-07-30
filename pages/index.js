@@ -5,7 +5,6 @@ import { useContext } from 'react'
 import dynamic from 'next/dynamic'
 
 import { StoreContext } from '../store/context'
-import HomeImageText from '../components/homeImageText/HomeImageText'
 import HomepageProjects from '../components/homepageProjects/HomepageProjects'
 
 import homepageBackgroundImage from '../public/images/homepage/landing/shutterstock_1212713398.jpg'
@@ -27,7 +26,7 @@ const HeroSectionWrapper = styled.div`
 	margin-top: -80px;
 `
 
-const DyncamicComponent = dynamic(() =>
+const DyncamicHeroComponent = dynamic(() =>
 	import('../components/homeImageText/HomeImageText')
 )
 
@@ -49,7 +48,7 @@ const Index = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<HeroSectionWrapper img={homepageBackgroundImage}>
-				<DyncamicComponent />
+				<DyncamicHeroComponent />
 			</HeroSectionWrapper>
 			<HomepageProjects />
 		</motion.div>

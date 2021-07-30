@@ -1,4 +1,6 @@
-import { CenterRule } from '../../store/context'
+import { useContext } from 'react'
+
+import { StoreContext, CenterRule } from '../../store/context'
 import {
 	Container,
 	ContentWrapper,
@@ -8,6 +10,8 @@ import {
 import { contactDetails } from '../../public/text-files/contactDetails'
 
 const ContactDetails = () => {
+	const { matchesSm } = useContext(StoreContext)
+
 	return (
 		<Container>
 			<h1>Or get in touch with Tom</h1>

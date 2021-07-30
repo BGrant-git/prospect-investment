@@ -15,7 +15,8 @@ export const Container = styled.div`
 
 	@media (max-width: 855px) {
 		background-position: 0% 15%;
-		overflow-y: hidden;
+		width: 100%;
+		overflow: hidden;
 	}
 `
 

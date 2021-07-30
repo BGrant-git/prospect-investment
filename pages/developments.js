@@ -9,7 +9,7 @@ import {
 	Container,
 	ProjectsWrapper,
 	StyledH1,
-} from '../store/pages-styles/projectsStyles'
+} from '../store/pages-styles/developmentsStyles'
 import { projectsShortData } from '../public/text-files/projectsText'
 
 const Developments = () => {
