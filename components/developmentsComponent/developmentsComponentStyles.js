@@ -20,6 +20,9 @@ export const Container = styled.div`
 	@media (max-width: 855px) {
 		max-height: unset;
 		border-radius: 0;
+		width: 100vw;
+		margin: 0;
+		padding: 10px 0;
 
 		&:hover {
 			transform: none;
@@ -44,6 +47,11 @@ export const TextWrapper = styled.div`
 	p {
 		font-size: 20px;
 	}
+
+	@media (max-width: 855px) {
+		text-align: center;
+		padding: 0 15px;
+	}
 `
 
 export const ButtonWrapper = styled.div`
@@ -53,6 +61,15 @@ export const ButtonWrapper = styled.div`
 	a {
 		text-decoration: underline;
 		color: var(--main-colour-dark);
+	}
+
+	@media (max-width: 855px) {
+		flex-direction: column;
+		padding-bottom: 20px;
+
+		p {
+			margin: 0;
+		}
 	}
 `
 

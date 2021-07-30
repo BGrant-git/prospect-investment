@@ -11,6 +11,11 @@ export const Container = styled.div`
 	background-size: cover;
 	margin-top: -80px;
 	padding-top: 80px;
+
+	@media (max-width: 855px) {
+		width: 100vw;
+		overflow-x: hidden;
+	}
 `
 
 export const ContentWrapper = styled.div`
@@ -20,7 +25,6 @@ export const ContentWrapper = styled.div`
 
 	@media (max-width: 960px) {
 		margin: 10px 0;
-		width: 100%;
 		border-radius: 0px;
 	}
 `

@@ -1,8 +1,6 @@
 import { useContext } from 'react'
 import { motion } from 'framer-motion'
-
-import ContactForm from '../components/contactForm/ContactForm'
-import ContactDetails from '../components/contactDetails/ContactDetails'
+import dynamic from 'next/dynamic'
 
 import { StoreContext } from '../store/context'
 import { CenterRule } from '../store/context'
@@ -11,10 +9,18 @@ import {
 	ContentWrapper,
 	StyledH1,
 } from '../store/pages-styles/contactStyles'
-import backgroundImg from '../public/images/homepage/naomi-hebert-MP0bgaS_d1c-unsplash.jpg'
+import backgroundImgDesk from '../public/images/contact/desk-bg.jpg'
+
+const DyncamicContactForm = dynamic(() =>
+	import('../components/contactForm/ContactForm')
+)
+
+const DyncamicContactDetails = dynamic(() =>
+	import('../components/contactDetails/ContactDetails')
+)
 
 const Contact = () => {
-	const { transitionVariants } = useContext(StoreContext)
+	const { transitionVariants, matchesSm } = useContext(StoreContext)
 
 	return (
 		<motion.div
@@ -22,12 +28,12 @@ const Contact = () => {
 			initial="initial"
 			animate="animate"
 		>
-			<Container backgroundImg={backgroundImg}>
+			<Container backgroundImg={matchesSm ? backgroundImgDesk : null}>
 				<StyledH1>Contact Us</StyledH1>
 				<CenterRule background="white" />
 				<ContentWrapper>
-					<ContactForm />
-					<ContactDetails />
+					<DyncamicContactForm />
+					<DyncamicContactDetails />
 				</ContentWrapper>
 			</Container>
 		</motion.div>

@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import { useContext } from 'react'
 import { Button } from '@material-ui/core'
-import { motion } from 'framer-motion'
+
+import AnimateWrapper from '../framerWrappers/AnimateWrapper'
 
 import { StoreContext } from '../../store/context'
 import { landingText } from '../../public/text-files/homepageText'
@@ -17,11 +18,7 @@ import {
 const HomeImageText = () => {
 	const { framerLeftSlideVariants } = useContext(StoreContext)
 	return (
-		<motion.div
-			initial="hidden"
-			animate="visible"
-			variants={framerLeftSlideVariants}
-		>
+		<AnimateWrapper variants={framerLeftSlideVariants}>
 			<Container>
 				<TextWrapper>
 					<StyledH1>{landingText.heading}</StyledH1>
@@ -36,7 +33,7 @@ const HomeImageText = () => {
 					</Link>
 				</div>
 			</Container>
-		</motion.div>
+		</AnimateWrapper>
 	)
 }
 

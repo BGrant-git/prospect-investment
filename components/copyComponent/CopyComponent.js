@@ -18,7 +18,7 @@ const CopyComponent = () => {
 		useContext(StoreContext)
 
 	return (
-		<>
+		<div>
 			<AnimateWrapper variants={framerLeftSlideVariants}>
 				<RowWrapper>
 					<TextWrapper>
@@ -39,7 +39,7 @@ const CopyComponent = () => {
 					</TextWrapper>
 				</RowWrapper>
 			</AnimateWrapper>
-		</>
+		</div>
 	)
 }
 
