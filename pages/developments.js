@@ -1,7 +1,8 @@
 import { useContext } from 'react'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
-import ProjectComponent from '../components/developmentsComponent/DevelopmentsComponent'
+import ProjectComponent from '../components/projectComponent/ProjectComponent'
 import StaggerAnimateWrapper from '../components/framerWrappers/StaggerAnimateWrapper'
 
 import { StoreContext, CenterRule } from '../store/context'
@@ -28,14 +29,21 @@ const Developments = () => {
 					<ProjectsWrapper>
 						{projectsShortData.map((item, i) => (
 							<motion.div variants={framerStaggerVariants.item} key={i}>
-								<ProjectComponent
-									title={item.title}
-									area={item.area}
-									status={item.status}
-									description={item.description}
-									gdv={item.gdv}
-									img={item.img}
-								/>
+								<Link
+									href="/projectDisplay"
+									as={item.title.replace(/\s+/g, '-').toLowerCase()}
+								>
+									<a>
+										<ProjectComponent
+											title={item.title}
+											area={item.area}
+											status={item.status}
+											description={item.description}
+											gdv={item.gdv}
+											img={item.img}
+										/>
+									</a>
+								</Link>
 							</motion.div>
 						))}
 					</ProjectsWrapper>
