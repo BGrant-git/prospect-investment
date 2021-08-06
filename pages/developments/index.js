@@ -2,16 +2,16 @@ import { useContext } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
-import ProjectComponent from '../components/projectComponent/ProjectComponent'
-import StaggerAnimateWrapper from '../components/framerWrappers/StaggerAnimateWrapper'
+import ProjectComponent from '../../components/projectComponent/ProjectComponent'
+import StaggerAnimateWrapper from '../../components/framerWrappers/StaggerAnimateWrapper'
 
-import { StoreContext, CenterRule } from '../store/context'
+import { StoreContext, CenterRule } from '../../store/context'
 import {
 	Container,
 	ProjectsWrapper,
 	StyledH1,
-} from '../store/pages-styles/developmentsStyles'
-import { projectsShortData } from '../public/text-files/projectsText'
+} from '../../store/pages-styles/developmentsStyles'
+import { projectsDataShort } from '../../public/text-files/projectsText'
 
 const Developments = () => {
 	const { transitionVariants, framerStaggerVariants } = useContext(StoreContext)
@@ -27,11 +27,13 @@ const Developments = () => {
 				<CenterRule background="white" />
 				<StaggerAnimateWrapper variant={framerStaggerVariants.container}>
 					<ProjectsWrapper>
-						{projectsShortData.map((item, i) => (
+						{projectsDataShort.map((item, i) => (
 							<motion.div variants={framerStaggerVariants.item} key={i}>
 								<Link
 									href="/projectDisplay"
-									as={item.title.replace(/\s+/g, '-').toLowerCase()}
+									as={`/developments/${item.title
+										.replace(/\s+/g, '-')
+										.toLowerCase()}`}
 								>
 									<a>
 										<ProjectComponent

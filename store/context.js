@@ -30,6 +30,7 @@ const StoreContextProvider = ({ children }) => {
 	const matchesMd = useMediaQuery('(min-width:955px)')
 	const links = ['Home', 'About', 'Projects', 'Contact']
 	const [scrolled, setScrolled] = useState(false)
+	const [projectToDisplay, setProjectToDisplay] = useState({})
 
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll)
@@ -42,6 +43,10 @@ const StoreContextProvider = ({ children }) => {
 		} else {
 			setScrolled(false)
 		}
+	}
+
+	const handleProjectClick = (project) => {
+		setProjectToDisplay(project)
 	}
 
 	const transitionVariants = {
@@ -118,6 +123,8 @@ const StoreContextProvider = ({ children }) => {
 				framerRightSlideVariants,
 				framerStaggerVariants,
 				scrolled: [scrolled, setScrolled],
+				projectToDisplay: [projectToDisplay, setProjectToDisplay],
+				handleProjectClick,
 			}}
 		>
 			{children}

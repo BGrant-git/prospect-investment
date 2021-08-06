@@ -14,7 +14,6 @@ export const Container = styled.div`
 
 	&:hover {
 		transform: scale(1.01);
-		border-radius: 0px;
 	}
 
 	@media (max-width: 855px) {
@@ -33,7 +32,8 @@ export const Container = styled.div`
 export const TextWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
-	padding: 10px 20px;
+	justify-content: space-between;
+	padding: 10px 20px 0;
 
 	h1 {
 		font-size: 35px;
@@ -51,6 +51,14 @@ export const TextWrapper = styled.div`
 	@media (max-width: 855px) {
 		text-align: center;
 		padding: 0 15px;
+	}
+`
+
+export const StyleP = styled.p`
+	min-height: 120px;
+
+	@media (max-width: 855px) {
+		min-height: unset;
 	}
 `
 

@@ -22,12 +22,10 @@ const ProjectComponent = ({ title, area, status, description, gdv, img }) => {
 					<CenterRule background="var(--main-dark)" />
 				)}
 				<h3>{status}</h3>
-				<p>{description}</p>
+				<p style={{ minHeight: '120px' }}>{description}</p>
 				<ButtonWrapper>
 					<p>GDV: {gdv}</p>
-					<p>
-						<a>More info ➤ </a>
-					</p>
+					<p>More info ➤</p>
 				</ButtonWrapper>
 			</TextWrapper>
 			<StyledImg src={img} alt="" />
