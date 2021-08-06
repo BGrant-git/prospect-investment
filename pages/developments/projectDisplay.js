@@ -1,3 +1,4 @@
+import DevelopmentComponent from '../../components/developmentComponent/DevelopmentComponent'
 import {
 	ButtonWrapper,
 	Container,
@@ -11,11 +12,17 @@ import {
 // within text might be that description and location can be separated
 import { projectsDataLong } from '../../public/text-files/projectsText'
 
-const ProjectDisplay = () => {
+const ProjectDisplay = ({ projectIds }) => {
 	return (
 		<Container>
 			<TitleWrapper></TitleWrapper>
-			<ButtonWrapper></ButtonWrapper>
+			<ButtonWrapper>
+				{projectsIds.map((item, i) => (
+					<div key={i}>
+						<a href={item[0]}>{item[1]}</a>
+					</div>
+				))}
+			</ButtonWrapper>
 		</Container>
 	)
 }

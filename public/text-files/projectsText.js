@@ -42,7 +42,11 @@ export const projectsDataLong = {
 		title: `Baker Road`,
 		area: `NW10`,
 		description: `Victorian house converted into 3 flats. Purchased at opportunistic price at auction.`,
-		projectIds: [`#groundFloor`, `#firstFloor`, `secondFloor`],
+		projectIds: [
+			[`#groundFloor`, `Ground Floor`],
+			[`#firstFloor`, 'First Floor'],
+			[`secondFloor`, `Second Floor`],
+		],
 		groundFloor: {
 			title: `Ground Floor - Baker Road`,
 			location: `Harlesden NW10`,
