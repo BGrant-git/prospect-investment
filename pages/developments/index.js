@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
-import ProjectComponent from '../../components/projectComponent/ProjectComponent'
+import ProjectComponent from '../../components/projectCards/ProjectCard'
 import StaggerAnimateWrapper from '../../components/framerWrappers/StaggerAnimateWrapper'
 
 import { StoreContext, CenterRule } from '../../store/context'
@@ -11,10 +11,18 @@ import {
 	ProjectsWrapper,
 	StyledH1,
 } from '../../store/pages-styles/developmentsStyles'
-import { projectsDataShort } from '../../public/text-files/projectsText'
+import {
+	projectsDataShort,
+	projectsDataLong,
+} from '../../public/text-files/projectsText'
 
 const Developments = () => {
-	const { transitionVariants, framerStaggerVariants } = useContext(StoreContext)
+	const {
+		transitionVariants,
+		framerStaggerVariants,
+		projectToDisplay,
+		handleProjectClick,
+	} = useContext(StoreContext)
 
 	return (
 		<motion.div
@@ -30,10 +38,13 @@ const Developments = () => {
 						{projectsDataShort.map((item, i) => (
 							<motion.div variants={framerStaggerVariants.item} key={i}>
 								<Link
-									href="/projectDisplay"
+									href="/developments/projectDisplay"
 									as={`/developments/${item.title
 										.replace(/\s+/g, '-')
 										.toLowerCase()}`}
+									onClick={() => {
+										handleProjectClick(projectsDataLong[{ item }])
+									}}
 								>
 									<a>
 										<ProjectComponent

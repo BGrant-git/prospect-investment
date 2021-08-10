@@ -1,4 +1,4 @@
-import DevelopmentComponent from '../../components/developmentComponent/DevelopmentComponent'
+import DevelopmentComponent from '../../components/developments/Developments'
 import {
 	ButtonWrapper,
 	Container,
@@ -12,19 +12,22 @@ import {
 // within text might be that description and location can be separated
 import { projectsDataLong } from '../../public/text-files/projectsText'
 
-const ProjectDisplay = ({ projectIds }) => {
+const ProjectDisplay = () => {
 	return (
 		<Container>
 			<TitleWrapper></TitleWrapper>
 			<ButtonWrapper>
-				{projectsIds.map((item, i) => (
+				{/* {projectsIds.map((item, i) => (
 					<div key={i}>
 						<a href={item[0]}>{item[1]}</a>
 					</div>
-				))}
+				))} */}
 			</ButtonWrapper>
 		</Container>
 	)
 }
+
+// const [projectToDisplayVal, setProjectToDisplayVal] = projectToDisplay
+// console.log(projectToDisplayVal)
 
 export default ProjectDisplay

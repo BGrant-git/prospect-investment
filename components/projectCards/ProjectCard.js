@@ -6,9 +6,9 @@ import {
 	Container,
 	StyledImg,
 	TextWrapper,
-} from './projectComponentStyles'
+} from './projectCardStyles'
 
-const ProjectComponent = ({ title, area, status, description, gdv, img }) => {
+const ProjectCard = ({ title, area, status, description, gdv, img }) => {
 	const { matchesSm } = useContext(StoreContext)
 
 	return (
@@ -33,4 +33,4 @@ const ProjectComponent = ({ title, area, status, description, gdv, img }) => {
 	)
 }
 
-export default ProjectComponent
+export default ProjectCard

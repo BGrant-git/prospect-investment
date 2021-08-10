@@ -10,10 +10,10 @@ import {
 	StyledP,
 	StyledImgLeft,
 	StyledImgRight,
-} from './copyComponentStyles'
+} from './aboutCopyStyles'
 import { LeftRule, RightRule } from '../../store/context'
 
-const CopyComponent = () => {
+const AboutCopy = () => {
 	const { framerLeftSlideVariants, framerRightSlideVariants } =
 		useContext(StoreContext)
 
@@ -43,4 +43,4 @@ const CopyComponent = () => {
 	)
 }
 
-export default CopyComponent
+export default AboutCopy

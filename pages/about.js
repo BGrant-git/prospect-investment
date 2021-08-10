@@ -17,8 +17,8 @@ import {
 import copyBackgroundMob from '../public/images/about/mob-bg.jpg'
 import copyBackgroundDesk from '../public/images/about/shutterstock_179448743.jpg'
 
-const DyncamicCopyComponent = dynamic(() =>
-	import('../components/copyComponent/CopyComponent')
+const DyncamicAboutCopy = dynamic(() =>
+	import('../components/aboutCopy/AboutCopy')
 )
 
 const About = () => {
@@ -36,7 +36,7 @@ const About = () => {
 						<StyledH1>WHO WE ARE</StyledH1>
 						<CenterRule background="white" />
 					</TitleWrapper>
-					<DyncamicCopyComponent />
+					<DyncamicAboutCopy />
 					<BioSection />
 				</ContentWrapper>
 			</Container>
