@@ -11,18 +11,10 @@ import {
 	ProjectsWrapper,
 	StyledH1,
 } from '../../store/pages-styles/developmentsStyles'
-import {
-	projectsDataShort,
-	projectsDataLong,
-} from '../../public/text-files/projectsText'
+import { projectsDataShort } from '../../public/text-files/projectsText'
 
 const Developments = () => {
-	const {
-		transitionVariants,
-		framerStaggerVariants,
-		projectToDisplay,
-		handleProjectClick,
-	} = useContext(StoreContext)
+	const { transitionVariants, framerStaggerVariants } = useContext(StoreContext)
 
 	return (
 		<motion.div
@@ -38,13 +30,8 @@ const Developments = () => {
 						{projectsDataShort.map((item, i) => (
 							<motion.div variants={framerStaggerVariants.item} key={i}>
 								<Link
-									href="/developments/projectDisplay"
-									as={`/developments/${item.title
-										.replace(/\s+/g, '-')
-										.toLowerCase()}`}
-									onClick={() => {
-										handleProjectClick(projectsDataLong[{ item }])
-									}}
+									href={`/developments/${item.id}`}
+									as={`/developments/${item.title.replace(/\s+/g, '-')}`}
 								>
 									<a>
 										<ProjectComponent
