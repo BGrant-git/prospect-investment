@@ -29,5 +29,6 @@ export const projectsShortData = [
 		status: `Completed`,
 		description: `Maisonette in grand Victorian building purchased at distressed price. Planning granted to split into 2 maisonette units. Achieve top prices for the area.`,
 		gdv: `£2m`,
+		img: require('../images/projects/project1/project1.jpg'),
 	},
 ]
