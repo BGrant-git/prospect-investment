@@ -30,7 +30,7 @@ const StoreContextProvider = ({ children }) => {
 	const matchesMd = useMediaQuery('(min-width:955px)')
 	const links = ['Home', 'About', 'Projects', 'Contact']
 	const [scrolled, setScrolled] = useState(false)
-	const [projectToDisplay, setProjectToDisplay] = useState({})
+	const [projectToDisplay, setProjectToDisplay] = useState('hello')
 
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll)
