@@ -18,8 +18,12 @@ const NavbarDesk = () => {
 	const [scrolledVal] = scrolled
 	const router = useRouter()
 
+	const spanColour = scrolledVal
+		? { color: 'white' }
+		: { color: 'var(--main-colour)' }
+
 	return (
-		<Container bg={scrolledVal ? 'var(--main-colour-dark)' : 'transparent'}>
+		<Container bg={scrolledVal ? 'var(--main-colour)' : 'transparent'}>
 			<LogoWrapper>
 				<Link href="/" as="">
 					<a>
@@ -27,8 +31,7 @@ const NavbarDesk = () => {
 							fontSize={scrolledVal ? '38px' : '45px'}
 							marginTop={scrolledVal ? '23px' : '20px'}
 						>
-							PROSPECT{' '}
-							<span style={{ color: 'var(--main-colour' }}>INVESTMENT</span>
+							PROSPECT <span style={spanColour}>INVESTMENT</span>
 						</StyledH1>
 					</a>
 				</Link>
@@ -44,7 +47,12 @@ const NavbarDesk = () => {
 					page={'ABOUT'}
 					isActive={router.pathname == '/about' ? true : false}
 				/>
-				<NavDropdown
+				{/* <NavDropdown
+					isActive={router.pathname == '/developments' ? true : false}
+				/> */}
+				<NavbarButtonDesk
+					link={'/developments'}
+					page={'DEVELOPMENTS'}
 					isActive={router.pathname == '/developments' ? true : false}
 				/>
 				<NavbarButtonDesk

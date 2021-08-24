@@ -10,7 +10,6 @@ export const StyledA = styled.a`
 	color: white;
 	text-transform: uppercase;
 	letter-spacing: 0.15em;
-
 	display: inline-block;
 	position: relative;
 
@@ -19,10 +18,10 @@ export const StyledA = styled.a`
 		bottom: 0;
 		content: '';
 		display: block;
-		height: 2px;
+		height: 3px;
 		left: 50%;
 		position: absolute;
-		background: var(--main-colour);
+		background: white;
 		transition: width 0.3s ease 0s, left 0.3s ease 0s;
 		width: 0;
 	}
@@ -30,4 +29,11 @@ export const StyledA = styled.a`
 		width: 100%;
 		left: 0;
 	}
+`
+
+export const ActiveLink = styled.div`
+	width: 98%;
+	height: 3px;
+	background-color: white;
+	margin-top: -3px;
 `
