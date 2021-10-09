@@ -11,10 +11,12 @@ const data = projectsDataLong.bakerRoad
 
 const BakerRoad = () => {
 	return (
-		<Container background={data.groundFloor.heroImg}>
+		// <Container background={data.groundFloor.heroImg}>
+		<Container>
 			<TitleWrapper>
 				<h1>{data.title}</h1>
-				<CenterRule background={'white'} />
+				<h2>{data.area}</h2>
+				<CenterRule background={'var(--main-dark)'} />
 			</TitleWrapper>
 			<DescWrapper>
 				<h2>{data.description}</h2>

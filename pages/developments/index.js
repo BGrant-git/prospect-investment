@@ -29,10 +29,7 @@ const Developments = () => {
 					<ProjectsWrapper>
 						{projectsDataShort.map((item, i) => (
 							<motion.div variants={framerStaggerVariants.item} key={i}>
-								<Link
-									href={`/developments/${item.id}`}
-									as={`/developments/${item.title.replace(/\s+/g, '-')}`}
-								>
+								<Link href={`/developments/${item.id}`}>
 									<a>
 										<ProjectComponent
 											title={item.title}

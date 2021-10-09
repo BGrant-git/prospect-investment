@@ -8,7 +8,7 @@ const NavbarButtonsDesk = ({ link, isActive, page }) => {
 			<Link href={link} as={link}>
 				<StyledA>{page}</StyledA>
 			</Link>
-			{isActive ? <ActiveLink /> : null}
+			{/* {isActive ? <ActiveLink /> : null} */}
 		</ButtonWrapper>
 	)
 }
