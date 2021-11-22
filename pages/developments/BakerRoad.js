@@ -7,11 +7,12 @@ import {
 	TitleWrapper,
 } from '../../store/pages-styles/developmentsStyles/bakerRoadStyles'
 
+import PropertyDisplay from '../../components/PropertyDisplay/PropertyDisplayComponent/PropertyDisplay'
+
 const data = projectsDataLong.bakerRoad
 
 const BakerRoad = () => {
 	return (
-		// <Container background={data.groundFloor.heroImg}>
 		<Container>
 			<TitleWrapper>
 				<h1>{data.title}</h1>
@@ -29,6 +30,7 @@ const BakerRoad = () => {
 					</a>
 				))}
 			</IndexButtonWrapper>
+			<PropertyDisplay />
 		</Container>
 	)
 }

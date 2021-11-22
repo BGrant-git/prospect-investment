@@ -1,7 +1,7 @@
 {
 	"name": "prospect-investment",
 	"version": "0.1.0",
-	"private": true,
+	"license": "UNLICENSED",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",

@@ -40,11 +40,21 @@ export const IndexButtonWrapper = styled.div`
 	border-radius: 5px;
 
 	h2 {
-		margin-top: 0;
+		margin: 0;
 	}
 
 	a {
 		padding: 0 15px;
 		font-size: 25px;
+	}
+
+	@media (max-width: 690px) {
+		display: flex;
+		flex-direction: column;
+		width: auto;
+
+		a {
+			margin-bottom: 5px;
+		}
 	}
 `
