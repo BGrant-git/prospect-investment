@@ -1,5 +1,5 @@
+import { SRLWrapper } from 'simple-react-lightbox'
 import { createGlobalStyle } from 'styled-components'
-import { AnimatePresence } from 'framer-motion'
 
 import StoreContextProvider from '../store/context'
 import Layout from '../components/layout/Layout'
@@ -33,10 +33,12 @@ const GlobalStyle = createGlobalStyle`
 function MyApp({ Component, pageProps }) {
 	return (
 		<StoreContextProvider>
-			<Layout>
-				<Component {...pageProps} />
-				<GlobalStyle />
-			</Layout>
+			<SRLWrapper>
+				<Layout>
+					<Component {...pageProps} />
+					<GlobalStyle />
+				</Layout>
+			</SRLWrapper>
 		</StoreContextProvider>
 	)
 }
