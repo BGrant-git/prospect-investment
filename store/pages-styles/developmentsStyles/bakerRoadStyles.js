@@ -32,29 +32,25 @@ export const DescWrapper = styled.div`
 `
 
 export const IndexButtonWrapper = styled.div`
-	margin: auto;
+	margin: 0 auto 20px;
 	text-align: center;
-	background-color: rgba(228, 233, 237, 0.2);
-	width: 600px;
-	padding: 15px;
-	border-radius: 5px;
+`
 
-	h2 {
-		margin: 0;
-	}
+export const ButtonWrapper = styled.div`
+	display: flex;
+	justify-content: center;
 
-	a {
-		padding: 0 15px;
-		font-size: 25px;
-	}
-
-	@media (max-width: 690px) {
-		display: flex;
+	@media (max-width: 860px) {
 		flex-direction: column;
-		width: auto;
-
-		a {
-			margin-bottom: 5px;
-		}
 	}
+`
+
+export const ButtonDiv = styled.div`
+	cursor: pointer;
+	font-size: 20px;
+	margin: 0 10px;
+	border: 2px solid var(--main-dark);
+	border-radius: 3px;
+	padding: 10px;
+	font-weight: bold;
 `

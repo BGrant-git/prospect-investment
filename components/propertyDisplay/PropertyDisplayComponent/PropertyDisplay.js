@@ -4,18 +4,28 @@ import PropertyHeroSection from '../PropertyHero/PropertyHero'
 import PropertyText from '../propertyText/PropertyText'
 import PropertyGallery from '../PropertyGallery/PropertyGallery'
 
-import { Container } from './propertyDisplayStyles'
+import { Wrapper } from './propertyDisplayStyles'
 
 import { projectsDataLong } from '../../../public/text-files/projectsText'
 
-const PropertyDisplay = (props) => {
+const PropertyDisplay = ({ propertyData }) => {
 	return (
 		<Grid container>
-			<Container>
-				<PropertyHeroSection />
-				<PropertyText />
+			<Wrapper>
+				<PropertyHeroSection
+					img={propertyData.heroImg}
+					agentLogo={propertyData.agentLogo}
+					title={propertyData.title}
+					subtitle={propertyData.subtitle}
+					text={propertyData.text}
+				/>
+				<PropertyText
+					desc={propertyData.text.description}
+					keyFeatures={propertyData.text.keyFeatures}
+					location={propertyData.text.location}
+				/>
 				<PropertyGallery />
-			</Container>
+			</Wrapper>
 		</Grid>
 	)
 }

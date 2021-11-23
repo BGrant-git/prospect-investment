@@ -1,10 +1,13 @@
+import { useState } from 'react'
 import { CenterRule } from '../../store/context'
 import { projectsDataLong } from '../../public/text-files/projectsText'
 import {
+	ButtonDiv,
 	Container,
 	DescWrapper,
 	IndexButtonWrapper,
 	TitleWrapper,
+	ButtonWrapper,
 } from '../../store/pages-styles/developmentsStyles/bakerRoadStyles'
 
 import PropertyDisplay from '../../components/propertyDisplay/PropertyDisplayComponent/PropertyDisplay'
@@ -12,6 +15,12 @@ import PropertyDisplay from '../../components/propertyDisplay/PropertyDisplayCom
 const data = projectsDataLong.bakerRoad
 
 const BakerRoad = () => {
+	const [property, setProperty] = useState('groundFloor')
+
+	const handleButton = (e) => {
+		setProperty(e[0])
+	}
+
 	return (
 		<Container>
 			<TitleWrapper>
@@ -22,15 +31,19 @@ const BakerRoad = () => {
 			<DescWrapper>
 				<h2>{data.description}</h2>
 			</DescWrapper>
+
 			<IndexButtonWrapper>
-				<h2>Properties:</h2>
-				{data.projectIds.map((item, i) => (
-					<a href={item[0]} key={i}>
-						{item[1]}
-					</a>
-				))}
+				<h2>Select Property:</h2>
+				<ButtonWrapper>
+					{data.projectIds.map((item, i) => (
+						<ButtonDiv key={i} onClick={() => handleButton(item)}>
+							{item[1]}
+							{console.log(property)}
+						</ButtonDiv>
+					))}
+				</ButtonWrapper>
 			</IndexButtonWrapper>
-			<PropertyDisplay />
+			<PropertyDisplay propertyData={projectsDataLong.bakerRoad[property]} />
 		</Container>
 	)
 }

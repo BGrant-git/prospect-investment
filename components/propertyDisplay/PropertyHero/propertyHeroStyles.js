@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const TextContainer = styled.div`
+export const TextWrapper = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -17,7 +17,7 @@ export const StyledImg = styled.img`
 	width: 100%;
 `
 
-export const AgentLogoContainer = styled.div`
+export const AgentLogoWrapper = styled.div`
 	width: 220px;
 	text-align: right;
 `

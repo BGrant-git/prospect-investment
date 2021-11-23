@@ -3,7 +3,7 @@ import { Grid } from '@material-ui/core'
 
 import { projectsDataLong } from '../../../public/text-files/projectsText'
 
-import { StyledThumb, ImgContainer } from './propertyGalleryStyles'
+import { StyledThumb, ImgWrapper } from './propertyGalleryStyles'
 
 const PropertyGallery = () => {
 	const images = projectsDataLong.bakerRoad.groundFloor.images
@@ -15,9 +15,9 @@ const PropertyGallery = () => {
 					{images.map((item, i) => (
 						<Grid item xs={6} key={i}>
 							<a href={item}>
-								<ImgContainer>
+								<ImgWrapper>
 									<StyledThumb src={item} alt="" />
-								</ImgContainer>
+								</ImgWrapper>
 							</a>
 						</Grid>
 					))}
