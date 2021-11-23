@@ -50,34 +50,36 @@ export const projectsDataLong = {
 		groundFloor: {
 			title: `Ground Floor - Baker Road`,
 			location: `Harlesden NW10`,
-			heroImg: require('../images/projects/BakerRoad/ground-floor/001.jpg'),
-			keyFeatures: [
-				`Two Double Bedrooms`,
-				`Two Shower Rooms`,
-				`125 Year Lease`,
-				`Central Locaiton`,
-				`Stunning Condition`,
-				`Brand New`,
-			],
-			description: `This  newly  converted  two  double  bedroom,  two shower  room,  first  floor  flat  boasts  modern accommodation throughout  with  an  open  plan kitchen living area. It is being sold with a 
-			125  year  lease  and  is  available  to  view 
-			immediately.`,
-			price: `£425 Leasehold`,
-			location: `The  property  is  situated  just  0.1 
-			miles from Harlseden Station, 0.3 miles to Harlesden 
-			High  Street  and  1  mile  from  the  North  Circular 
-			leading to the M1 and A40.`,
+			heroImg: require('../images/projects/BakerRoad/groundFloor/001.jpg'),
+			text: {
+				keyFeatures: [
+					`Two Double Bedrooms`,
+					`Two Shower Rooms`,
+					`125 Year Lease`,
+					`Central Locaiton`,
+					`Stunning Condition`,
+					`Brand New`,
+				],
+				description: `This  newly  converted  two  double  bedroom,  two shower  room,  first  floor  flat  boasts  modern accommodation throughout  with  an  open  plan kitchen living area. It is being sold with a 
+				125  year  lease  and  is  available  to  view 
+				immediately.`,
+				price: `£425 Leasehold`,
+				location: `The  property  is  situated  just  0.1 
+				miles from Harlseden Station, 0.3 miles to Harlesden 
+				High  Street  and  1  mile  from  the  North  Circular 
+				leading to the M1 and A40.`,
+			},
 			images: [
-				require('../images/projects/BakerRoad/ground-floor/001.jpg'),
-				require('../images/projects/BakerRoad/ground-floor/002.jpg'),
-				require('../images/projects/BakerRoad/ground-floor/003.jpg'),
-				require('../images/projects/BakerRoad/ground-floor/004.jpg'),
+				require('../images/projects/BakerRoad/groundFloor/001.jpg'),
+				require('../images/projects/BakerRoad/groundFloor/002.jpg'),
+				require('../images/projects/BakerRoad/groundFloor/003.jpg'),
+				require('../images/projects/BakerRoad/groundFloor/004.jpg'),
 			],
 			firstFloor: {
 				id: `firstFloor`,
 				title: `First Floor - Baker Road`,
 				location: `Harlesden NW10`,
-				heroImg: require('../images/projects/BakerRoad/ground-floor/001.jpg'),
+				heroImg: require('../images/projects/BakerRoad/groundFloor/001.jpg'),
 				keyFeatures: [
 					`Two Double Bedrooms`,
 					`Two Shower Rooms`,
@@ -95,15 +97,15 @@ export const projectsDataLong = {
 				High  Street  and  1  mile  from  the  North  Circular 
 				leading to the M1 and A40.`,
 				images: [
-					require('../images/projects/BakerRoad/ground-floor/002.jpg'),
-					require('../images/projects/BakerRoad/ground-floor/003.jpg'),
+					require('../images/projects/BakerRoad/groundFloor/002.jpg'),
+					require('../images/projects/BakerRoad/groundFloor/003.jpg'),
 				],
 			},
 			secondFloor: {
 				id: `secondFloor`,
 				title: `Second Floor - Baker Road`,
 				location: `Harlesden NW10`,
-				heroImg: require('../images/projects/BakerRoad/ground-floor/001.jpg'),
+				heroImg: require('../images/projects/BakerRoad/groundFloor/001.jpg'),
 				keyFeatures: [
 					`Two Double Bedrooms`,
 					`Two Shower Rooms`,
@@ -121,8 +123,8 @@ export const projectsDataLong = {
 				High  Street  and  1  mile  from  the  North  Circular 
 				leading to the M1 and A40.`,
 				images: [
-					require('../images/projects/BakerRoad/ground-floor/002.jpg'),
-					require('../images/projects/BakerRoad/ground-floor/003.jpg'),
+					require('../images/projects/BakerRoad/groundFloor/002.jpg'),
+					require('../images/projects/BakerRoad/groundFloor/003.jpg'),
 				],
 			},
 		},

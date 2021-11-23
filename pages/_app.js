@@ -1,4 +1,4 @@
-import { SRLWrapper } from 'simple-react-lightbox'
+import SimpleReactLightbox from 'simple-react-lightbox'
 import { createGlobalStyle } from 'styled-components'
 
 import StoreContextProvider from '../store/context'
@@ -33,12 +33,12 @@ const GlobalStyle = createGlobalStyle`
 function MyApp({ Component, pageProps }) {
 	return (
 		<StoreContextProvider>
-			<SRLWrapper>
+			<SimpleReactLightbox>
 				<Layout>
 					<Component {...pageProps} />
 					<GlobalStyle />
 				</Layout>
-			</SRLWrapper>
+			</SimpleReactLightbox>
 		</StoreContextProvider>
 	)
 }

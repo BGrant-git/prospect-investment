@@ -7,7 +7,7 @@ import {
 	TitleWrapper,
 } from '../../store/pages-styles/developmentsStyles/bakerRoadStyles'
 
-import PropertyDisplay from '../../components/PropertyDisplay/PropertyDisplayComponent/PropertyDisplay'
+import PropertyDisplay from '../../components/propertyDisplay/PropertyDisplayComponent/PropertyDisplay'
 
 const data = projectsDataLong.bakerRoad
 
