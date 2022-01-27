@@ -53,4 +53,9 @@ export const ButtonDiv = styled.div`
 	border-radius: 3px;
 	padding: 10px;
 	font-weight: bold;
+
+	@media (max-width: 860px) {
+		margin: 5px auto;
+		width: 50%;
+	}
 `

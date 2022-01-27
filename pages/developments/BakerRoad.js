@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { CenterRule } from '../../store/context'
+
 import { projectsDataLong } from '../../public/text-files/projectsText'
 import {
 	ButtonDiv,
@@ -16,9 +17,11 @@ const data = projectsDataLong.bakerRoad
 
 const BakerRoad = () => {
 	const [property, setProperty] = useState('groundFloor')
+	const [activeButton, setActiveButton] = useState(0)
 
-	const handleButton = (e) => {
-		setProperty(e[0])
+	const handleButton = (propertyName, index) => {
+		setProperty(propertyName[0])
+		setActiveButton(index)
 	}
 
 	return (
@@ -36,7 +39,11 @@ const BakerRoad = () => {
 				<h2>Select Property:</h2>
 				<ButtonWrapper>
 					{data.projectIds.map((item, i) => (
-						<ButtonDiv key={i} onClick={() => handleButton(item)}>
+						<ButtonDiv
+							key={i}
+							style={i === activeButton ? { backgroundColor: 'red' } : null}
+							onClick={() => handleButton(item, i)}
+						>
 							{item[1]}
 							{console.log(property)}
 						</ButtonDiv>
