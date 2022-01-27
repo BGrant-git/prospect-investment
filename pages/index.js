@@ -10,14 +10,6 @@ import HomepageProjects from '../components/homepageProjects/HomepageProjects'
 
 import homepageBackgroundImage from '../public/images/homepage/landing/shutterstock_1212713398.jpg'
 
-const client = createClient(
-	'563492ad6f9170000100000148943b638d2b4a1199cba4562fb73b2e'
-)
-
-client.collections.media().then((media) => {
-	console.log(media)
-})
-
 const HeroSectionWrapper = styled.div`
 	background: linear-gradient(rgba(25, 25, 112, 0.3), rgba(25, 25, 112, 0.5)),
 		url(${homepageBackgroundImage});
