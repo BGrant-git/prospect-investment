@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from 'react'
 import { useMediaQuery } from '@material-ui/core'
 import styled from 'styled-components'
+import { onAuthStateChanged } from 'firebase/auth'
 
 export const CenterRule = styled.div`
 	background-color: ${(props) => props.background};
