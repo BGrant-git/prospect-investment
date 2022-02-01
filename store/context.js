@@ -30,6 +30,7 @@ const StoreContextProvider = ({ children }) => {
 	const matchesSm = useMediaQuery('(min-width: 855px)')
 	const matchesMd = useMediaQuery('(min-width:955px)')
 	const links = ['Home', 'About', 'Projects', 'Contact']
+	const [user, setUser] = useState(null)
 	const [scrolled, setScrolled] = useState(false)
 	const [projectToDisplay, setProjectToDisplay] = useState('hello')
 
@@ -123,6 +124,7 @@ const StoreContextProvider = ({ children }) => {
 				framerLeftSlideVariants,
 				framerRightSlideVariants,
 				framerStaggerVariants,
+				user: [user, setUser],
 				scrolled: [scrolled, setScrolled],
 				projectToDisplay: [projectToDisplay, setProjectToDisplay],
 				handleProjectClick,

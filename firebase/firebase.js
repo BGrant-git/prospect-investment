@@ -21,4 +21,6 @@ provider.setCustomParameters({ prompt: 'select_account' })
 
 export const signInWithGoogle = () => auth.signInWithPopup(provider)
 
+export const signOutFromGoogle = () => auth.signOut(provider)
+
 export default firebase

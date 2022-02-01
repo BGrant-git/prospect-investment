@@ -1,4 +1,4 @@
-import { signInWithGoogle } from '../firebase/firebase'
+import { signInWithGoogle } from '../../firebase/firebase'
 
 const LoginComponent = () => {
 	return (
