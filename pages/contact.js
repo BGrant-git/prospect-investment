@@ -8,7 +8,7 @@ import {
 	Container,
 	ContentWrapper,
 	StyledH1,
-} from '../store/pages-styles/contactStyles'
+} from '../pages/pages-styles/contactStyles'
 import backgroundImgDesk from '../public/images/contact/desk-bg.jpg'
 
 const DyncamicContactForm = dynamic(() =>
