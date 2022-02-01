@@ -9,7 +9,7 @@ import {
 	IndexButtonWrapper,
 	TitleWrapper,
 	ButtonWrapper,
-} from '../../pages/pages-styles/developmentsStyles/bakerRoadStyles'
+} from '../../styles/pages-styles/developmentsStyles/bakerRoadStyles'
 
 import PropertyDisplay from '../../components/propertyDisplay/PropertyDisplayComponent/PropertyDisplay'
 

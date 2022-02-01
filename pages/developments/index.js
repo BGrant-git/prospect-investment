@@ -10,7 +10,7 @@ import {
 	Container,
 	ProjectsWrapper,
 	StyledH1,
-} from '../../pages/pages-styles/developmentsStyles/developmentsStyles'
+} from '../../styles/pages-styles/developmentsStyles/developmentsStyles'
 import { projectsDataShort } from '../../public/text-files/projectsText'
 
 const Developments = () => {

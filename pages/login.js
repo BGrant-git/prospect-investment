@@ -8,9 +8,8 @@ import LogoutComponent from '../components/authComponents/LogoutComponent'
 const Login = () => {
 	const { user } = useContext(StoreContext)
 	const [userVal, setUserVal] = user
-	// const [user, setUser] = useState(null)
 
-	//TODO read user state from layout and render something there idk
+	//TODO admin access to accounts
 
 	useEffect(() => {
 		firebase.auth().onAuthStateChanged((userVal) => {

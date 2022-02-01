@@ -14,7 +14,8 @@ import {
 } from './navbarDeskStyles'
 
 const NavbarDesk = () => {
-	const { scrolled } = useContext(StoreContext)
+	const { scrolled, user } = useContext(StoreContext)
+	const [userVal, setUserVal] = user
 	const [scrolledVal] = scrolled
 	const router = useRouter()
 
@@ -36,6 +37,7 @@ const NavbarDesk = () => {
 					</a>
 				</Link>
 			</LogoWrapper>
+			{userVal === null ? <p>logged out</p> : <p>logged in</p>}
 			<LinkWrapper>
 				<NavbarButtonDesk
 					link={'/'}
