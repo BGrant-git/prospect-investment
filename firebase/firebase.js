@@ -1,5 +1,21 @@
-import firebase from 'firebase/compat/app'
-import 'firebase/compat/auth'
+import { initializeApp } from 'firebase/app'
+import {
+	getFirestore,
+	query,
+	getDocs,
+	collection,
+	where,
+	addDoc,
+} from 'firebase/firestore'
+import {
+	getAuth,
+	signInWithPopup,
+	GoogleAuthProvider,
+	signOut,
+} from 'firebase/auth'
+import { useContext } from 'react'
+
+import { StoreContext } from '../store/context'
 
 const firebaseConfig = {
 	apiKey: 'AIzaSyCgHEORpXG8qrM-y1xkHIjTnne0Z2otnTM',
@@ -11,16 +27,35 @@ const firebaseConfig = {
 	measurementId: 'G-3KBPRWN0YV',
 }
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig)
+const app = initializeApp(firebaseConfig)
+const auth = getAuth(app)
+const db = getFirestore(app)
 
-export const auth = firebase.auth()
+const googleProvider = new GoogleAuthProvider()
+const signInWithGoogle = async () => {
+	try {
+		const res = await signInWithPopup(auth, googleProvider)
+		const user = res.user
+		const q = query(collection(db, 'users'), where('uid', '==', user.uid))
+		const docs = await getDocs(q)
+		if (docs.docs.length === 0) {
+			await addDoc(collection(db, 'users'), {
+				uid: user.uid,
+				name: user.displayName,
+				authProvider: 'google',
+				email: user.email,
+			})
+		}
+	} catch (err) {
+		console.error(err)
+		alert(err.message)
+	}
+}
 
-const provider = new firebase.auth.GoogleAuthProvider()
-provider.setCustomParameters({ prompt: 'select_account' })
+const logout = () => {
+	signOut(auth)
+}
 
-export const signInWithGoogle = () => auth.signInWithPopup(provider)
+export { auth, db, signInWithGoogle, logout }
 
-export const signOutFromGoogle = () => auth.signOut(provider)
-
-export default firebase
+// problems: box is empty unless i remove away from res then i get user indefinefed error, still error when closing the box before signing in

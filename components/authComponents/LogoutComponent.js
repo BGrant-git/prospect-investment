@@ -1,9 +1,9 @@
-import { signOutFromGoogle } from '../../firebase/firebase'
+import { logout } from '../../firebase/firebase'
 
 const LogoutComponent = () => {
 	return (
 		<div>
-			<button onClick={signOutFromGoogle}>Sign out</button>
+			<button onClick={logout}>Sign out</button>
 		</div>
 	)
 }
