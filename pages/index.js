@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { useContext } from 'react'
 import dynamic from 'next/dynamic'
-import { createClient } from 'pexels'
 
 import { StoreContext } from '../store/context'
 import HomepageProjects from '../components/homepageProjects/HomepageProjects'
