@@ -48,7 +48,9 @@ const signInWithGoogle = async () => {
 		}
 	} catch (err) {
 		console.error(err)
-		alert(err.message)
+		if (!Error === 'Firebase: Error (auth/popup-closed-by-user).') {
+			alert(err.message)
+		}
 	}
 }
 
