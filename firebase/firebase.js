@@ -13,9 +13,6 @@ import {
 	GoogleAuthProvider,
 	signOut,
 } from 'firebase/auth'
-import { useContext } from 'react'
-
-import { StoreContext } from '../store/context'
 
 const firebaseConfig = {
 	apiKey: 'AIzaSyCgHEORpXG8qrM-y1xkHIjTnne0Z2otnTM',
@@ -46,6 +43,7 @@ const signInWithGoogle = async () => {
 				email: user.email,
 			})
 		}
+		console.log(auth)
 	} catch (err) {
 		console.error(err)
 		if (!Error === 'Firebase: Error (auth/popup-closed-by-user).') {
@@ -56,8 +54,7 @@ const signInWithGoogle = async () => {
 
 const logout = () => {
 	signOut(auth)
+	console.log(auth)
 }
 
 export { auth, db, signInWithGoogle, logout }
-
-// problems: box is empty unless i remove away from res then i get user indefinefed error, still error when closing the box before signing in
