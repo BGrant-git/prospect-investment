@@ -9,6 +9,8 @@ const Login = () => {
 	const { userData } = useContext(StoreContext)
 	const [userDataVal, setUserDataVal] = userData
 
+	console.log('auth' + auth)
+
 	return (
 		<div>
 			<LoginComponent setUserDataVal={setUserDataVal} />

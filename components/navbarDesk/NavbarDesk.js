@@ -39,7 +39,7 @@ const NavbarDesk = () => {
 					</a>
 				</Link>
 			</LogoWrapper>
-			{auth.currentUser === null ? <p>logged out</p> : <p>logged in</p>}
+			{userDataVal === null ? <p>logged out</p> : <p>logged in</p>}
 			<LinkWrapper>
 				<NavbarButtonDesk
 					link={'/'}
