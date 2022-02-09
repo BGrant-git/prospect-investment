@@ -5,6 +5,11 @@ const LoginComponent = ({ setUserDataVal, setIsLoggedInVal }) => {
 		signInWithGoogle().then(() => {
 			setUserDataVal(returnAuth())
 			setIsLoggedInVal(true)
+
+			window.localStorage.setItem(
+				'user',
+				JSON.stringify(returnAuth().currentUser)
+			)
 		})
 	}
 

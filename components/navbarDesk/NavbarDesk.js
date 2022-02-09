@@ -38,7 +38,7 @@ const NavbarDesk = () => {
 					</a>
 				</Link>
 			</LogoWrapper>
-			{isLoggedInVal === false ? <p>logged out</p> : <p>logged in</p>}
+			{isLoggedInVal ? <p>logged in</p> : <p>logged out</p>}
 			<LinkWrapper>
 				<NavbarButtonDesk
 					link={'/'}

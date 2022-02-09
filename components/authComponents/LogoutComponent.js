@@ -5,6 +5,7 @@ const LogoutComponent = ({ setUserDataVal, setIsLoggedInVal }) => {
 		logout()
 		setUserDataVal(returnAuth())
 		setIsLoggedInVal(false)
+		window.localStorage.clear()
 	}
 
 	return (

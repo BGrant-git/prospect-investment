@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from 'react'
 import { useMediaQuery } from '@material-ui/core'
 import styled from 'styled-components'
+import Cookies from 'js-cookie'
 
 import { returnAuth } from '../firebase/firebase'
 
@@ -36,11 +37,30 @@ const StoreContextProvider = ({ children }) => {
 	const [scrolled, setScrolled] = useState(false)
 	const [projectToDisplay, setProjectToDisplay] = useState('hello')
 
-	//TODO check if user is already logged in through cookies/local storage and then set an 'isLoggedIn' state
+	//TODO check if user is already logged in through cookies/local storage and then set an 'isLoggedIn' state - think im done with this one
 
-	useEffect(() => {
-		window.addEventListener('scroll', handleScroll)
-	}, [])
+	//TODO send firebase auth to a cookie
+
+	const checkForLocalStorageUser = () => {
+		if (window.localStorage.getItem('user') !== null) {
+			return true
+		} else {
+			return false
+		}
+	}
+
+	const setInitialAuthState = () => {
+		// if (Cookies.get('userData')) {
+		// 	setIsLoggedIn(true)
+		// } else if (checkForLocalStorageUser('user')) {
+		// 	setIsLoggedIn(true)
+		// } else {
+		// 	setIsLoggedIn(false)
+		// }
+		if (checkForLocalStorageUser()) {
+			setIsLoggedIn(true)
+		}
+	}
 
 	const handleScroll = () => {
 		const offset = window.scrollY
@@ -54,6 +74,11 @@ const StoreContextProvider = ({ children }) => {
 	const handleProjectClick = (project) => {
 		setProjectToDisplay(project)
 	}
+
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll)
+		setInitialAuthState()
+	}, [])
 
 	const transitionVariants = {
 		initial: {
