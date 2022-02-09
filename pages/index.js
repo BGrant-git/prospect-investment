@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 
-import { StoreContext } from '../store/context'
+import { StoreContext, userData } from '../store/context'
 import HomepageProjects from '../components/homepageProjects/HomepageProjects'
 
 import homepageBackgroundImage from '../public/images/homepage/landing/shutterstock_1212713398.jpg'
@@ -31,7 +31,12 @@ const DyncamicHeroComponent = dynamic(() =>
 )
 
 const Index = () => {
-	const { transitionVariants } = useContext(StoreContext)
+	const { transitionVariants, userData } = useContext(StoreContext)
+	const [userDataVal, setUserDataVal] = userData
+
+	useEffect(() => {
+		console.log(userDataVal)
+	}, [])
 
 	return (
 		<motion.div

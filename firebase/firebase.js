@@ -43,18 +43,23 @@ const signInWithGoogle = async () => {
 				email: user.email,
 			})
 		}
-		console.log(auth)
+		//console.log(auth)
 	} catch (err) {
-		console.error(err)
+		//console.error(err)
 		if (!Error === 'Firebase: Error (auth/popup-closed-by-user).') {
 			alert(err.message)
 		}
 	}
 }
 
-const logout = () => {
-	signOut(auth)
-	console.log(auth)
+const returnAuth = () => {
+	return auth
 }
 
-export { auth, db, signInWithGoogle, logout }
+const logout = () => {
+	signOut(auth)
+	//console.log(auth)
+	return auth
+}
+
+export { auth, db, signInWithGoogle, logout, returnAuth }

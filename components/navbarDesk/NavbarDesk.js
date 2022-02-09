@@ -2,8 +2,6 @@ import Link from 'next/link'
 import { useContext } from 'react'
 import { useRouter } from 'next/router'
 
-import { auth } from '../../firebase/firebase'
-
 import NavbarButtonDesk from '../navbarButtonDesk/NavbarButtonDesk'
 import NavDropdown from '../navDropdown/NavDropdown'
 
@@ -16,8 +14,9 @@ import {
 } from './navbarDeskStyles'
 
 const NavbarDesk = () => {
-	const { scrolled, userData } = useContext(StoreContext)
+	const { scrolled, userData, isLoggedIn } = useContext(StoreContext)
 	const [userDataVal, setUserDataVal] = userData
+	const [isLoggedInVal, setIsLoggedInVal] = isLoggedIn
 	const [scrolledVal] = scrolled
 	const router = useRouter()
 
@@ -39,7 +38,7 @@ const NavbarDesk = () => {
 					</a>
 				</Link>
 			</LogoWrapper>
-			{userDataVal === null ? <p>logged out</p> : <p>logged in</p>}
+			{isLoggedInVal === false ? <p>logged out</p> : <p>logged in</p>}
 			<LinkWrapper>
 				<NavbarButtonDesk
 					link={'/'}

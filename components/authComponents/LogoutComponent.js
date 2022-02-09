@@ -1,9 +1,10 @@
-import { logout, auth } from '../../firebase/firebase'
+import { logout, returnAuth } from '../../firebase/firebase'
 
-const LogoutComponent = ({ setUserDataVal }) => {
+const LogoutComponent = ({ setUserDataVal, setIsLoggedInVal }) => {
 	const onClickHandler = () => {
 		logout()
-		setUserDataVal(null)
+		setUserDataVal(returnAuth())
+		setIsLoggedInVal(false)
 	}
 
 	return (

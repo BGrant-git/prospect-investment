@@ -1,9 +1,10 @@
-import { signInWithGoogle, auth } from '../../firebase/firebase'
+import { signInWithGoogle, returnAuth } from '../../firebase/firebase'
 
-const LoginComponent = ({ setUserDataVal }) => {
+const LoginComponent = ({ setUserDataVal, setIsLoggedInVal }) => {
 	const onClickHandler = () => {
-		signInWithGoogle().then((auth) => {
-			setUserDataVal(auth)
+		signInWithGoogle().then(() => {
+			setUserDataVal(returnAuth())
+			setIsLoggedInVal(true)
 		})
 	}
 

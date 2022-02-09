@@ -1,7 +1,8 @@
 import { createContext, useState, useEffect } from 'react'
 import { useMediaQuery } from '@material-ui/core'
 import styled from 'styled-components'
-import { onAuthStateChanged } from 'firebase/auth'
+
+import { returnAuth } from '../firebase/firebase'
 
 export const CenterRule = styled.div`
 	background-color: ${(props) => props.background};
@@ -30,9 +31,12 @@ const StoreContextProvider = ({ children }) => {
 	const matchesSm = useMediaQuery('(min-width: 855px)')
 	const matchesMd = useMediaQuery('(min-width:955px)')
 	const links = ['Home', 'About', 'Projects', 'Contact']
-	const [userData, setUserData] = useState(null)
+	const [isLoggedIn, setIsLoggedIn] = useState(false)
+	const [userData, setUserData] = useState(() => returnAuth())
 	const [scrolled, setScrolled] = useState(false)
 	const [projectToDisplay, setProjectToDisplay] = useState('hello')
+
+	//TODO check if user is already logged in through cookies/local storage and then set an 'isLoggedIn' state
 
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll)
@@ -49,10 +53,6 @@ const StoreContextProvider = ({ children }) => {
 
 	const handleProjectClick = (project) => {
 		setProjectToDisplay(project)
-	}
-
-	const isLoggedIn = (user) => {
-		setUserData(user)
 	}
 
 	const transitionVariants = {
@@ -131,8 +131,8 @@ const StoreContextProvider = ({ children }) => {
 				userData: [userData, setUserData],
 				scrolled: [scrolled, setScrolled],
 				projectToDisplay: [projectToDisplay, setProjectToDisplay],
+				isLoggedIn: [isLoggedIn, setIsLoggedIn],
 				handleProjectClick,
-				isLoggedIn,
 			}}
 		>
 			{children}
