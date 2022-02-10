@@ -4,9 +4,10 @@ import { motion } from 'framer-motion'
 import { useContext, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 
-import { StoreContext, userData } from '../store/context'
+import { StoreContext } from '../store/context'
 import HomepageProjects from '../components/homepageProjects/HomepageProjects'
 
+import { framerMotionVariants } from '../store/framerMotionVariants'
 import homepageBackgroundImage from '../public/images/homepage/landing/shutterstock_1212713398.jpg'
 
 const HeroSectionWrapper = styled.div`
@@ -31,7 +32,7 @@ const DyncamicHeroComponent = dynamic(() =>
 )
 
 const Index = () => {
-	const { transitionVariants, userData } = useContext(StoreContext)
+	const { userData } = useContext(StoreContext)
 	const [userDataVal, setUserDataVal] = userData
 
 	useEffect(() => {
@@ -40,7 +41,7 @@ const Index = () => {
 
 	return (
 		<motion.div
-			variants={transitionVariants}
+			variants={framerMotionVariants.transitionVariants}
 			initial="initial"
 			animate="animate"
 		>

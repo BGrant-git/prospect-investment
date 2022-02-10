@@ -1,9 +1,8 @@
 import { createContext, useState, useEffect } from 'react'
 import { useMediaQuery } from '@material-ui/core'
 import styled from 'styled-components'
-import Cookies from 'js-cookie'
 
-import { returnAuth } from '../firebase/firebase'
+import { auth } from '../firebase/firebase'
 
 export const CenterRule = styled.div`
 	background-color: ${(props) => props.background};
@@ -33,31 +32,12 @@ const StoreContextProvider = ({ children }) => {
 	const matchesMd = useMediaQuery('(min-width:955px)')
 	const links = ['Home', 'About', 'Projects', 'Contact']
 	const [isLoggedIn, setIsLoggedIn] = useState(false)
-	const [userData, setUserData] = useState(() => returnAuth())
+	const [userData, setUserData] = useState(auth)
 	const [scrolled, setScrolled] = useState(false)
 	const [projectToDisplay, setProjectToDisplay] = useState('hello')
 
-	//TODO check if user is already logged in through cookies/local storage and then set an 'isLoggedIn' state - think im done with this one
-
-	//TODO send firebase auth to a cookie
-
-	const checkForLocalStorageUser = () => {
-		if (window.localStorage.getItem('user') !== null) {
-			return true
-		} else {
-			return false
-		}
-	}
-
-	const setInitialAuthState = () => {
-		// if (Cookies.get('userData')) {
-		// 	setIsLoggedIn(true)
-		// } else if (checkForLocalStorageUser('user')) {
-		// 	setIsLoggedIn(true)
-		// } else {
-		// 	setIsLoggedIn(false)
-		// }
-		if (checkForLocalStorageUser()) {
+	const setInitialLoggedInState = () => {
+		if (window.localStorage.getItem('user')) {
 			setIsLoggedIn(true)
 		}
 	}
@@ -77,7 +57,8 @@ const StoreContextProvider = ({ children }) => {
 
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll)
-		setInitialAuthState()
+		setInitialLoggedInState()
+		console.log(userData)
 	}, [])
 
 	const transitionVariants = {
