@@ -1,21 +1,17 @@
-import { signInWithGoogle, returnAuth } from '../../firebase/firebase'
+import { signInWithGoogle, auth } from '../../firebase/firebase'
 
 const LoginComponent = ({ setUserDataVal, setIsLoggedInVal }) => {
-	const onClickHandler = () => {
+	const onClickHandler = (auth) => {
 		signInWithGoogle().then(() => {
-			setUserDataVal(returnAuth())
+			setUserDataVal(auth)
 			setIsLoggedInVal(true)
-
-			window.localStorage.setItem(
-				'user',
-				JSON.stringify(returnAuth().currentUser)
-			)
+			window.localStorage.setItem('user', JSON.stringify(auth.currentUser))
 		})
 	}
 
 	return (
 		<div>
-			<button onClick={onClickHandler}>Sign in with Google</button>
+			<button onClick={() => onClickHandler(auth)}>Sign in with Google</button>
 		</div>
 	)
 }

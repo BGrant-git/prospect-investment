@@ -15,13 +15,13 @@ import {
 } from 'firebase/auth'
 
 const firebaseConfig = {
-	apiKey: 'AIzaSyCgHEORpXG8qrM-y1xkHIjTnne0Z2otnTM',
-	authDomain: 'prospect-investment.firebaseapp.com',
-	projectId: 'prospect-investment',
-	storageBucket: 'prospect-investment.appspot.com',
-	messagingSenderId: '1064392309360',
-	appId: '1:1064392309360:web:ce04497cc293d6329912b5',
-	measurementId: 'G-3KBPRWN0YV',
+	apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+	authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+	projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+	storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+	messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+	appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+	measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 }
 
 const app = initializeApp(firebaseConfig)
@@ -46,20 +46,14 @@ const signInWithGoogle = async () => {
 		//console.log(auth)
 	} catch (err) {
 		//console.error(err)
-		if (!Error === 'Firebase: Error (auth/popup-closed-by-user).') {
+		if (!err === 'Firebase: Error (auth/popup-closed-by-user).') {
 			alert(err.message)
 		}
 	}
 }
 
-const returnAuth = () => {
-	return auth
-}
-
 const logout = () => {
 	signOut(auth)
-	//console.log(auth)
-	return auth
 }
 
-export { auth, db, signInWithGoogle, logout, returnAuth }
+export { auth, db, signInWithGoogle, logout }

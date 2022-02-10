@@ -4,9 +4,9 @@ import { motion } from 'framer-motion'
 import { useContext, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 
-import { StoreContext } from '../store/context'
 import HomepageProjects from '../components/homepageProjects/HomepageProjects'
 
+import { StoreContext } from '../store/context'
 import { framerMotionVariants } from '../store/framerMotionVariants'
 import homepageBackgroundImage from '../public/images/homepage/landing/shutterstock_1212713398.jpg'
 
@@ -30,6 +30,8 @@ const HeroSectionWrapper = styled.div`
 const DyncamicHeroComponent = dynamic(() =>
 	import('../components/homeImageText/HomeImageText')
 )
+
+//TODO see if i need these dynamic components
 
 const Index = () => {
 	const { userData } = useContext(StoreContext)
