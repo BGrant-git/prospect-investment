@@ -1,7 +1,7 @@
 // framer motion settings
 
 export const framerMotionVariants = {
-	transitionVariants: {
+	fadeIn: {
 		initial: {
 			opacity: 0,
 		},
@@ -12,7 +12,7 @@ export const framerMotionVariants = {
 			},
 		},
 	},
-	framerUpVariants: {
+	slideUp: {
 		hidden: { opacity: 0, translateY: '10%' },
 		visible: {
 			opacity: 1,
@@ -23,7 +23,7 @@ export const framerMotionVariants = {
 			},
 		},
 	},
-	framerLeftSlideVariants: {
+	slideLeft: {
 		hidden: { opacity: 0, translateX: '10%' },
 		visible: {
 			opacity: 1,
@@ -34,7 +34,7 @@ export const framerMotionVariants = {
 			},
 		},
 	},
-	framerRightSlideVariants: {
+	slideRight: {
 		hidden: { opacity: 0, translateX: '-10%' },
 		visible: {
 			opacity: 1,
@@ -45,7 +45,7 @@ export const framerMotionVariants = {
 			},
 		},
 	},
-	framerStaggerVariants: {
+	stagger: {
 		container: {
 			hidden: { opacity: 0 },
 			visible: {

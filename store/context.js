@@ -61,79 +61,12 @@ const StoreContextProvider = ({ children }) => {
 		console.log(userData)
 	}, [])
 
-	const transitionVariants = {
-		initial: {
-			opacity: 0,
-		},
-		animate: {
-			opacity: 1,
-			transition: {
-				duration: 0.3,
-			},
-		},
-	}
-
-	const framerUpVariants = {
-		hidden: { opacity: 0, translateY: '10%' },
-		visible: {
-			opacity: 1,
-			translateY: '0%',
-			transition: {
-				duration: 0.5,
-				delay: 0.3,
-			},
-		},
-	}
-
-	const framerLeftSlideVariants = {
-		hidden: { opacity: 0, translateX: '10%' },
-		visible: {
-			opacity: 1,
-			translateX: '0%',
-			transition: {
-				duration: 1,
-				delay: 0.3,
-			},
-		},
-	}
-
-	const framerRightSlideVariants = {
-		hidden: { opacity: 0, translateX: '-10%' },
-		visible: {
-			opacity: 1,
-			translateX: '0%',
-			transition: {
-				duration: 1,
-				delay: 0.3,
-			},
-		},
-	}
-
-	const framerStaggerVariants = {
-		container: {
-			hidden: { opacity: 0 },
-			visible: {
-				opacity: 1,
-				transition: {
-					delay: 0.3,
-					staggerChildren: 0.5,
-				},
-			},
-		},
-		item: { hidden: { opacity: 0 }, visible: { opacity: 1 } },
-	}
-
 	return (
 		<StoreContext.Provider
 			value={{
 				matchesSm,
 				matchesMd,
 				links,
-				transitionVariants,
-				framerUpVariants,
-				framerLeftSlideVariants,
-				framerRightSlideVariants,
-				framerStaggerVariants,
 				userData: [userData, setUserData],
 				scrolled: [scrolled, setScrolled],
 				projectToDisplay: [projectToDisplay, setProjectToDisplay],

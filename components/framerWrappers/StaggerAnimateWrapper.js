@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { StoreContext } from '../../store/context'
 
 const StaggerAnimateWrapper = ({ variant, children }) => {
-	const { framerStaggerVariants, matchesSm } = useContext(StoreContext)
+	const { stagger, matchesSm } = useContext(StoreContext)
 
 	return (
 		<>

@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 
 import AnimateWrapper from '../framerWrappers/AnimateWrapper'
+import { framerMotionVariants } from '../../store/framerMotionVariants'
 import { StoreContext } from '../../store/context'
 import { aboutPageCopy } from '../../public/text-files/aboutText'
 
@@ -14,12 +15,11 @@ import {
 import { LeftRule, RightRule } from '../../store/context'
 
 const AboutCopy = () => {
-	const { framerLeftSlideVariants, framerRightSlideVariants } =
-		useContext(StoreContext)
+	const { slideLeft, slideRight } = useContext(StoreContext)
 
 	return (
 		<div>
-			<AnimateWrapper variants={framerLeftSlideVariants}>
+			<AnimateWrapper variants={framerMotionVariants.slideLeft}>
 				<RowWrapper>
 					<TextWrapper>
 						<h2>{aboutPageCopy[0].heading}</h2>
@@ -29,7 +29,7 @@ const AboutCopy = () => {
 					<StyledImgLeft src={aboutPageCopy[0].img} alt="" />
 				</RowWrapper>
 			</AnimateWrapper>
-			<AnimateWrapper variants={framerRightSlideVariants}>
+			<AnimateWrapper variants={framerMotionVariants.slideRight}>
 				<RowWrapper>
 					<StyledImgRight src={aboutPageCopy[1].img} alt="" />
 					<TextWrapper style={{ textAlign: 'right' }}>

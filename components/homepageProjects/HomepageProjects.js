@@ -1,9 +1,7 @@
-import { useContext } from 'react'
-
 import HomepageProjectItem from '../homepageProjectItem/HomepageProjectItem'
 import ScrollAnimateWrapper from '../framerWrappers/ScrollAnimateWrapper'
 
-import { StoreContext } from '../../store/context'
+import { framerMotionVariants } from '../../store/framerMotionVariants'
 import {
 	Container,
 	ProjectsWrapper,
@@ -13,10 +11,8 @@ import {
 import { projectsData } from '../../public/text-files/homepageText'
 
 const HomepageProjects = () => {
-	const { framerUpVariants } = useContext(StoreContext)
-
 	return (
-		<ScrollAnimateWrapper variants={framerUpVariants}>
+		<ScrollAnimateWrapper variants={framerMotionVariants.slideUp}>
 			<Container>
 				<TitleWrapper>
 					<h1>Featured Projects:</h1>

@@ -25,7 +25,7 @@ const scrollToTop = () => {
 }
 
 const NavbarMob = () => {
-	const { scrolled, framerUpVariants } = useContext(StoreContext)
+	const { scrolled, slideUp } = useContext(StoreContext)
 	const [scrolledVal] = scrolled
 
 	return (

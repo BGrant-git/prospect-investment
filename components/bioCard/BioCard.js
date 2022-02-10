@@ -1,8 +1,7 @@
-import { useContext, useEffect } from 'react'
-import { useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
+import { useContext } from 'react'
 
 import ScrollAnimateWrapper from '../framerWrappers/ScrollAnimateWrapper'
+import { framerMotionVariants } from '../../store/framerMotionVariants'
 
 import { StoreContext } from '../../store/context'
 import {
@@ -15,10 +14,10 @@ import {
 } from './bioCardStyles'
 
 const bioCard = ({ name, position, bioText, img }) => {
-	const { matchesMd, framerUpVariants } = useContext(StoreContext)
+	const { matchesMd } = useContext(StoreContext)
 
 	return (
-		<ScrollAnimateWrapper variants={framerUpVariants}>
+		<ScrollAnimateWrapper variants={framerMotionVariants.slideUp}>
 			<Container>
 				<ImageWrapper>
 					<StyledImg src={img} alt="" />

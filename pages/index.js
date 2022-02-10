@@ -41,7 +41,7 @@ const Index = () => {
 
 	return (
 		<motion.div
-			variants={framerMotionVariants.transitionVariants}
+			variants={framerMotionVariants.fadeIn}
 			initial="initial"
 			animate="animate"
 		>
