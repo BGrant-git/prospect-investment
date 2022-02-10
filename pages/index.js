@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import dynamic from 'next/dynamic'
-import { createClient } from 'pexels'
 
 import { StoreContext } from '../store/context'
 import HomepageProjects from '../components/homepageProjects/HomepageProjects'
 
+import { framerMotionVariants } from '../store/framerMotionVariants'
 import homepageBackgroundImage from '../public/images/homepage/landing/shutterstock_1212713398.jpg'
 
 const HeroSectionWrapper = styled.div`
@@ -32,11 +32,16 @@ const DyncamicHeroComponent = dynamic(() =>
 )
 
 const Index = () => {
-	const { transitionVariants } = useContext(StoreContext)
+	const { userData } = useContext(StoreContext)
+	const [userDataVal, setUserDataVal] = userData
+
+	useEffect(() => {
+		console.log(userDataVal)
+	}, [])
 
 	return (
 		<motion.div
-			variants={transitionVariants}
+			variants={framerMotionVariants.transitionVariants}
 			initial="initial"
 			animate="animate"
 		>

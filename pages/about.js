@@ -12,7 +12,7 @@ import {
 	ContentWrapper,
 	TitleWrapper,
 	StyledH1,
-} from '../store/pages-styles/aboutStyles'
+} from '../public/styles/pages-styles/aboutStyles'
 
 import copyBackgroundMob from '../public/images/about/mob-bg.jpg'
 import copyBackgroundDesk from '../public/images/about/shutterstock_179448743.jpg'

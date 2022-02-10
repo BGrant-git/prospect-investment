@@ -1,4 +1,8 @@
-import { Container, HeroWrapper, InfoWrapper } from './developmentsStyles'
+import {
+	Container,
+	HeroWrapper,
+	InfoWrapper,
+} from '../../styles/pages-styles/developmentsStyles/developmentsStyles'
 
 const Developments = (props) => {
 	return (
