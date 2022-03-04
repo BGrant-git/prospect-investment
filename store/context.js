@@ -58,7 +58,6 @@ const StoreContextProvider = ({ children }) => {
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll)
 		setInitialLoggedInState()
-		console.log(userData)
 	}, [])
 
 	return (
