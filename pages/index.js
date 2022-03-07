@@ -3,11 +3,9 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { useContext, useEffect } from 'react'
 import dynamic from 'next/dynamic'
-import { collection, getDocs } from 'firebase/firestore'
 
 import HomepageProjects from '../components/homepageProjects/HomepageProjects'
 
-import { db } from '../firebase/firebase'
 import { StoreContext } from '../store/context'
 import { framerMotionVariants } from '../store/framerMotionVariants'
 import homepageBackgroundImage from '../public/images/homepage/landing/shutterstock_1212713398.jpg'
@@ -36,9 +34,6 @@ const DyncamicHeroComponent = dynamic(() =>
 //TODO see if i need these dynamic components
 
 const Index = () => {
-	const { userData } = useContext(StoreContext)
-	const [userDataVal, setUserDataVal] = userData
-
 	useEffect(() => {}, [])
 
 	return (

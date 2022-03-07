@@ -15,8 +15,6 @@ import {
 
 const NavbarDesk = () => {
 	const { scrolled, userData, isLoggedIn } = useContext(StoreContext)
-	const [userDataVal, setUserDataVal] = userData
-	const [isLoggedInVal, setIsLoggedInVal] = isLoggedIn
 	const [scrolledVal] = scrolled
 	const router = useRouter()
 
@@ -38,7 +36,6 @@ const NavbarDesk = () => {
 					</a>
 				</Link>
 			</LogoWrapper>
-			{isLoggedInVal ? <p>logged in</p> : <p>logged out</p>}
 			<LinkWrapper>
 				<NavbarButtonDesk
 					link={'/'}
