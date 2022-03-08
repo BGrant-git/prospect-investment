@@ -24,7 +24,7 @@ const HomeImageText = () => {
 				</TextWrapper>
 
 				<div>
-					<Link href="/contact" as="/contact">
+					<Link href="/contact" as="/contact" passHref>
 						<Button variant="contained" style={muiButtonStyle}>
 							contact us
 						</Button>

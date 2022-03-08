@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
-import ProjectComponent from '../../components/projectCards/ProjectCard'
+import ProjectCard from '../../components/projectCards/ProjectCard'
 import StaggerAnimateWrapper from '../../components/framerWrappers/StaggerAnimateWrapper'
 
 import { CenterRule } from '../../store/context'
@@ -29,7 +29,7 @@ const Developments = () => {
 							<motion.div variants={framerMotionVariants.stagger.item} key={i}>
 								<Link href={`/developments/${item.id}`}>
 									<a>
-										<ProjectComponent
+										<ProjectCard
 											title={item.title}
 											area={item.area}
 											status={item.status}

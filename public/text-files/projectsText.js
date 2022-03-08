@@ -50,7 +50,7 @@ export const projectsDataLong = {
 		groundFloor: {
 			title: `Ground Floor - Baker Road, Harlesden NW10`,
 			subtitle: `2 Bed Flat, Asking Price £425,000`,
-			heroImg: require('../images/projects/BakerRoad/groundFloor/001.jpg'),
+			heroImg: '../images/projects/BakerRoad/groundFloor/001.jpg',
 			text: {
 				keyFeatures: [
 					`Two Double Bedrooms`,
@@ -69,21 +69,19 @@ export const projectsDataLong = {
 				leading to the M1 and A40.`,
 			},
 			images: [
-				require('../images/projects/BakerRoad/groundFloor/001.jpg'),
-				require('../images/projects/BakerRoad/groundFloor/002.jpg'),
-				require('../images/projects/BakerRoad/groundFloor/003.jpg'),
-				require('../images/projects/BakerRoad/groundFloor/004.jpg'),
-				require('../images/projects/BakerRoad/groundFloor/floorplan.jpg'),
-				require('../images/projects/BakerRoad/groundFloor/epc.jpg'),
+				'../images/projects/BakerRoad/groundFloor/001.jpg',
+				'../images/projects/BakerRoad/groundFloor/002.jpg',
+				'../images/projects/BakerRoad/groundFloor/003.jpg',
+				'../images/projects/BakerRoad/groundFloor/004.jpg',
+				'../images/projects/BakerRoad/groundFloor/floorplan.jpg',
+				'../images/projects/BakerRoad/groundFloor/epc.jpg',
 			],
-			agentLogo: [
-				require('../images/projects/BakerRoad/groundFloor/agentLogo.jpg'),
-			],
+			agentLogo: ['../images/projects/BakerRoad/groundFloor/agentLogo.jpg'],
 		},
 		firstFloor: {
 			title: `First Floor - Baker Road, Harlesden NW10`,
 			subtitle: `first2 Bed Flat, Asking Price £425,000`,
-			heroImg: require('../images/projects/BakerRoad/groundFloor/002.jpg'),
+			heroImg: '../images/projects/BakerRoad/groundFloor/002.jpg',
 			text: {
 				keyFeatures: [
 					`first2Two Double Bedrooms`,
@@ -102,21 +100,19 @@ export const projectsDataLong = {
 				leading to the M1 and A40.`,
 			},
 			images: [
-				require('../images/projects/BakerRoad/firstFloor/001.jpg'),
-				require('../images/projects/BakerRoad/firstFloor/002.jpg'),
-				require('../images/projects/BakerRoad/firstFloor/003.jpg'),
-				require('../images/projects/BakerRoad/firstFloor/004.jpg'),
-				require('../images/projects/BakerRoad/firstFloor/floorplan.jpg'),
-				require('../images/projects/BakerRoad/firstFloor/epc.jpg'),
+				'../images/projects/BakerRoad/firstFloor/001.jpg',
+				'../images/projects/BakerRoad/firstFloor/002.jpg',
+				'../images/projects/BakerRoad/firstFloor/003.jpg',
+				'../images/projects/BakerRoad/firstFloor/004.jpg',
+				'../images/projects/BakerRoad/firstFloor/floorplan.jpg',
+				'../images/projects/BakerRoad/firstFloor/epc.jpg',
 			],
-			agentLogo: [
-				require('../images/projects/BakerRoad/groundFloor/agentLogo.jpg'),
-			],
+			agentLogo: ['../images/projects/BakerRoad/groundFloor/agentLogo.jpg'],
 		},
 		secondFloor: {
 			title: `Second Floor - Baker Road, Harlesden NW10`,
 			subtitle: `Second2 Bed Flat, Asking Price £425,000`,
-			heroImg: require('../images/projects/BakerRoad/groundFloor/003.jpg'),
+			heroImg: '../images/projects/BakerRoad/groundFloor/003.jpg',
 			text: {
 				keyFeatures: [
 					`SecondTwo Double Bedrooms`,
@@ -135,16 +131,14 @@ export const projectsDataLong = {
 				leading to the M1 and A40.`,
 			},
 			images: [
-				require('../images/projects/BakerRoad/secondFloor/001.jpg'),
-				require('../images/projects/BakerRoad/secondFloor/002.jpg'),
-				require('../images/projects/BakerRoad/secondFloor/003.jpg'),
-				require('../images/projects/BakerRoad/secondFloor/004.jpg'),
-				require('../images/projects/BakerRoad/secondFloor/floorplan.jpg'),
-				require('../images/projects/BakerRoad/secondFloor/epc.jpg'),
+				'../images/projects/BakerRoad/secondFloor/001.jpg',
+				'../images/projects/BakerRoad/secondFloor/002.jpg',
+				'../images/projects/BakerRoad/secondFloor/003.jpg',
+				'../images/projects/BakerRoad/secondFloor/004.jpg',
+				'../images/projects/BakerRoad/secondFloor/floorplan.jpg',
+				'../images/projects/BakerRoad/secondFloor/epc.jpg',
 			],
-			agentLogo: [
-				require('../images/projects/BakerRoad/groundFloor/agentLogo.jpg'),
-			],
+			agentLogo: ['../images/projects/BakerRoad/groundFloor/agentLogo.jpg'],
 		},
 	},
 }

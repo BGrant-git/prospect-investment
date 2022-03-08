@@ -1,16 +1,21 @@
 import { Grid } from '@material-ui/core'
+import Image from 'next/image'
 
 const PropertyHeroImg = require('../../../public/images/projects/BakerRoad/groundFloor/001.jpg')
 const AgentLogo = require('../../../public/images/projects/BakerRoad/groundFloor/agentLogo.jpg')
 
-import { StyledImg, TextWrapper, AgentLogoWrapper } from './propertyHeroStyles'
+import {
+	StyledImgWrapper,
+	TextWrapper,
+	AgentLogoWrapper,
+} from './propertyHeroStyles'
 
 const PropertyHeroSection = (props) => {
 	return (
 		<div>
-			<div>
-				<StyledImg src={props.img} alt="" />
-			</div>
+			<StyledImgWrapper>
+				<img src={props.img} alt="" width="100%" />
+			</StyledImgWrapper>
 			<TextWrapper>
 				<div>
 					<div>
@@ -22,7 +27,9 @@ const PropertyHeroSection = (props) => {
 				</div>
 				<div>
 					<AgentLogoWrapper>
-						<StyledImg src={props.agentLogo} alt="" />
+						<StyledImgWrapper>
+							<img src={props.agentLogo} alt="" width="100%" />
+						</StyledImgWrapper>
 					</AgentLogoWrapper>
 				</div>
 			</TextWrapper>

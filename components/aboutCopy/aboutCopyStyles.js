@@ -9,6 +9,7 @@ export const RowWrapper = styled.div`
 	z-index: 1;
 	background-color: white;
 	border-radius: 5px;
+	overflow: hidden;
 
 	@media (max-width: 855px) {
 		flex-direction: column;
@@ -26,10 +27,11 @@ export const StyledP = styled.p`
 	font-weight: bold;
 `
 
-export const StyledImgLeft = styled.img`
+export const StyledImgLeftWrapper = styled.div`
 	width: auto;
-	height: 350px;
+	height: 100%;
 	border-radius: 0 5px 0 0;
+	margin-bottom: -5px;
 
 	@media (max-width: 855px) {
 		width: 100%;
@@ -37,10 +39,11 @@ export const StyledImgLeft = styled.img`
 	}
 `
 
-export const StyledImgRight = styled.img`
+export const StyledImgRightWrapper = styled.div`
 	width: auto;
-	height: 350px;
+	height: 100%;
 	border-radius: 0 0 0 5px;
+	margin-bottom: -5px;
 
 	@media (max-width: 855px) {
 		width: 100%;

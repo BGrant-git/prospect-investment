@@ -12,7 +12,7 @@ const NavDropdown = ({ link, isActive, page }) => {
 	return (
 		<NavbarDropdown>
 			<ButtonWrapper>
-				<Link href="/developments" as="/developments">
+				<Link href="/developments" as="/developments" passHref>
 					<StyledA style={isActive ? { color: 'var(--main-colour)' } : null}>
 						DEVELOPMENTS
 					</StyledA>

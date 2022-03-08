@@ -24,7 +24,7 @@ const PropertyDisplay = ({ propertyData }) => {
 					keyFeatures={propertyData.text.keyFeatures}
 					location={propertyData.text.location}
 				/>
-				<PropertyGallery />
+				<PropertyGallery images={propertyData.images} />
 			</Wrapper>
 		</Grid>
 	)

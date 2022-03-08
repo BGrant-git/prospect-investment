@@ -1,22 +1,18 @@
-import { useContext } from 'react'
-
 import AnimateWrapper from '../framerWrappers/AnimateWrapper'
 import { framerMotionVariants } from '../../store/framerMotionVariants'
-import { StoreContext } from '../../store/context'
 import { aboutPageCopy } from '../../public/text-files/aboutText'
 
 import {
 	RowWrapper,
 	TextWrapper,
 	StyledP,
-	StyledImgLeft,
-	StyledImgRight,
+	StyledImgLeftWrapper,
+	StyledImgRightWrapper,
 } from './aboutCopyStyles'
 import { LeftRule, RightRule } from '../../store/context'
+import Image from 'next/image'
 
 const AboutCopy = () => {
-	const { slideLeft, slideRight } = useContext(StoreContext)
-
 	return (
 		<div>
 			<AnimateWrapper variants={framerMotionVariants.slideLeft}>
@@ -26,12 +22,16 @@ const AboutCopy = () => {
 						<LeftRule background="var(--main-dark)" />
 						<StyledP>{aboutPageCopy[0].text}</StyledP>
 					</TextWrapper>
-					<StyledImgLeft src={aboutPageCopy[0].img} alt="" />
+					<StyledImgLeftWrapper>
+						<Image src={aboutPageCopy[0].img} alt="" />
+					</StyledImgLeftWrapper>
 				</RowWrapper>
 			</AnimateWrapper>
 			<AnimateWrapper variants={framerMotionVariants.slideRight}>
 				<RowWrapper>
-					<StyledImgRight src={aboutPageCopy[1].img} alt="" />
+					<StyledImgRightWrapper>
+						<Image src={aboutPageCopy[1].img} alt="" />
+					</StyledImgRightWrapper>
 					<TextWrapper style={{ textAlign: 'right' }}>
 						<h2>{aboutPageCopy[1].heading}</h2>
 						<RightRule background="var(--main-dark)" />

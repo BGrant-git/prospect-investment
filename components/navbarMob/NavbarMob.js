@@ -30,7 +30,7 @@ const NavbarMob = () => {
 
 	return (
 		<div>
-			<Link href="/">
+			<Link href="/" passHref>
 				<StyledA>
 					<div>
 						<StyledH1>PROSPECT</StyledH1>
@@ -41,30 +41,30 @@ const NavbarMob = () => {
 			<Menu right styles={hamburgerMenuStyles}>
 				<div>
 					<LinkWrapper>
-						<a href="/" className="menu-item">
+						<Link href="/" className="menu-item" passHref>
 							<h2>HOME</h2>
-						</a>
+						</Link>
 					</LinkWrapper>
 					<LinkWrapper>
-						<a href="/about" className="menu-item">
+						<Link href="/about" className="menu-item" passHref>
 							<h2>ABOUT</h2>
-						</a>
+						</Link>
 					</LinkWrapper>
 					<LinkWrapper>
-						<a className="menu-item" href="/developments">
+						<Link className="menu-item" href="/developments" passHref>
 							<h2>DEVELOPMENTS</h2>
-						</a>
-						<a className="menu-item" href="/developments">
+						</Link>
+						<Link className="menu-item" href="/developments" passHref>
 							<h3>- COMPLETED</h3>
-						</a>
-						<a className="menu-item" href="/developments">
+						</Link>
+						<Link className="menu-item" href="/developments" passHref>
 							<h3>- IN PROGRESS</h3>
-						</a>
+						</Link>
 					</LinkWrapper>
 					<LinkWrapper>
-						<a className="menu-item" href="/contact">
+						<Link className="menu-item" href="/contact" passHref>
 							<h2>CONTACT US</h2>
-						</a>
+						</Link>
 					</LinkWrapper>
 				</div>
 			</Menu>

@@ -30,7 +30,7 @@ export const ImageWrapper = styled.div`
 	padding: 15px;
 `
 
-export const StyledImg = styled.img`
+export const StyledImg = styled.div`
 	width: 200px;
 	height: 200px;
 `
