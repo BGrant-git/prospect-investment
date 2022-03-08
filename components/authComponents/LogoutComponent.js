@@ -1,18 +1,5 @@
-import { logout, returnAuth } from '../../firebase/firebase'
-
-const LogoutComponent = ({ setUserDataVal, setIsLoggedInVal }) => {
-	const onClickHandler = () => {
-		logout()
-		setUserDataVal(returnAuth())
-		setIsLoggedInVal(false)
-		window.localStorage.clear()
-	}
-
-	return (
-		<div>
-			<button onClick={onClickHandler}>Sign out</button>
-		</div>
-	)
+const LogoutComponent = () => {
+	return <div></div>
 }
 
 export default LogoutComponent

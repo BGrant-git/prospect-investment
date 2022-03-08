@@ -1,10 +1,9 @@
 import Link from 'next/link'
-import { useContext } from 'react'
 import { Button } from '@material-ui/core'
 
 import AnimateWrapper from '../framerWrappers/AnimateWrapper'
 
-import { StoreContext } from '../../store/context'
+import { framerMotionVariants } from '../../store/framerMotionVariants'
 import { landingText } from '../../public/text-files/homepageText'
 
 import {
@@ -16,9 +15,8 @@ import {
 } from './homeImageTextStyles'
 
 const HomeImageText = () => {
-	const { framerLeftSlideVariants } = useContext(StoreContext)
 	return (
-		<AnimateWrapper variants={framerLeftSlideVariants}>
+		<AnimateWrapper variants={framerMotionVariants.slideLeft}>
 			<Container>
 				<TextWrapper>
 					<StyledH1>{landingText.heading}</StyledH1>
@@ -26,7 +24,7 @@ const HomeImageText = () => {
 				</TextWrapper>
 
 				<div>
-					<Link href="/contact" as="/contact">
+					<Link href="/contact" as="/contact" passHref>
 						<Button variant="contained" style={muiButtonStyle}>
 							contact us
 						</Button>

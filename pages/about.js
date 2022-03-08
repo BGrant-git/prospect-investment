@@ -2,10 +2,9 @@ import { useContext } from 'react'
 import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
 
-import { CenterRule } from '../store/context'
+import { CenterRule, StoreContext } from '../store/context'
+import { framerMotionVariants } from '../store/framerMotionVariants'
 import BioSection from '../components/bioSection/BioSection'
-
-import { StoreContext } from '../store/context'
 
 import {
 	Container,
@@ -22,11 +21,11 @@ const DyncamicAboutCopy = dynamic(() =>
 )
 
 const About = () => {
-	const { transitionVariants, matchesSm } = useContext(StoreContext)
+	const { matchesSm } = useContext(StoreContext)
 
 	return (
 		<motion.div
-			variants={transitionVariants}
+			variants={framerMotionVariants.fadeIn}
 			initial="initial"
 			animate="animate"
 		>

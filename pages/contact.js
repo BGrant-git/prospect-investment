@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
 
 import { StoreContext } from '../store/context'
+import { framerMotionVariants } from '../store/framerMotionVariants'
 import { CenterRule } from '../store/context'
 import {
 	Container,
@@ -20,11 +21,11 @@ const DyncamicContactDetails = dynamic(() =>
 )
 
 const Contact = () => {
-	const { transitionVariants, matchesSm } = useContext(StoreContext)
+	const { matchesSm } = useContext(StoreContext)
 
 	return (
 		<motion.div
-			variants={transitionVariants}
+			variants={framerMotionVariants.fadeIn}
 			initial="initial"
 			animate="animate"
 		>

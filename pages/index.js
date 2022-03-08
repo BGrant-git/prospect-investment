@@ -1,21 +1,17 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { useContext, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 
-import { StoreContext } from '../store/context'
 import HomepageProjects from '../components/homepageProjects/HomepageProjects'
 
+import { StoreContext } from '../store/context'
 import { framerMotionVariants } from '../store/framerMotionVariants'
-import homepageBackgroundImage from '../public/images/homepage/landing/shutterstock_1212713398.jpg'
+import homepageBackgroundImage from '../public/images/homepage/landing/backround-gradient.jpg'
 
 const HeroSectionWrapper = styled.div`
-	background: linear-gradient(rgba(25, 25, 112, 0.3), rgba(25, 25, 112, 0.5)),
-		url(${homepageBackgroundImage});
-	background-position: bottom;
-	background-repeat: no-repeat;
-	background-size: cover;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -23,7 +19,6 @@ const HeroSectionWrapper = styled.div`
 	height: 100vh;
 	transition: 0.2 ease-in-out;
 	position: static;
-	border-radius: 0;
 	margin-top: -80px;
 `
 
@@ -31,17 +26,14 @@ const DyncamicHeroComponent = dynamic(() =>
 	import('../components/homeImageText/HomeImageText')
 )
 
-const Index = () => {
-	const { userData } = useContext(StoreContext)
-	const [userDataVal, setUserDataVal] = userData
+//TODO see if i need these dynamic components
 
-	useEffect(() => {
-		console.log(userDataVal)
-	}, [])
+const Index = () => {
+	useEffect(() => {}, [])
 
 	return (
 		<motion.div
-			variants={framerMotionVariants.transitionVariants}
+			variants={framerMotionVariants.fadeIn}
 			initial="initial"
 			animate="animate"
 		>
@@ -53,7 +45,8 @@ const Index = () => {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<HeroSectionWrapper img={homepageBackgroundImage}>
+			<HeroSectionWrapper>
+				<Image src={homepageBackgroundImage} layout="fill" />
 				<DyncamicHeroComponent />
 			</HeroSectionWrapper>
 			<HomepageProjects />

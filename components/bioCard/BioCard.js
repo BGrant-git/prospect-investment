@@ -1,8 +1,8 @@
-import { useContext, useEffect } from 'react'
-import { useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
+import { useContext } from 'react'
+import Image from 'next/image'
 
 import ScrollAnimateWrapper from '../framerWrappers/ScrollAnimateWrapper'
+import { framerMotionVariants } from '../../store/framerMotionVariants'
 
 import { StoreContext } from '../../store/context'
 import {
@@ -14,14 +14,22 @@ import {
 	TitleWrapper,
 } from './bioCardStyles'
 
-const bioCard = ({ name, position, bioText, img }) => {
-	const { matchesMd, framerUpVariants } = useContext(StoreContext)
+const BioCard = ({ name, position, bioText, img }) => {
+	const { matchesMd } = useContext(StoreContext)
 
 	return (
-		<ScrollAnimateWrapper variants={framerUpVariants}>
+		<ScrollAnimateWrapper variants={framerMotionVariants.slideUp}>
 			<Container>
 				<ImageWrapper>
-					<StyledImg src={img} alt="" />
+					<StyledImg>
+						<Image
+							src={img}
+							className="bioPics"
+							alt=""
+							width={200}
+							height={200}
+						/>
+					</StyledImg>
 					<TitleWrapper border={matchesMd ? 'solid' : 'none'}>
 						<h1>{name.toUpperCase()}</h1>
 						<h2>{position}</h2>
@@ -38,4 +46,4 @@ const bioCard = ({ name, position, bioText, img }) => {
 	)
 }
 
-export default bioCard
+export default BioCard

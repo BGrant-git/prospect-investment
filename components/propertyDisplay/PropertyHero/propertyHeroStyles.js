@@ -13,7 +13,7 @@ export const TextWrapper = styled.div`
 	}
 `
 
-export const StyledImg = styled.img`
+export const StyledImgWrapper = styled.div`
 	width: 100%;
 `
 

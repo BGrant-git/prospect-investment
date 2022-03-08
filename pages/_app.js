@@ -14,7 +14,6 @@ const GlobalStyle = createGlobalStyle`
 		--main-colour-faded: #C9E8FB;
 		--main-grey: #E3E3E3;
 		--main-dark: #333333;
-
 	}
   body {
 		margin: 0;
@@ -28,6 +27,10 @@ const GlobalStyle = createGlobalStyle`
 		text-decoration: none;
 		color: inherit;
 	}
+	.bioPics {
+		border-radius: 3px;
+	}
+
 `
 
 function MyApp({ Component, pageProps }) {

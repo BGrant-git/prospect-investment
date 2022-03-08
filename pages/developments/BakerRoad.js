@@ -45,7 +45,6 @@ const BakerRoad = () => {
 							onClick={() => handleButton(item, i)}
 						>
 							{item[1]}
-							{console.log(property)}
 						</ButtonDiv>
 					))}
 				</ButtonWrapper>

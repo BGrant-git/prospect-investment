@@ -81,7 +81,7 @@ export const ButtonWrapper = styled.div`
 	}
 `
 
-export const StyledImg = styled.img`
+export const StyledImgWrapper = styled.div`
 	height: 250px;
 	width: auto;
 	border-radius: 0 0 5px 5px;

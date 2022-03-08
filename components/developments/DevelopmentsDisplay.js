@@ -1,3 +1,15 @@
+import { useContext } from 'react'
+import { StoreContext } from '../../store/context'
+
+import {
+	Container,
+	TitleWrapper,
+	DescWrapper,
+	IndexButtonWrapper,
+	ButtonWrapper,
+	ButtonDiv,
+} from '../../public/styles/pages-styles/developmentsStyles/bakerRoadStyles'
+
 const DevelopmentsDisplay = (
 	title,
 	area,
@@ -7,6 +19,8 @@ const DevelopmentsDisplay = (
 	property,
 	PropertyDisplay
 ) => {
+	const { CenterRule } = useContext(StoreContext)
+
 	return (
 		<Container>
 			<TitleWrapper>

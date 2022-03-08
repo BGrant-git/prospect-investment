@@ -1,10 +1,11 @@
+import Image from 'next/image'
 import { useContext } from 'react'
 
 import { StoreContext, LeftRule, CenterRule } from '../../store/context'
 import {
 	ButtonWrapper,
 	Container,
-	StyledImg,
+	StyledImgWrapper,
 	TextWrapper,
 } from './projectCardStyles'
 
@@ -28,7 +29,9 @@ const ProjectCard = ({ title, area, status, description, gdv, img }) => {
 					<p>More info ➤</p>
 				</ButtonWrapper>
 			</TextWrapper>
-			<StyledImg src={img} alt="" />
+			<StyledImgWrapper>
+				<Image src={img} alt="" />
+			</StyledImgWrapper>
 		</Container>
 	)
 }
