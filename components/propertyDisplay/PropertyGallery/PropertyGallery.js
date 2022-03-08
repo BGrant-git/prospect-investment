@@ -7,7 +7,7 @@ const PropertyGallery = (images) => {
 	return (
 		<>
 			<SRLWrapper>
-				<Grid container justify="center">
+				<Grid container justifyContent="center">
 					{images.images.map((item, i) => (
 						<Grid item xs={6} key={i}>
 							<a href={item}>
