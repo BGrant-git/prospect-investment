@@ -19,7 +19,7 @@ const HomeImageText = () => {
 			<motion.div
 				initial="hidden"
 				animate="visible"
-				variants={framerMotionVariants.slideLeft}
+				variants={framerMotionVariants.slideUp}
 			>
 				<TextWrapper>
 					<StyledH1>{landingText.heading}</StyledH1>
