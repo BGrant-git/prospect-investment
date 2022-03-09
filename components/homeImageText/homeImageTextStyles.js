@@ -11,7 +11,7 @@ export const Container = styled.div`
 `
 
 export const TextWrapper = styled.div`
-	padding: 10px;
+	width: 100%;
 `
 
 export const StyledH1 = styled.h1`

@@ -1,10 +1,11 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { slide as Menu } from 'react-burger-menu'
 
 import { StoreContext } from '../../store/context'
 import {
+	LogoContainer,
 	StyledA,
 	StyledImg,
 	LinkWrapper,
@@ -24,20 +25,24 @@ const scrollToTop = () => {
 	})
 }
 
+// TODO make active link look nicer
+
 const NavbarMob = () => {
 	const { scrolled, slideUp } = useContext(StoreContext)
 	const [scrolledVal] = scrolled
 
 	return (
 		<div>
-			<Link href="/" passHref>
-				<StyledA>
-					<div>
-						<StyledH1>PROSPECT</StyledH1>
-						<h1 style={{ color: 'var(--main-colour' }}>INVESTMENT</h1>
-					</div>
-				</StyledA>
-			</Link>
+			<LogoContainer>
+				<Link href="/" passHref>
+					<StyledA>
+						<div>
+							<StyledH1>PROSPECT</StyledH1>
+							<h1 style={{ color: 'var(--main-colour' }}>INVESTMENT</h1>
+						</div>
+					</StyledA>
+				</Link>
+			</LogoContainer>
 			<Menu right styles={hamburgerMenuStyles}>
 				<div>
 					<LinkWrapper>

@@ -1,11 +1,20 @@
 import styled from 'styled-components'
 
+export const LogoContainer = styled.div`
+	width: 100%;
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
+	background-color: ${(props) => props.bg};
+`
+
 export const StyledA = styled.a`
 	line-height: 5px;
 	display: flex;
 	cursor: pointer;
 	width: 66%;
 	margin-left: 10px;
+	z-index: 100;
 `
 
 export const LinkWrapper = styled.div`

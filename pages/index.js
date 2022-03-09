@@ -2,14 +2,12 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-import { useContext, useEffect } from 'react'
-import dynamic from 'next/dynamic'
 
+import HomeImageText from '../components/homeImageText/HomeImageText'
 import HomepageProjects from '../components/homepageProjects/HomepageProjects'
 
-import { StoreContext } from '../store/context'
 import { framerMotionVariants } from '../store/framerMotionVariants'
-import homepageBackgroundImage from '../public/images/homepage/landing/backround-gradient.jpg'
+import homepageBackgroundImage from '../public/images/homepage/landing/background-gradient.webp'
 
 const HeroSectionWrapper = styled.div`
 	display: flex;
@@ -18,19 +16,11 @@ const HeroSectionWrapper = styled.div`
 	width: 100%;
 	height: 100vh;
 	transition: 0.2 ease-in-out;
-	position: static;
+	position: relative;
 	margin-top: -80px;
 `
 
-const DyncamicHeroComponent = dynamic(() =>
-	import('../components/homeImageText/HomeImageText')
-)
-
-//TODO see if i need these dynamic components
-
 const Index = () => {
-	useEffect(() => {}, [])
-
 	return (
 		<motion.div
 			variants={framerMotionVariants.fadeIn}
@@ -47,9 +37,9 @@ const Index = () => {
 			</Head>
 			<HeroSectionWrapper>
 				<Image src={homepageBackgroundImage} layout="fill" />
-				<DyncamicHeroComponent />
+				<HomeImageText />
 			</HeroSectionWrapper>
-			<HomepageProjects />
+			{/* <HomepageProjects /> */}
 		</motion.div>
 	)
 }
