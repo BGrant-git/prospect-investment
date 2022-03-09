@@ -15,11 +15,15 @@ const HeroSectionWrapper = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	max-width: 100%;
+	min-width: 100%;
 	height: 100vh;
 	transition: 0.2 ease-in-out;
 	position: relative;
 	margin-top: -80px;
+
+	@media screen and (max-width: 600px) {
+		transition: none;
+	}
 `
 
 const Index = () => {
