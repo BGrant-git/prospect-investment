@@ -20,6 +20,10 @@ const HeroSectionWrapper = styled.div`
 	transition: 0.2 ease-in-out;
 	position: relative;
 	margin-top: -80px;
+
+	@media screen and (max-width: 600px) {
+		transition: none;
+	}
 `
 
 const Index = () => {
