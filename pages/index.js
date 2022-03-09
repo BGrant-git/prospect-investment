@@ -41,7 +41,7 @@ const Index = () => {
 				<HomeImageText />
 				{/* </motion.div> */}
 			</HeroSectionWrapper>
-			<HomepageProjects />
+			{/* <HomepageProjects /> */}
 		</div>
 	)
 }
