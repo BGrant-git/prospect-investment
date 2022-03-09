@@ -9,11 +9,13 @@ import HomepageProjects from '../components/homepageProjects/HomepageProjects'
 import { framerMotionVariants } from '../store/framerMotionVariants'
 import homepageBackgroundImage from '../public/images/homepage/landing/background-gradient.webp'
 
+const IndexContainer = styled.div``
+
 const HeroSectionWrapper = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100vh;
+	width: auto;
 	height: 100vh;
 	transition: 0.2 ease-in-out;
 	position: relative;
