@@ -16,16 +16,12 @@ const HeroSectionWrapper = styled.div`
 	min-width: 100%;
 	height: 100vh;
 	transition: 0.2 ease-in-out;
-	position: relative;
 	margin-top: -80px;
+	object-fit: contain;
 
-	@media screen and (max-width: 600px) {
+	@media (max-width: 855px) {
 		transition: none;
 	}
-`
-
-const ImageWrapper = styled.div`
-	min-width: 100vw;
 `
 
 const Index = () => {
@@ -40,9 +36,7 @@ const Index = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<HeroSectionWrapper>
-				<div>
-					<Image src={homepageBackgroundImage} layout="fill" />
-				</div>
+				<Image src={homepageBackgroundImage} layout="fill" />
 				{/* <motion.div
 					variants={framerMotionVariants.fadeIn}
 					initial="initial"
