@@ -31,6 +31,10 @@ const StoreContextProvider = ({ children }) => {
 	const links = ['Home', 'About', 'Projects', 'Contact']
 	const [scrolled, setScrolled] = useState(false)
 	const [projectToDisplay, setProjectToDisplay] = useState('hello')
+	const [menuOpenState, setMenuOpenState] = useState(false)
+
+	const toggleMenu = () => setMenuOpenState(!menuOpenState)
+	const menuStateChangeHandler = (newState) => setMenuOpenState(newState.isOpen)
 
 	const handleScroll = () => {
 		const offset = window.scrollY
@@ -57,7 +61,10 @@ const StoreContextProvider = ({ children }) => {
 				links,
 				scrolled: [scrolled, setScrolled],
 				projectToDisplay: [projectToDisplay, setProjectToDisplay],
+				menuOpenState: [menuOpenState, setMenuOpenState],
 				handleProjectClick,
+				toggleMenu,
+				menuStateChangeHandler,
 			}}
 		>
 			{children}

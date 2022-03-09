@@ -28,8 +28,15 @@ const scrollToTop = () => {
 // TODO make active link look nicer
 
 const NavbarMob = () => {
-	const { scrolled, slideUp } = useContext(StoreContext)
+	const {
+		scrolled,
+		slideUp,
+		menuOpenState,
+		toggleMenu,
+		menuStateChangeHandler,
+	} = useContext(StoreContext)
 	const [scrolledVal] = scrolled
+	const [menuOpenStateVal, setMenuOpenStateVal] = menuOpenState
 
 	return (
 		<div>
@@ -43,8 +50,13 @@ const NavbarMob = () => {
 					</StyledA>
 				</Link>
 			</LogoContainer>
-			<Menu right styles={hamburgerMenuStyles}>
-				<div>
+			<Menu
+				right
+				styles={hamburgerMenuStyles}
+				isOpen={menuOpenStateVal}
+				onStateChange={(state) => menuStateChangeHandler(state)}
+			>
+				<div onClick={toggleMenu}>
 					<LinkWrapper>
 						<Link href="/" className="menu-item" passHref>
 							<h2>HOME</h2>
