@@ -22,11 +22,7 @@ const HeroSectionWrapper = styled.div`
 
 const Index = () => {
 	return (
-		<motion.div
-			variants={framerMotionVariants.fadeIn}
-			initial="initial"
-			animate="animate"
-		>
+		<div>
 			<Head>
 				<title>Prospect Investment</title>
 				<meta
@@ -37,10 +33,16 @@ const Index = () => {
 			</Head>
 			<HeroSectionWrapper>
 				<Image src={homepageBackgroundImage} layout="fill" />
+				{/* <motion.div
+					variants={framerMotionVariants.fadeIn}
+					initial="initial"
+					animate="animate"
+				> */}
 				<HomeImageText />
+				{/* </motion.div> */}
 			</HeroSectionWrapper>
-			{/* <HomepageProjects /> */}
-		</motion.div>
+			<HomepageProjects />
+		</div>
 	)
 }
 

@@ -21,12 +21,12 @@ const NavDropdown = ({ link, isActive, page }) => {
 			<NavbarDropdownContent>
 				<DropdownLinkWrapper>
 					<Link href="/developments" as="/developments">
-						<a>COMPLETED</a>
+						COMPLETED
 					</Link>
 				</DropdownLinkWrapper>
 				<DropdownLinkWrapper>
 					<Link href="/developments" as="/developments">
-						<a>IN PROGRESS</a>
+						IN PROGRESS
 					</Link>
 				</DropdownLinkWrapper>
 			</NavbarDropdownContent>

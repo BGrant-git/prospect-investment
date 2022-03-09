@@ -4,7 +4,7 @@ export const ButtonWrapper = styled.div`
 	margin: 0 10px;
 `
 
-export const StyledA = styled.a`
+export const StyledLink = styled.div`
 	cursor: pointer;
 	font-size: 22px;
 	color: white;

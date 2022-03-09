@@ -28,16 +28,14 @@ const Developments = () => {
 						{projectsDataShort.map((item, i) => (
 							<motion.div variants={framerMotionVariants.stagger.item} key={i}>
 								<Link href={`/developments/${item.id}`}>
-									<a>
-										<ProjectCard
-											title={item.title}
-											area={item.area}
-											status={item.status}
-											description={item.description}
-											gdv={item.gdv}
-											img={item.img}
-										/>
-									</a>
+									<ProjectCard
+										title={item.title}
+										area={item.area}
+										status={item.status}
+										description={item.description}
+										gdv={item.gdv}
+										img={item.img}
+									/>
 								</Link>
 							</motion.div>
 						))}

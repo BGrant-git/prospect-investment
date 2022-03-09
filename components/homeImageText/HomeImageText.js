@@ -15,12 +15,12 @@ import {
 
 const HomeImageText = () => {
 	return (
-		<motion.div
-			initial="hidden"
-			animate="visible"
-			variants={framerMotionVariants.slideLeft}
-		>
-			<Container>
+		<Container>
+			<motion.div
+				initial="hidden"
+				animate="visible"
+				variants={framerMotionVariants.slideLeft}
+			>
 				<TextWrapper>
 					<StyledH1>{landingText.heading}</StyledH1>
 					<StyledH2>{landingText.subHeading}</StyledH2>
@@ -32,8 +32,8 @@ const HomeImageText = () => {
 						</Button>
 					</Link>
 				</div>
-			</Container>
-		</motion.div>
+			</motion.div>
+		</Container>
 	)
 }
 
