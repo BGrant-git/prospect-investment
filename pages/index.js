@@ -9,8 +9,6 @@ import HomepageProjects from '../components/homepageProjects/HomepageProjects'
 import { framerMotionVariants } from '../store/framerMotionVariants'
 import homepageBackgroundImage from '../public/images/homepage/landing/background-gradient.webp'
 
-const IndexContainer = styled.div``
-
 const HeroSectionWrapper = styled.div`
 	display: flex;
 	justify-content: center;
@@ -26,6 +24,10 @@ const HeroSectionWrapper = styled.div`
 	}
 `
 
+const ImageWrapper = styled.div`
+	min-width: 100vw;
+`
+
 const Index = () => {
 	return (
 		<div>
@@ -38,7 +40,9 @@ const Index = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<HeroSectionWrapper>
-				<Image src={homepageBackgroundImage} layout="fill" />
+				<div>
+					<Image src={homepageBackgroundImage} layout="fill" />
+				</div>
 				{/* <motion.div
 					variants={framerMotionVariants.fadeIn}
 					initial="initial"
