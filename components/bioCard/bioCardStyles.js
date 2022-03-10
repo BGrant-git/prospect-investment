@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Card } from '@material-ui/core'
 
 export const Container = styled.div`
 	margin: 20px auto;
@@ -14,8 +13,6 @@ export const Container = styled.div`
 	border-radius: 5px;
 
 	@media (max-width: 855px) {
-		width: 100%;
-		max-width: 500px;
 		height: auto;
 		border-radius: 0px;
 	}

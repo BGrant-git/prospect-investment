@@ -14,6 +14,8 @@ export const RowWrapper = styled.div`
 	@media (max-width: 855px) {
 		flex-direction: column;
 		border-radius: 0px;
+		padding: 0 20px;
+		text-align: center;
 	}
 `
 
