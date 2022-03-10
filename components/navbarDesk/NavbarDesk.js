@@ -26,14 +26,12 @@ const NavbarDesk = () => {
 		<Container bg={scrolledVal ? 'var(--main-colour)' : 'transparent'}>
 			<LogoWrapper>
 				<Link href="/" as="">
-					<a>
-						<StyledH1
-							fontSize={scrolledVal ? '38px' : '45px'}
-							marginTop={scrolledVal ? '23px' : '20px'}
-						>
-							PROSPECT <span style={spanColour}>INVESTMENT</span>
-						</StyledH1>
-					</a>
+					<StyledH1
+						fontSize={scrolledVal ? '38px' : '45px'}
+						marginTop={scrolledVal ? '23px' : '20px'}
+					>
+						PROSPECT <span style={spanColour}>INVESTMENT</span>
+					</StyledH1>
 				</Link>
 			</LogoWrapper>
 			<LinkWrapper>

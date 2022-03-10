@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { Button } from '@material-ui/core'
-
-import AnimateWrapper from '../framerWrappers/AnimateWrapper'
+import { motion } from 'framer-motion'
 
 import { framerMotionVariants } from '../../store/framerMotionVariants'
 import { landingText } from '../../public/text-files/homepageText'
@@ -16,13 +15,16 @@ import {
 
 const HomeImageText = () => {
 	return (
-		<AnimateWrapper variants={framerMotionVariants.slideLeft}>
-			<Container>
+		<Container>
+			<motion.div
+				initial="hidden"
+				animate="visible"
+				variants={framerMotionVariants.slideUp}
+			>
 				<TextWrapper>
 					<StyledH1>{landingText.heading}</StyledH1>
 					<StyledH2>{landingText.subHeading}</StyledH2>
 				</TextWrapper>
-
 				<div>
 					<Link href="/contact" as="/contact" passHref>
 						<Button variant="contained" style={muiButtonStyle}>
@@ -30,8 +32,8 @@ const HomeImageText = () => {
 						</Button>
 					</Link>
 				</div>
-			</Container>
-		</AnimateWrapper>
+			</motion.div>
+		</Container>
 	)
 }
 

@@ -1,12 +1,12 @@
 import Link from 'next/link'
 
-import { ButtonWrapper, StyledA, ActiveLink } from './navbarButtonDeskStyles'
+import { ButtonWrapper, StyledLink, ActiveLink } from './navbarButtonDeskStyles'
 
 const NavbarButtonsDesk = ({ link, isActive, page }) => {
 	return (
 		<ButtonWrapper>
 			<Link href={link} as={link} passHref>
-				<StyledA>{page}</StyledA>
+				<StyledLink>{page}</StyledLink>
 			</Link>
 			{/* {isActive ? <ActiveLink /> : null} */}
 		</ButtonWrapper>
