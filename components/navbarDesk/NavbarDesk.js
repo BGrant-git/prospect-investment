@@ -25,7 +25,7 @@ const NavbarDesk = () => {
 	return (
 		<Container bg={scrolledVal ? 'var(--main-colour)' : 'transparent'}>
 			<LogoWrapper>
-				<Link href="/" as="">
+				<Link href="/" as="" passHref>
 					<StyledH1
 						fontSize={scrolledVal ? '38px' : '45px'}
 						marginTop={scrolledVal ? '23px' : '20px'}

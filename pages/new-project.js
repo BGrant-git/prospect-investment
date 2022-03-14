@@ -115,7 +115,7 @@ const NewProject = () => {
 			<div>
 				{fireData.map((data) => {
 					return (
-						<div>
+						<div key={data.id}>
 							<h3>{data.name}</h3>
 							<p>{data.age}</p>
 							<button onClick={() => getID(data.id, data.name, data.age)}>

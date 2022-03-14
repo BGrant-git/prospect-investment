@@ -27,7 +27,7 @@ const Developments = () => {
 					<ProjectsWrapper>
 						{projectsDataShort.map((item, i) => (
 							<motion.div variants={framerMotionVariants.stagger.item} key={i}>
-								<Link href={`/developments/${item.id}`}>
+								<Link href={`/developments/${item.id}`} passHref>
 									<ProjectCard
 										title={item.title}
 										area={item.area}
