@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
 import HeroSection from '../components/heroSection/HeroSection'
+import NewProjectForm from '../components/newProjectForm/NewProjectForm'
 
 const Index = () => {
 	return (
@@ -14,6 +15,7 @@ const Index = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<HeroSection />
+			<NewProjectForm />
 		</div>
 	)
 }
