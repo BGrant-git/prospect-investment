@@ -20,6 +20,10 @@ const Login = () => {
 		)
 	}
 
+	const signOut = () => {
+		sessionStorage.setItem('userToken', null)
+	}
+
 	useEffect(() => {
 		let token = sessionStorage.getItem('userToken')
 
@@ -43,6 +47,7 @@ const Login = () => {
 				onChange={(event) => setPassword(event.target.value)}
 			/>
 			<button onClick={signIn}>Sign In</button>
+			<button onClick={signOut}>Sign Out</button>
 		</div>
 	)
 }

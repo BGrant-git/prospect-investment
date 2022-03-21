@@ -1,5 +1,19 @@
+import { useState, useEffect } from 'react'
+import {
+	addDoc,
+	setDoc,
+	getDocs,
+	collection,
+	doc,
+	updateDoc,
+	deleteDoc,
+	where,
+	query,
+} from 'firebase/firestore'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+
+import { database } from '../../firebaseConfig'
 
 import ProjectCard from '../../components/projectCards/ProjectCard'
 import StaggerAnimateWrapper from '../../components/framerWrappers/StaggerAnimateWrapper'
@@ -14,6 +28,26 @@ import {
 import { projectsDataShort } from '../../public/text-files/projectsText'
 
 const Developments = () => {
+	const [fireData, setFireData] = useState([])
+	const databaseRef = collection(database, 'properties')
+
+	const getData = async () =>
+		await getDocs(databaseRef)
+			.then((response) =>
+				console.log(
+					response.docs.map((data) => {
+						return data.data()
+					})
+				)
+			)
+			.catch((err) => {
+				console.error(err)
+			})
+
+	useEffect(() => {
+		getData()
+	}, [])
+
 	return (
 		<motion.div
 			variants={framerMotionVariants.fadeIn}
@@ -27,7 +61,7 @@ const Developments = () => {
 					<ProjectsWrapper>
 						{projectsDataShort.map((item, i) => (
 							<motion.div variants={framerMotionVariants.stagger.item} key={i}>
-								<Link href={`/developments/${item.id}`} passHref>
+								<a href={`/developments/${item.id}`} passHref>
 									<ProjectCard
 										title={item.title}
 										area={item.area}
@@ -36,7 +70,7 @@ const Developments = () => {
 										gdv={item.gdv}
 										img={item.img}
 									/>
-								</Link>
+								</a>
 							</motion.div>
 						))}
 					</ProjectsWrapper>

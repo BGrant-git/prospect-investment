@@ -1,23 +1,29 @@
 import { useState, useEffect } from 'react'
 import {
 	addDoc,
+	setDoc,
 	getDocs,
 	collection,
 	doc,
 	updateDoc,
 	deleteDoc,
 } from 'firebase/firestore'
-
-import { database } from '../firebaseConfig'
+import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
+import { database, storage } from '../firebaseConfig'
 import NewProjectForm from '../components/newProjectForm/NewProjectForm'
 
 const NewProject = () => {
 	const [ID, setID] = useState(null)
 	const [fireData, setFireData] = useState([])
+	const [docName, setDocName] = useState('Property Name...')
 	const [name, setName] = useState('')
 	const [age, setAge] = useState(null)
 	const [isUpdate, setIsUpdate] = useState(false)
+	const [progress, setProgress] = useState(0)
 	const databaseRef = collection(database, 'CRUD data')
+	const docRef = doc(database, 'CRUD data', docName)
+
+	const propertiesRef = collection(database, 'properties')
 
 	const addData = () => {
 		addDoc(databaseRef, {
@@ -29,6 +35,23 @@ const NewProject = () => {
 				getData()
 				setName('')
 				setAge(null)
+			})
+			.catch((err) => {
+				console.error(err)
+			})
+	}
+
+	const setData = () => {
+		setDoc(docRef, {
+			name: name,
+			age: Number(age),
+		})
+			.then(() => {
+				alert('Data sent')
+				getData()
+				setName('')
+				setAge('')
+				setDocName('Property Name...')
 			})
 			.catch((err) => {
 				console.error(err)
@@ -87,6 +110,32 @@ const NewProject = () => {
 			})
 	}
 
+	const formHandler = (event) => {
+		event.preventDefault()
+		const file = event.target[0].files[0]
+		uploadFiles(file)
+	}
+
+	const uploadFiles = (file) => {
+		if (!file) return
+		//replace files with docName or whatever to specify folder in storage
+		const storageRef = ref(storage, `files/${file.name}`)
+		const uploadTask = uploadBytesResumable(storageRef, file)
+		uploadTask.on(
+			'state_changed',
+			(snapshot) => {
+				const prog = Math.round(
+					(snapshot.bytesTransferred / snapshot.totalBytes) * 100
+				)
+				setProgress(prog)
+			},
+			(err) => console.log(err),
+			() => {
+				getDownloadURL(uploadTask.snapshot.ref).then((url) => console.log(url))
+			}
+		)
+	}
+
 	useEffect(() => {
 		getData()
 	}, [])
@@ -94,6 +143,13 @@ const NewProject = () => {
 	return (
 		<div>
 			<div>
+				<input
+					placeholder="Doc Name"
+					type="text"
+					value={docName}
+					onFocus={(event) => event.target.select()}
+					onChange={(event) => setDocName(event.target.value)}
+				/>
 				<input
 					placeholder="Name"
 					type="text"
@@ -109,7 +165,7 @@ const NewProject = () => {
 				{isUpdate ? (
 					<button onClick={updateFields}>UPDATE</button>
 				) : (
-					<button onClick={addData}>ADD</button>
+					<button onClick={setData}>ADD</button>
 				)}
 			</div>
 			<div>
@@ -125,6 +181,13 @@ const NewProject = () => {
 						</div>
 					)
 				})}
+			</div>
+			<div>
+				<form onSubmit={formHandler}>
+					<input type="file" />
+					<button type="submit">Upload</button>
+				</form>
+				<h4>Uploaded {progress} %</h4>
 			</div>
 		</div>
 	)
