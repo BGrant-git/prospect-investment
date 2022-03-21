@@ -1,4 +1,4 @@
-import Grid from '@material-ui/core/Grid'
+import { Grid } from '@mui/material'
 
 import PropertyHeroSection from '../PropertyHero/PropertyHero'
 import PropertyText from '../propertyText/PropertyText'

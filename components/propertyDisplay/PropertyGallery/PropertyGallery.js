@@ -1,5 +1,5 @@
 import SimpleReactLightbox, { SRLWrapper } from 'simple-react-lightbox'
-import { Grid } from '@material-ui/core'
+import { Grid } from '@mui/material'
 
 import { StyledThumb, ImgWrapper } from './propertyGalleryStyles'
 

@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from 'react'
-import { useMediaQuery } from '@material-ui/core'
+import { useMediaQuery } from '@mui/material'
 import styled from 'styled-components'
 
 export const CenterRule = styled.div`

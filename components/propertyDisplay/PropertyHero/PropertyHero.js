@@ -1,4 +1,4 @@
-import { Grid } from '@material-ui/core'
+import { Grid } from '@mui/material'
 import Image from 'next/image'
 
 const PropertyHeroImg = require('../../../public/images/projects/BakerRoad/groundFloor/001.jpg')

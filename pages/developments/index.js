@@ -61,7 +61,7 @@ const Developments = () => {
 					<ProjectsWrapper>
 						{projectsDataShort.map((item, i) => (
 							<motion.div variants={framerMotionVariants.stagger.item} key={i}>
-								<a href={`/developments/${item.id}`} passHref>
+								<Link href={`/developments/${item.id}`} passHref>
 									<ProjectCard
 										title={item.title}
 										area={item.area}
@@ -70,7 +70,7 @@ const Developments = () => {
 										gdv={item.gdv}
 										img={item.img}
 									/>
-								</a>
+								</Link>
 							</motion.div>
 						))}
 					</ProjectsWrapper>

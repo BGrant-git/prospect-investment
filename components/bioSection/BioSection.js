@@ -1,5 +1,5 @@
 import BioCard from '../bioCard/BioCard'
-import { Grid } from '@material-ui/core'
+import { Grid } from '@mui/material'
 
 import { Container, StyledH1 } from './bioSectionStyles'
 import { bioData } from '../../public/text-files/aboutText'

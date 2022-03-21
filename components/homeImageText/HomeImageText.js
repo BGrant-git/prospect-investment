@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Button } from '@material-ui/core'
+import { Button } from '@mui/material'
 import { motion } from 'framer-motion'
 
 import { framerMotionVariants } from '../../store/framerMotionVariants'
