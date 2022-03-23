@@ -8,7 +8,12 @@ import {
 	updateDoc,
 	deleteDoc,
 } from 'firebase/firestore'
-import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
+import {
+	getDownloadURL,
+	ref,
+	uploadBytesResumable,
+	uploadBytes,
+} from 'firebase/storage'
 import { database, storage } from '../firebaseConfig'
 import NewProjectForm from '../components/newProjectForm/NewProjectForm'
 
@@ -20,15 +25,24 @@ const NewProject = () => {
 	const [age, setAge] = useState(null)
 	const [isUpdate, setIsUpdate] = useState(false)
 	const [progress, setProgress] = useState(0)
+	const [imagesToUpload, setImagesToUpload] = useState([])
 	const databaseRef = collection(database, 'CRUD data')
+	const propertiesRef = doc(database, 'properties', docName)
 	const docRef = doc(database, 'CRUD data', docName)
 
-	const propertiesRef = collection(database, 'properties')
+	const [isCompleted, setIsCompleted] = useState(false)
+	const [description, setDescription] = useState('')
+	const [keyFeatures, setKeyFeatures] = useState([{ name: '' }])
+	const [title, setTitle] = useState('')
+	const [heroImg, setHeroImg] = useState('')
 
-	const addData = () => {
-		addDoc(databaseRef, {
-			name: name,
-			age: Number(age),
+	const setPropertyData = () => {
+		setDoc(propertiesRef, {
+			isCompleted: isCompleted,
+			title: title,
+			description: description,
+			keyFeatures: keyFeatures,
+			heroImg: heroImg,
 		})
 			.then(() => {
 				alert('Data sent')
@@ -110,17 +124,46 @@ const NewProject = () => {
 			})
 	}
 
-	const formHandler = (event) => {
+	const heroImgHandler = (event) => {
 		event.preventDefault()
 		const file = event.target[0].files[0]
 		uploadFiles(file)
 	}
 
+	const fileSelectedHandler = (event) => {
+		setImagesToUpload(event.target.files)
+	}
+
+	const handleFormChange = (event, index) => {
+		let data = [...keyFeatures]
+		data[index][event.target.name] = event.target.value
+		setKeyFeatures(data)
+	}
+
+	const featuresSubmit = (e) => {
+		e.preventDefault()
+		setKeyFeatures(formFields)
+	}
+
+	const addFields = () => {
+		let object = {
+			name: '',
+		}
+		setKeyFeatures([...keyFeatures, object])
+	}
+
+	const removeFields = (index) => {
+		let data = [...keyFeatures]
+		data.splice(index, 1)
+		setKeyFeatures(data)
+	}
+
 	const uploadFiles = (file) => {
+		console.log(file)
 		if (!file) return
-		//replace files with docName or whatever to specify folder in storage
-		const storageRef = ref(storage, `files/${file.name}`)
-		const uploadTask = uploadBytesResumable(storageRef, file)
+		const sotrageRef = ref(storage, `files/${file.name}`)
+		const uploadTask = uploadBytesResumable(sotrageRef, file)
+
 		uploadTask.on(
 			'state_changed',
 			(snapshot) => {
@@ -129,9 +172,12 @@ const NewProject = () => {
 				)
 				setProgress(prog)
 			},
-			(err) => console.log(err),
+			(error) => console.log(error),
 			() => {
-				getDownloadURL(uploadTask.snapshot.ref).then((url) => console.log(url))
+				getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+					console.log('File available at', downloadURL)
+					setHeroImg(downloadURL)
+				})
 			}
 		)
 	}
@@ -139,6 +185,10 @@ const NewProject = () => {
 	useEffect(() => {
 		getData()
 	}, [])
+
+	useEffect(() => {
+		console.log(keyFeatures)
+	}, [keyFeatures])
 
 	return (
 		<div>
@@ -183,11 +233,52 @@ const NewProject = () => {
 				})}
 			</div>
 			<div>
-				<form onSubmit={formHandler}>
+				<label>
+					Completed:
+					<select
+						value={isCompleted}
+						onChange={(event) => setIsCompleted(event.target.value)}
+					>
+						<option value={false}>No</option>
+						<option value={true}>Yes</option>
+					</select>
+				</label>
+				<input
+					placeholder="Property Name"
+					type="text"
+					value={docName}
+					onFocus={(event) => event.target.select()}
+					onChange={(event) => setDocName(event.target.value)}
+				/>
+				<form onSubmit={heroImgHandler}>
 					<input type="file" />
 					<button type="submit">Upload</button>
+					<h4>Uploaded {progress} %</h4>
 				</form>
-				<h4>Uploaded {progress} %</h4>
+				<input
+					placeholder="Description"
+					type="text"
+					value={description}
+					onChange={(event) => setDescription(event.target.value)}
+				/>
+				<form>
+					{keyFeatures.map((form, index) => {
+						return (
+							<div key={index}>
+								<input
+									name="name"
+									placeholder="Feature"
+									onChange={(event) => handleFormChange(event, index)}
+									value={form.name}
+								/>
+								<button onClick={() => removeFields(index)}>Remove</button>
+							</div>
+						)
+					})}
+				</form>
+				<button onClick={addFields}>Add more</button>
+				<br />
+				<button onClick={setPropertyData}>Lets goooo</button>
 			</div>
 		</div>
 	)
