@@ -32,7 +32,7 @@ const NewProject = () => {
 
 	const [isCompleted, setIsCompleted] = useState(false)
 	const [description, setDescription] = useState('')
-	const [keyFeatures, setKeyFeatures] = useState([{ name: '' }])
+	const [keyFeatures, setKeyFeatures] = useState([{ feature: '' }])
 	const [title, setTitle] = useState('')
 	const [heroImg, setHeroImg] = useState('')
 
@@ -147,7 +147,7 @@ const NewProject = () => {
 
 	const addFields = () => {
 		let object = {
-			name: '',
+			feature: '',
 		}
 		setKeyFeatures([...keyFeatures, object])
 	}
@@ -266,7 +266,7 @@ const NewProject = () => {
 						return (
 							<div key={index}>
 								<input
-									name="name"
+									name="feature"
 									placeholder="Feature"
 									onChange={(event) => handleFormChange(event, index)}
 									value={form.name}
