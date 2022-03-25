@@ -25,7 +25,6 @@ const NewProject = () => {
 	const [age, setAge] = useState(null)
 	const [isUpdate, setIsUpdate] = useState(false)
 	const [progress, setProgress] = useState(0)
-	const [imagesToUpload, setImagesToUpload] = useState([])
 	const databaseRef = collection(database, 'CRUD data')
 	const propertiesRef = doc(database, 'properties', docName)
 	const docRef = doc(database, 'CRUD data', docName)
@@ -35,14 +34,17 @@ const NewProject = () => {
 	const [keyFeatures, setKeyFeatures] = useState([{ feature: '' }])
 	const [title, setTitle] = useState('')
 	const [heroImg, setHeroImg] = useState('')
+	const [imagesToUpload, setImagesToUpload] = useState([])
+	const [URLs, setURLs] = useState([])
 
 	const setPropertyData = () => {
 		setDoc(propertiesRef, {
 			isCompleted: isCompleted,
-			title: title,
+			title: docName,
 			description: description,
 			keyFeatures: keyFeatures,
 			heroImg: heroImg,
+			imageURLs: URLs,
 		})
 			.then(() => {
 				alert('Data sent')
@@ -130,8 +132,9 @@ const NewProject = () => {
 		uploadFiles(file)
 	}
 
-	const fileSelectedHandler = (event) => {
-		setImagesToUpload(event.target.files)
+	const imagesSubmit = (event) => {
+		event.preventDefault()
+		uploadImages(imagesToUpload)
 	}
 
 	const handleFormChange = (event, index) => {
@@ -161,7 +164,7 @@ const NewProject = () => {
 	const uploadFiles = (file) => {
 		console.log(file)
 		if (!file) return
-		const sotrageRef = ref(storage, `files/${file.name}`)
+		const sotrageRef = ref(storage, `${docName}/${file.name}`)
 		const uploadTask = uploadBytesResumable(sotrageRef, file)
 
 		uploadTask.on(
@@ -182,13 +185,48 @@ const NewProject = () => {
 		)
 	}
 
+	const uploadImages = (files) => {
+		const promises = []
+		files.map((file) => {
+			console.log('loop')
+
+			const storageRef = ref(storage, `${docName}/${file.name}`)
+
+			const uploadTask = uploadBytesResumable(storageRef, file)
+			promises.push(uploadTask)
+			uploadTask.on(
+				'state_changed',
+				(snapshot) => {
+					const prog = Math.round(
+						(snapshot.bytesTransferred / snapshot.totalBytes) * 100
+					)
+					setProgress(prog)
+				},
+				(error) => console.log(error),
+				async () => {
+					await getDownloadURL(uploadTask.snapshot.ref).then((downloadURLs) => {
+						setURLs((prevState) => [...prevState, downloadURLs])
+						console.log('File available at', downloadURLs)
+					})
+				}
+			)
+		})
+		Promise.all(promises)
+			.then(() => alert('All images uploaded'))
+			.then((err) => console.log(err))
+	}
+
 	useEffect(() => {
 		getData()
 	}, [])
 
 	useEffect(() => {
-		console.log(keyFeatures)
-	}, [keyFeatures])
+		imagesToUpload.map((item) => console.log(item))
+	}, [imagesToUpload])
+
+	useEffect(() => {
+		console.log(URLs)
+	}, [URLs])
 
 	return (
 		<div>
@@ -277,6 +315,16 @@ const NewProject = () => {
 					})}
 				</form>
 				<button onClick={addFields}>Add more</button>
+				<br />
+				<form onSubmit={imagesSubmit}>
+					<input
+						type="file"
+						multiple
+						onChange={(event) => setImagesToUpload([...event.target.files])}
+					/>
+					<button type="submit">Upload</button>
+					<h4>Uploaded {progress} %</h4>
+				</form>
 				<br />
 				<button onClick={setPropertyData}>Lets goooo</button>
 			</div>
