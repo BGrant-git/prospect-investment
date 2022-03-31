@@ -8,12 +8,7 @@ import {
 	updateDoc,
 	deleteDoc,
 } from 'firebase/firestore'
-import {
-	getDownloadURL,
-	ref,
-	uploadBytesResumable,
-	uploadBytes,
-} from 'firebase/storage'
+import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
 import { database, storage } from '../firebaseConfig'
 import NewProjectForm from '../components/newProjectForm/NewProjectForm'
 
@@ -33,6 +28,7 @@ const NewProject = () => {
 	const [description, setDescription] = useState('')
 	const [keyFeatures, setKeyFeatures] = useState([{ feature: '' }])
 	const [title, setTitle] = useState('')
+	const [location, setLocation] = useState('')
 	const [heroImg, setHeroImg] = useState('')
 	const [imagesToUpload, setImagesToUpload] = useState([])
 	const [URLs, setURLs] = useState([])
@@ -40,7 +36,8 @@ const NewProject = () => {
 	const setPropertyData = () => {
 		setDoc(propertiesRef, {
 			isCompleted: isCompleted,
-			title: docName,
+			title: title,
+			location: location,
 			description: description,
 			keyFeatures: keyFeatures,
 			heroImg: heroImg,
@@ -126,6 +123,13 @@ const NewProject = () => {
 			})
 	}
 
+	const titleHandler = (event) => {
+		setTitle(event.target.value)
+		event.target.value
+			? setDocName(event.target.value.toLowerCase().replace(' ', '-'))
+			: ''
+	}
+
 	const heroImgHandler = (event) => {
 		event.preventDefault()
 		const file = event.target[0].files[0]
@@ -137,15 +141,10 @@ const NewProject = () => {
 		uploadImages(imagesToUpload)
 	}
 
-	const handleFormChange = (event, index) => {
+	const handleFeaturesFormChange = (event, index) => {
 		let data = [...keyFeatures]
 		data[index][event.target.name] = event.target.value
 		setKeyFeatures(data)
-	}
-
-	const featuresSubmit = (e) => {
-		e.preventDefault()
-		setKeyFeatures(formFields)
 	}
 
 	const addFields = () => {
@@ -221,12 +220,8 @@ const NewProject = () => {
 	}, [])
 
 	useEffect(() => {
-		imagesToUpload.map((item) => console.log(item))
-	}, [imagesToUpload])
-
-	useEffect(() => {
-		console.log(URLs)
-	}, [URLs])
+		console.log(docName)
+	}, [docName])
 
 	return (
 		<div>
@@ -234,7 +229,7 @@ const NewProject = () => {
 				<input
 					placeholder="Doc Name"
 					type="text"
-					value={docName}
+					value={title}
 					onFocus={(event) => event.target.select()}
 					onChange={(event) => setDocName(event.target.value)}
 				/>
@@ -284,9 +279,14 @@ const NewProject = () => {
 				<input
 					placeholder="Property Name"
 					type="text"
-					value={docName}
-					onFocus={(event) => event.target.select()}
-					onChange={(event) => setDocName(event.target.value)}
+					value={title}
+					onChange={titleHandler}
+				/>
+				<input
+					placeholder="Location"
+					type="text"
+					value={location}
+					onChange={(event) => setLocation(event.target.value)}
 				/>
 				<form onSubmit={heroImgHandler}>
 					<input type="file" />
@@ -306,7 +306,7 @@ const NewProject = () => {
 								<input
 									name="feature"
 									placeholder="Feature"
-									onChange={(event) => handleFormChange(event, index)}
+									onChange={(event) => handleFeaturesFormChange(event, index)}
 									value={form.name}
 								/>
 								<button onClick={() => removeFields(index)}>Remove</button>

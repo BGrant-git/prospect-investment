@@ -7,13 +7,12 @@ import {
 	doc,
 	updateDoc,
 	deleteDoc,
-	where,
-	query,
 } from 'firebase/firestore'
+import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
-import { database } from '../../firebaseConfig'
+import { database, storage } from '../../firebaseConfig'
 
 import ProjectCard from '../../components/projectCards/ProjectCard'
 import StaggerAnimateWrapper from '../../components/framerWrappers/StaggerAnimateWrapper'
@@ -28,8 +27,8 @@ import {
 import { projectsDataShort } from '../../public/text-files/projectsText'
 
 const Developments = () => {
-	const [fireData, setFireData] = useState([])
 	const databaseRef = collection(database, 'properties')
+	const [properties, setProperties] = useState([])
 
 	const getData = async () =>
 		await getDocs(databaseRef)
@@ -46,6 +45,20 @@ const Developments = () => {
 
 	useEffect(() => {
 		getData()
+	}, [])
+
+	useEffect(() => {
+		async function getProperties() {
+			const propertiesCollection = collection(database, 'properties')
+			const propertiesSnapshot = await getDocs(propertiesCollection)
+			const properties = propertiesSnapshot.docs.map((doc) => {
+				const data = doc.data()
+				data.id = doc.id
+				return data
+			})
+			setProperties(properties)
+		}
+		getProperties(properties)
 	}, [])
 
 	return (
@@ -72,6 +85,18 @@ const Developments = () => {
 									/>
 								</Link>
 							</motion.div>
+						))}
+					</ProjectsWrapper>
+					<ProjectsWrapper>
+						{properties.map((item, i) => (
+							<ProjectCard
+								title={item.title}
+								area={item.area}
+								status={item.completed}
+								description={item.description}
+								img={item.heroImg}
+								id={item.id}
+							/>
 						))}
 					</ProjectsWrapper>
 				</StaggerAnimateWrapper>
