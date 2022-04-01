@@ -9,13 +9,23 @@ import {
 	updateDoc,
 	deleteDoc,
 } from 'firebase/firestore'
+import Link from 'next/link'
 
 import { database } from '../../firebaseConfig'
 
-const Property = (props) => {
-	console.log(props.property)
+import PropertyDisplay from '../../components/propertyDisplay/PropertyDisplayComponent/PropertyDisplay'
 
-	return <div>hi</div>
+const Property = (props) => {
+	console.log(props.id)
+	return (
+		<>
+			<PropertyDisplay propertyData={props.property} />
+			<div>
+				<button>Edit</button>
+				<button>Delete</button>
+			</div>
+		</>
+	)
 }
 
 export const getStaticPaths = async () => {
@@ -34,7 +44,8 @@ export const getStaticProps = async (context) => {
 	const docRef = doc(database, 'properties', id)
 	const docSnap = await getDoc(docRef)
 	return {
-		props: { property: JSON.stringify(docSnap.data()) || null },
+		props: { property: docSnap.data(), id: id || null },
+		revalidate: 10,
 	}
 }
 

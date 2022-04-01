@@ -126,7 +126,7 @@ const NewProject = () => {
 	const titleHandler = (event) => {
 		setTitle(event.target.value)
 		event.target.value
-			? setDocName(event.target.value.toLowerCase().replace(' ', '-'))
+			? setDocName(event.target.value.toLowerCase().replaceAll(' ', '-'))
 			: ''
 	}
 

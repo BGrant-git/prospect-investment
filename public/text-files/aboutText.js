@@ -47,3 +47,17 @@ export const bioData = [
 		img: require('../../public/images/about/man4.jpg'),
 	},
 ]
+
+const cunt = {
+	heroImg:
+		'https://firebasestorage.googleapis.com/v0/b/prospect-investm…338.png?alt=media&token=c7d52330-1e8c-4ed5-b1c3-db84ea844055',
+	description: 'the house of yat',
+	isCompleted: false,
+	imageURLs: [
+		'https://firebasestorage.googleapis.com/v0/b/prospect-investm…200.jpg?alt=media&token=f84c1cd5-79cb-497b-af90-7fdbdee75a70',
+		'https://firebasestorage.googleapis.com/v0/b/prospect-investm…702.jpg?alt=media&token=fbd7f25f-5fac-423d-85f9-4db96a1519e7',
+		'https://firebasestorage.googleapis.com/v0/b/prospect-investm…eus.jpg?alt=media&token=58285de3-dd90-489a-a771-7dd5c6b885aa',
+	],
+	keyFeatures: [{ feature: 'yats' }, { feature: 'be' }, { feature: 'here' }],
+	title: 'yats house',
+}

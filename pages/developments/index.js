@@ -61,6 +61,9 @@ const Developments = () => {
 		getProperties(properties)
 	}, [])
 
+	// TODO fix stagger animate
+	// TODO grab data with getStaticProps instead of in useEffect
+
 	return (
 		<motion.div
 			variants={framerMotionVariants.fadeIn}
@@ -72,31 +75,17 @@ const Developments = () => {
 				<CenterRule background="white" />
 				<StaggerAnimateWrapper variant={framerMotionVariants.stagger.container}>
 					<ProjectsWrapper>
-						{projectsDataShort.map((item, i) => (
-							<motion.div variants={framerMotionVariants.stagger.item} key={i}>
-								<Link href={`/developments/${item.id}`} passHref>
-									<ProjectCard
-										title={item.title}
-										area={item.area}
-										status={item.status}
-										description={item.description}
-										gdv={item.gdv}
-										img={item.img}
-									/>
-								</Link>
-							</motion.div>
-						))}
-					</ProjectsWrapper>
-					<ProjectsWrapper>
 						{properties.map((item, i) => (
-							<ProjectCard
-								title={item.title}
-								area={item.area}
-								status={item.completed}
-								description={item.description}
-								img={item.heroImg}
-								id={item.id}
-							/>
+							<motion.div variants={framerMotionVariants.stagger.item} key={i}>
+								<ProjectCard
+									title={item.title}
+									location={item.location}
+									status={item.isCompleted}
+									description={item.description}
+									img={item.heroImg}
+									id={item.id}
+								/>
+							</motion.div>
 						))}
 					</ProjectsWrapper>
 				</StaggerAnimateWrapper>
