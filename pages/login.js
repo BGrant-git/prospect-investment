@@ -26,7 +26,6 @@ const Login = () => {
 
 	useEffect(() => {
 		let token = sessionStorage.getItem('userToken')
-
 		if (token) {
 			router.push('/')
 		}

@@ -188,9 +188,7 @@ const NewProject = () => {
 		const promises = []
 		files.map((file) => {
 			console.log('loop')
-
 			const storageRef = ref(storage, `${docName}/${file.name}`)
-
 			const uploadTask = uploadBytesResumable(storageRef, file)
 			promises.push(uploadTask)
 			uploadTask.on(
