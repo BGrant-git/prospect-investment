@@ -36,7 +36,12 @@ const Property = (props) => {
 		<>
 			<PropertyDisplay propertyData={props.property} />
 			<div>
-				<button>Edit</button>
+				<Link
+					passHref
+					href={{ pathname: '/edit-project', query: { id: props.id } }}
+				>
+					<button>Edit</button>
+				</Link>
 				<button
 					onClick={() => {
 						if (window.confirm('Are you sure you want to delete this doc?'))

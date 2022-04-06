@@ -19,14 +19,19 @@ const NewProject = () => {
 	const [name, setName] = useState('')
 	const [age, setAge] = useState(null)
 	const [isUpdate, setIsUpdate] = useState(false)
-	const [progress, setProgress] = useState(0)
+	const [heroImgProgress, setHeroImgProgress] = useState(0)
+	const [imagesProgress, setImagesProgress] = useState(0)
 	const databaseRef = collection(database, 'CRUD data')
 	const propertiesRef = doc(database, 'properties', docName)
 	const docRef = doc(database, 'CRUD data', docName)
 
 	const [isCompleted, setIsCompleted] = useState(false)
 	const [description, setDescription] = useState('')
-	const [keyFeatures, setKeyFeatures] = useState([{ feature: '' }])
+	const [keyFeatures, setKeyFeatures] = useState([
+		{ feature: '' },
+		{ feature: '' },
+		{ feature: '' },
+	])
 	const [title, setTitle] = useState('')
 	const [location, setLocation] = useState('')
 	const [heroImg, setHeroImg] = useState('')
@@ -133,7 +138,7 @@ const NewProject = () => {
 	const heroImgHandler = (event) => {
 		event.preventDefault()
 		const file = event.target[0].files[0]
-		uploadFiles(file)
+		uploadHeroImg(file)
 	}
 
 	const imagesSubmit = (event) => {
@@ -160,7 +165,7 @@ const NewProject = () => {
 		setKeyFeatures(data)
 	}
 
-	const uploadFiles = (file) => {
+	const uploadHeroImg = (file) => {
 		console.log(file)
 		if (!file) return
 		const sotrageRef = ref(storage, `${docName}/${file.name}`)
@@ -172,7 +177,7 @@ const NewProject = () => {
 				const prog = Math.round(
 					(snapshot.bytesTransferred / snapshot.totalBytes) * 100
 				)
-				setProgress(prog)
+				setHeroImgProgress(prog)
 			},
 			(error) => console.log(error),
 			() => {
@@ -197,7 +202,7 @@ const NewProject = () => {
 					const prog = Math.round(
 						(snapshot.bytesTransferred / snapshot.totalBytes) * 100
 					)
-					setProgress(prog)
+					setImagesProgress(prog)
 				},
 				(error) => console.log(error),
 				async () => {
@@ -289,7 +294,7 @@ const NewProject = () => {
 				<form onSubmit={heroImgHandler}>
 					<input type="file" />
 					<button type="submit">Upload</button>
-					<h4>Uploaded {progress} %</h4>
+					<h4>Uploaded {heroImgProgress} %</h4>
 				</form>
 				<input
 					placeholder="Description"
@@ -321,7 +326,7 @@ const NewProject = () => {
 						onChange={(event) => setImagesToUpload([...event.target.files])}
 					/>
 					<button type="submit">Upload</button>
-					<h4>Uploaded {progress} %</h4>
+					<h4>Uploaded {imagesProgress} %</h4>
 				</form>
 				<br />
 				<button onClick={setPropertyData}>Lets goooo</button>
