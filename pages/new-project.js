@@ -1,30 +1,14 @@
-import { useState, useEffect } from 'react'
-import {
-	addDoc,
-	setDoc,
-	getDocs,
-	collection,
-	doc,
-	updateDoc,
-	deleteDoc,
-} from 'firebase/firestore'
+import { useState } from 'react'
+import { setDoc, doc } from 'firebase/firestore'
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
 import { database, storage } from '../firebaseConfig'
-import NewProjectForm from '../components/newProjectForm/NewProjectForm'
+import { useRouter } from 'next/router'
 
 const NewProject = () => {
-	const [ID, setID] = useState(null)
-	const [fireData, setFireData] = useState([])
+	const router = useRouter()
 	const [docName, setDocName] = useState('Property Name...')
-	const [name, setName] = useState('')
-	const [age, setAge] = useState(null)
-	const [isUpdate, setIsUpdate] = useState(false)
 	const [heroImgProgress, setHeroImgProgress] = useState(0)
 	const [imagesProgress, setImagesProgress] = useState(0)
-	const databaseRef = collection(database, 'CRUD data')
-	const propertiesRef = doc(database, 'properties', docName)
-	const docRef = doc(database, 'CRUD data', docName)
-
 	const [isCompleted, setIsCompleted] = useState(false)
 	const [description, setDescription] = useState('')
 	const [keyFeatures, setKeyFeatures] = useState([
@@ -37,6 +21,7 @@ const NewProject = () => {
 	const [heroImg, setHeroImg] = useState('')
 	const [imagesToUpload, setImagesToUpload] = useState([])
 	const [URLs, setURLs] = useState([])
+	const propertiesRef = doc(database, 'properties', docName)
 
 	const setPropertyData = () => {
 		setDoc(propertiesRef, {
@@ -50,78 +35,12 @@ const NewProject = () => {
 		})
 			.then(() => {
 				alert('Data sent')
-				getData()
-				setName('')
-				setAge(null)
-			})
-			.catch((err) => {
-				console.error(err)
-			})
-	}
-
-	const setData = () => {
-		setDoc(docRef, {
-			name: name,
-			age: Number(age),
-		})
-			.then(() => {
-				alert('Data sent')
-				getData()
-				setName('')
-				setAge('')
-				setDocName('Property Name...')
-			})
-			.catch((err) => {
-				console.error(err)
-			})
-	}
-
-	const getData = async () => {
-		await getDocs(databaseRef)
-			.then((response) => {
-				setFireData(
-					response.docs.map((data) => {
-						return { ...data.data(), id: data.id }
-					})
-				)
-			})
-			.catch((err) => {
-				console.error(err)
-			})
-	}
-
-	const getID = (id, name, age) => {
-		setID(id)
-		setName(name)
-		setAge(age)
-		setIsUpdate(true)
-	}
-
-	const updateFields = () => {
-		let fieldToEdit = doc(database, 'CRUD data', ID)
-		updateDoc(fieldToEdit, {
-			name: name,
-			age: Number(age),
-		})
-			.then(() => {
-				alert('Data Updated')
-				getData()
-				setID(null)
-				setName('')
-				setAge('')
-				setIsUpdate(false)
-			})
-			.catch((err) => {
-				console.error(err)
-			})
-	}
-
-	const deleteDocument = (id) => {
-		let fieldToEdit = doc(database, 'CRUD data', id)
-		deleteDoc(fieldToEdit)
-			.then(() => {
-				alert('Data Deleted')
-				getData()
+				setTitle('')
+				setDescription('')
+				setKeyFeatures([{ feature: '' }, { feature: '' }, { feature: '' }])
+				setLocation('')
+				setURLs([])
+				router.push('/developments')
 			})
 			.catch((err) => {
 				console.error(err)
@@ -218,56 +137,8 @@ const NewProject = () => {
 			.then((err) => console.log(err))
 	}
 
-	useEffect(() => {
-		getData()
-	}, [])
-
-	useEffect(() => {
-		console.log(docName)
-	}, [docName])
-
 	return (
 		<div>
-			<div>
-				<input
-					placeholder="Doc Name"
-					type="text"
-					value={title}
-					onFocus={(event) => event.target.select()}
-					onChange={(event) => setDocName(event.target.value)}
-				/>
-				<input
-					placeholder="Name"
-					type="text"
-					value={name}
-					onChange={(event) => setName(event.target.value)}
-				/>
-				<input
-					placeholder="Age"
-					type="number"
-					value={age}
-					onChange={(event) => setAge(event.target.value)}
-				/>
-				{isUpdate ? (
-					<button onClick={updateFields}>UPDATE</button>
-				) : (
-					<button onClick={setData}>ADD</button>
-				)}
-			</div>
-			<div>
-				{fireData.map((data) => {
-					return (
-						<div key={data.id}>
-							<h3>{data.name}</h3>
-							<p>{data.age}</p>
-							<button onClick={() => getID(data.id, data.name, data.age)}>
-								UPDATE
-							</button>
-							<button onClick={() => deleteDocument(data.id)}>DELETE</button>
-						</div>
-					)
-				})}
-			</div>
 			<div>
 				<label>
 					Completed:
