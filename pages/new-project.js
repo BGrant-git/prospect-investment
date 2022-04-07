@@ -168,8 +168,8 @@ const NewProject = () => {
 	const uploadHeroImg = (file) => {
 		console.log(file)
 		if (!file) return
-		const sotrageRef = ref(storage, `${docName}/${file.name}`)
-		const uploadTask = uploadBytesResumable(sotrageRef, file)
+		const storageRef = ref(storage, `${docName}/${file.name}`)
+		const uploadTask = uploadBytesResumable(storageRef, file)
 
 		uploadTask.on(
 			'state_changed',

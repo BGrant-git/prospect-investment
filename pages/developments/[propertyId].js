@@ -72,7 +72,7 @@ export const getStaticProps = async (context) => {
 	const docSnap = await getDoc(docRef)
 	return {
 		props: { property: docSnap.data(), id: id || null },
-		revalidate: 10,
+		revalidate: 1,
 	}
 }
 

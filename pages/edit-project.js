@@ -8,6 +8,8 @@ import { database, storage } from '../firebaseConfig'
 import { ImageWrapper } from '../public/styles/pages-styles/developmentsStyles/projectFormStyles'
 
 const EditProject = () => {
+	const router = useRouter()
+	const id = router.query.id
 	const [project, setProject] = useState({})
 	const [isCompleted, setIsCompleted] = useState(false)
 	const [description, setDescription] = useState('')
@@ -19,12 +21,9 @@ const EditProject = () => {
 	const [imagesToUpload, setImagesToUpload] = useState([])
 	const [imagesProgress, setImagesProgress] = useState(0)
 	const [URLs, setURLs] = useState([])
-	const router = useRouter()
-	const id = router.query.id
-	const propertyRef = doc(database, 'properties', id)
 
 	const updateProperty = () => {
-		updateDoc(propertyRef, {
+		updateDoc(doc(database, 'properties', id), {
 			isCompleted: isCompleted,
 			title: title,
 			location: location,
@@ -80,8 +79,8 @@ const EditProject = () => {
 	const uploadHeroImg = (file) => {
 		console.log(file)
 		if (!file) return
-		const sotrageRef = ref(storage, `${id}/${file.name}`)
-		const uploadTask = uploadBytesResumable(sotrageRef, file)
+		const storageRef = ref(storage, `${id}/${file.name}`)
+		const uploadTask = uploadBytesResumable(storageRef, file)
 
 		uploadTask.on(
 			'state_changed',
@@ -132,7 +131,7 @@ const EditProject = () => {
 
 	useEffect(() => {
 		const getData = async () => {
-			const propertySnapshot = await getDoc(propertyRef)
+			const propertySnapshot = await getDoc(doc(database, 'properties', id))
 			const property = propertySnapshot.data()
 			console.log(property)
 			property.id = propertySnapshot.id
