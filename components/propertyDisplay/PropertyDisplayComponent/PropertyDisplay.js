@@ -6,6 +6,13 @@ import PropertyGallery from '../PropertyGallery/PropertyGallery'
 
 import { Wrapper } from './propertyDisplayStyles'
 
+/**
+ * add completed status to display
+ * sort out image display so it is less of a static grid
+ *
+ *
+ */
+
 const PropertyDisplay = ({ propertyData }) => {
 	return (
 		<Grid container>
