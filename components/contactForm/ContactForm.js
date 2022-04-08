@@ -1,4 +1,4 @@
-import { Grid, TextField, Button } from '@material-ui/core'
+import { Grid, TextField, Button } from '@mui/material'
 import { useContext } from 'react'
 
 import { StoreContext, CenterRule } from '../../store/context'

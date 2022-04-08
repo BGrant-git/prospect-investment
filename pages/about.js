@@ -1,11 +1,11 @@
 import { useContext } from 'react'
 import { motion } from 'framer-motion'
-import dynamic from 'next/dynamic'
 
 import { CenterRule, StoreContext } from '../store/context'
 import { framerMotionVariants } from '../store/framerMotionVariants'
 import BioSection from '../components/bioSection/BioSection'
 
+import AboutCopy from '../components/aboutCopy/AboutCopy'
 import {
 	Container,
 	ContentWrapper,
@@ -15,10 +15,6 @@ import {
 
 import copyBackgroundMob from '../public/images/about/mob-bg.jpg'
 import copyBackgroundDesk from '../public/images/about/shutterstock_179448743.jpg'
-
-const DyncamicAboutCopy = dynamic(() =>
-	import('../components/aboutCopy/AboutCopy')
-)
 
 const About = () => {
 	const { matchesSm } = useContext(StoreContext)
@@ -35,7 +31,7 @@ const About = () => {
 						<StyledH1>WHO WE ARE</StyledH1>
 						<CenterRule background="white" />
 					</TitleWrapper>
-					<DyncamicAboutCopy />
+					<AboutCopy />
 					<BioSection />
 				</ContentWrapper>
 			</Container>

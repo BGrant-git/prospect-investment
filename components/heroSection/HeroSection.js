@@ -23,7 +23,7 @@ const HeroSectionWrapper = styled.div`
 const HeroSection = () => {
 	return (
 		<HeroSectionWrapper>
-			<Image src={homepageBackgroundImage} layout="fill" />
+			<Image src={homepageBackgroundImage} alt="" layout="fill" />
 			<div>
 				<HomeImageText />
 			</div>

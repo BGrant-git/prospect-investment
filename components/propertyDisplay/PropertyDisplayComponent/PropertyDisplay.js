@@ -1,4 +1,4 @@
-import Grid from '@material-ui/core/Grid'
+import { Grid } from '@mui/material'
 
 import PropertyHeroSection from '../PropertyHero/PropertyHero'
 import PropertyText from '../propertyText/PropertyText'
@@ -6,7 +6,12 @@ import PropertyGallery from '../PropertyGallery/PropertyGallery'
 
 import { Wrapper } from './propertyDisplayStyles'
 
-import { projectsDataLong } from '../../../public/text-files/projectsText'
+/**
+ * add completed status to display
+ * sort out image display so it is less of a static grid
+ *
+ *
+ */
 
 const PropertyDisplay = ({ propertyData }) => {
 	return (
@@ -14,17 +19,14 @@ const PropertyDisplay = ({ propertyData }) => {
 			<Wrapper>
 				<PropertyHeroSection
 					img={propertyData.heroImg}
-					agentLogo={propertyData.agentLogo}
 					title={propertyData.title}
-					subtitle={propertyData.subtitle}
-					text={propertyData.text}
 				/>
 				<PropertyText
-					desc={propertyData.text.description}
-					keyFeatures={propertyData.text.keyFeatures}
-					location={propertyData.text.location}
+					location={propertyData.location}
+					desc={propertyData.description}
+					keyFeatures={propertyData.keyFeatures}
 				/>
-				<PropertyGallery images={propertyData.images} />
+				<PropertyGallery images={propertyData.imageURLs} />
 			</Wrapper>
 		</Grid>
 	)
